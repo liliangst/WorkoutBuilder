@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PhL-iv-ACA">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="jiC-Br-M8I">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="g4W-A5-NLi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWg-87-tk6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="LZS-NV-kw0"/>
+                        <color key="backgroundColor" name="DarkGray"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" id="U3M-P4-sFb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fW-Us-O8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1224" y="885"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Vd-qb-ED8">
+            <objects>
+                <viewController id="YLI-L3-3qu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="32o-u6-kzG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kiG-k1-nlL"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="music.note" catalog="system" id="3kf-ZL-psx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYI-Le-F8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="167"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e3c-4c-QtC">
+            <objects>
+                <viewController id="Y7V-ZL-bNQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xnG-RH-hep">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OvG-0h-wqH"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="list.bullet" catalog="system" id="xXh-9E-mXg" userLabel="Workout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Uq-oc-bRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-523"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ofb-Ey-D1v">
+            <objects>
+                <viewController id="PfQ-Cb-e9Y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqd-cL-akc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UrV-Un-RAF"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="fqz-ze-v8e" userLabel="Home"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yum-zc-416" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="-1235"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LRY-iW-Hb5">
+            <objects>
+                <tabBarController id="PhL-iv-ACA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYg-Bg-QHY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Gray3"/>
+                        <color key="tintColor" name="Green"/>
+                        <color key="barTintColor" name="Gray1"/>
+                        <color key="selectedImageTintColor" name="Green"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="viewControllers" id="OTz-5u-b5W"/>
+                        <segue destination="Y7V-ZL-bNQ" kind="relationship" relationship="viewControllers" id="cO3-vr-wTp"/>
+                        <segue destination="YLI-L3-3qu" kind="relationship" relationship="viewControllers" id="urp-QE-z3J"/>
+                        <segue destination="g4W-A5-NLi" kind="relationship" relationship="viewControllers" id="RMJ-oe-3H1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKP-5s-VUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="30"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="music.note" catalog="system" width="96" height="128"/>
+        <namedColor name="DarkGray">
+            <color red="0.125" green="0.125" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray1">
+            <color red="0.9649999737739563" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray3">
+            <color red="0.3449999988079071" green="0.3449999988079071" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green">
+            <color red="0.59200000762939453" green="0.98400002717971802" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
