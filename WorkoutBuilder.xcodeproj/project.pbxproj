@@ -22,6 +22,9 @@
 		380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */; };
 		380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2A72A8BDCA100DE1568 /* FontExtension.swift */; };
 		380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */; };
+		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
+		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
+		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		380AF2A72A8BDCA100DE1568 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		380AF2AD2A939A7400DE1568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
+		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,8 @@
 			children = (
 				380AF2642A8BC53400DE1568 /* Main.storyboard */,
 				380AF26C2A8BC53500DE1568 /* LaunchScreen.storyboard */,
+				380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */,
+				387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 		380AF2962A8BC79400DE1568 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				380AF2AD2A939A7400DE1568 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,7 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
+				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
+				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
 				380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
 				380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */,

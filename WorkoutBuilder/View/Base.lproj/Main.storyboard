@@ -75,21 +75,35 @@
             </objects>
             <point key="canvasLocation" x="1224" y="-530"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ofb-Ey-D1v">
             <objects>
-                <viewController id="PfQ-Cb-e9Y" sceneMemberID="viewController">
+                <viewController id="PfQ-Cb-e9Y" customClass="HomeViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kqd-cL-akc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-6l-cPx">
+                                <rect key="frame" x="20" y="114" width="353" height="655"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UrV-Un-RAF"/>
                         <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="eMG-6l-cPx" firstAttribute="leading" secondItem="UrV-Un-RAF" secondAttribute="leading" constant="20" id="2dF-yw-nW5"/>
+                            <constraint firstItem="eMG-6l-cPx" firstAttribute="top" secondItem="UrV-Un-RAF" secondAttribute="top" constant="55" id="4FV-0B-7jh"/>
+                            <constraint firstItem="UrV-Un-RAF" firstAttribute="bottom" secondItem="eMG-6l-cPx" secondAttribute="bottom" id="uvg-Rz-ziC"/>
+                            <constraint firstItem="UrV-Un-RAF" firstAttribute="trailing" secondItem="eMG-6l-cPx" secondAttribute="trailing" constant="20" id="wD5-IL-2O5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="fqz-ze-v8e" userLabel="Home"/>
+                    <connections>
+                        <outlet property="stackView" destination="eMG-6l-cPx" id="GOv-lk-sfl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yum-zc-416" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="-1235"/>
+            <point key="canvasLocation" x="1223.6641221374045" y="-1235.2112676056338"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LRY-iW-Hb5">
@@ -121,7 +135,7 @@
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <namedColor name="DarkGray">
-            <color red="0.125" green="0.125" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gray1">
             <color red="0.9649999737739563" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
