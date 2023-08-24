@@ -95,7 +95,7 @@ struct MusicPlayerCard: View {
                 
             }
         }
-        .frame(width: 350, height: 190)
+        .aspectRatio(1.75, contentMode: .fill)
     }
 }
 

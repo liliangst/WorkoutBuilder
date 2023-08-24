@@ -22,6 +22,7 @@ struct FavoriteWorkoutsCarousel: View {
                     .foregroundColor(.appGray1)
                     .multilineTextAlignment(.center)
             }
+            .minimumScaleFactor(0.01)
         }
     }
 }

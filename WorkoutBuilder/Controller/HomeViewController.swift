@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
         setUpLabel(in: musicStack, title: "Musique")
         setUpMusicPlayerView()
         stackView.addArrangedSubview(musicStack)
+        NSLayoutConstraint.activate([
+            musicStack.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            musicStack.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+        ])
         
         // Set up favorite workouts section
         setUpLabel(in: workoutsStack, title: "Séances")
@@ -64,6 +68,7 @@ class HomeViewController: UIViewController {
         
         hostingMusicPlayerView.view.translatesAutoresizingMaskIntoConstraints = false
         hostingMusicPlayerView.view.leadingAnchor.constraint(equalTo: musicStack.leadingAnchor).isActive = true
+        hostingMusicPlayerView.view.trailingAnchor.constraint(equalTo: musicStack.trailingAnchor).isActive = true
     }
     
     private func setUpWorkoutsCarouselView() {
