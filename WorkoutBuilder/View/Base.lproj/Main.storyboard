@@ -109,7 +109,7 @@
         <scene sceneID="LRY-iW-Hb5">
             <objects>
                 <tabBarController id="PhL-iv-ACA" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYg-Bg-QHY">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYg-Bg-QHY" customClass="CustomTabBar" customModule="WorkoutBuilder" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Gray3"/>
@@ -129,6 +129,11 @@
             <point key="canvasLocation" x="-185" y="30"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="WYg-Bg-QHY">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
