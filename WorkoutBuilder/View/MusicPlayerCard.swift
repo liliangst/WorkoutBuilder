@@ -9,93 +9,109 @@ import SwiftUI
 
 struct MusicPlayerCard: View {
     @State var paused: Bool = false
+    var isEmptyState: Bool = true
     var body: some View {
         let offset: CGFloat = 5
-        ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.appGray3)
-                .offset(y: offset)
-            
-            RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(.appGray3)
-            
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.appGray2)
-                .padding(5)
-            
-            VStack(spacing: 20) {
-                HStack(spacing: 15) {
-                    ZStack {
-                        // Show green rectangle when there is no image
-                        Rectangle()
-                            .foregroundColor(.appGreen)
-                        // TODO: add image here
-                        // This is a placeholder
-                        Image(systemName: "music.quarternote.3")
-                            .resizable()
-                            .padding(10)
-                            .background(Color.red)
-                            .hidden()
+        if isEmptyState {
+            VStack {
+                Text("Pas de service de musique disponible")
+                    .font(.appTitle2Font)
+                    .foregroundColor(.appGray1)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                Text("Pour ajouter un service de musique veuillez vous connecter dans l'onglet musique.")
+                    .font(.appContentFont)
+                    .foregroundColor(.appGray1)
+                    .multilineTextAlignment(.center)
+            }
+            .minimumScaleFactor(0.01)
+        } else {
+            ZStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(.appGray3)
+                    .offset(y: offset)
+                
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(.appGray3)
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.appGray2)
+                    .padding(5)
+                
+                VStack(spacing: 20) {
+                    HStack(spacing: 15) {
+                        ZStack {
+                            // Show green rectangle when there is no image
+                            Rectangle()
+                                .foregroundColor(.appGreen)
+                            // TODO: add image here
+                            // This is a placeholder
+                            Image(systemName: "music.quarternote.3")
+                                .resizable()
+                                .padding(10)
+                                .background(Color.red)
+                                .hidden()
+                        }
+                        .cornerRadius(10)
+                        .frame(width: 60, height: 60)
+                        
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text("Music title")
+                                .font(.custom("DMSans-Regular", size: 18))
+                                .lineLimit(2)
+                            Text("Artist")
+                                .font(.custom("DMSans-Regular", size: 16))
+                                .lineLimit(1)
+                        }
+                        .foregroundColor(.appGray1)
+                        
+                        Spacer()
                     }
-                    .cornerRadius(10)
-                    .frame(width: 60, height: 60)
+                    .padding(.horizontal, 20)
                     
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Music title")
-                            .font(.custom("DMSans-Regular", size: 18))
-                            .lineLimit(2)
-                        Text("Artist")
-                            .font(.custom("DMSans-Regular", size: 16))
-                            .lineLimit(1)
+                    HStack {
+                        // TODO: progress values
+                        Text("0:20")
+                        ProgressView(value: 0.2)
+                            .progressViewStyle(MusicPlayerProgressStyle())
+                        Text("2:20")
+                    }
+                    .frame(height: 10)
+                    .font(.custom("DMSans-Regular", size: 10))
+                    .foregroundColor(.appGray1)
+                    .padding(.horizontal, 15)
+                    
+                    HStack(spacing: 30) {
+                        Button {
+                            // TODO: add function here
+                        } label: {
+                            Image(systemName: "backward.fill")
+                                .font(.system(size: 32, weight: .heavy))
+                        }
+                        
+                        Button {
+                            // TODO: add function here
+                            paused.toggle()
+                        } label: {
+                            Image(systemName: paused ? "play.fill" : "pause.fill")
+                                .font(.system(size: 32, weight: .heavy))
+                                .frame(width: 30, height: 30)
+                        }
+                        
+                        Button {
+                            // TODO: add function here
+                        } label: {
+                            Image(systemName: "forward.fill")
+                                .font(.system(size: 32, weight: .heavy))
+                        }
+                        
                     }
                     .foregroundColor(.appGray1)
                     
-                    Spacer()
                 }
-                .padding(.horizontal, 20)
-                
-                HStack {
-                    // TODO: progress values
-                    Text("0:20")
-                    ProgressView(value: 0.2)
-                        .progressViewStyle(MusicPlayerProgressStyle())
-                    Text("2:20")
-                }
-                .frame(height: 10)
-                .font(.custom("DMSans-Regular", size: 10))
-                .foregroundColor(.appGray1)
-                .padding(.horizontal, 15)
-                
-                HStack(spacing: 30) {
-                    Button {
-                        // TODO: add function here
-                    } label: {
-                        Image(systemName: "backward.fill")
-                            .font(.system(size: 32, weight: .heavy))
-                    }
-
-                    Button {
-                        // TODO: add function here
-                        paused.toggle()
-                    } label: {
-                        Image(systemName: paused ? "play.fill" : "pause.fill")
-                            .font(.system(size: 32, weight: .heavy))
-                            .frame(width: 30, height: 30)
-                    }
-    
-                    Button {
-                        // TODO: add function here
-                    } label: {
-                        Image(systemName: "forward.fill")
-                            .font(.system(size: 32, weight: .heavy))
-                    }
-
-                }
-                .foregroundColor(.appGray1)
-                
             }
+            .aspectRatio(1.75, contentMode: .fill)
         }
-        .aspectRatio(1.75, contentMode: .fill)
     }
 }
 
