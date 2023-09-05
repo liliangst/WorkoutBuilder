@@ -26,6 +26,11 @@
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
+		389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B45962AA61D1100373C2D /* WorkoutElement.swift */; };
+		389B45992AA61D9F00373C2D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B45982AA61D9F00373C2D /* Workout.swift */; };
+		389B459B2AA628CA00373C2D /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459A2AA628CA00373C2D /* Rest.swift */; };
+		389B459D2AA628CE00373C2D /* Sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459C2AA628CE00373C2D /* Sets.swift */; };
+		389B459F2AA628D500373C2D /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459E2AA628D500373C2D /* Exercice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
+		389B45962AA61D1100373C2D /* WorkoutElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutElement.swift; sourceTree = "<group>"; };
+		389B45982AA61D9F00373C2D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		389B459A2AA628CA00373C2D /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		389B459C2AA628CE00373C2D /* Sets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sets.swift; sourceTree = "<group>"; };
+		389B459E2AA628D500373C2D /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,8 @@
 		380AF2942A8BC78500DE1568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				389B45952AA61D0000373C2D /* WorkoutElements */,
+				389B45982AA61D9F00373C2D /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +228,17 @@
 				380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		389B45952AA61D0000373C2D /* WorkoutElements */ = {
+			isa = PBXGroup;
+			children = (
+				389B45962AA61D1100373C2D /* WorkoutElement.swift */,
+				389B459A2AA628CA00373C2D /* Rest.swift */,
+				389B459C2AA628CE00373C2D /* Sets.swift */,
+				389B459E2AA628D500373C2D /* Exercice.swift */,
+			);
+			path = WorkoutElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +384,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
+				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
+				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
 				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
+				389B459F2AA628D500373C2D /* Exercice.swift in Sources */,
+				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
+				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
 				380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
