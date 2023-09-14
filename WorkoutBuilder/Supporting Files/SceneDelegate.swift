@@ -56,6 +56,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         SpotifyHandler.shared.connect(url: url)
+//        let parameters = appRemote.authorizationParameters(from: url);
+//
+//        if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
+//            appRemote.connectionParameters.accessToken = access_token
+//            self.accessToken = access_token
+//        } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
+//            // Show the error
+//        }
     }
 }
 
