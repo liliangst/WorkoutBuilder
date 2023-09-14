@@ -50,6 +50,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+        
+        SpotifyHandler.shared.connect(url: url)
+//        let parameters = appRemote.authorizationParameters(from: url);
+//
+//        if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
+//            appRemote.connectionParameters.accessToken = access_token
+//            self.accessToken = access_token
+//        } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
+//            // Show the error
+//        }
+    }
 }
 

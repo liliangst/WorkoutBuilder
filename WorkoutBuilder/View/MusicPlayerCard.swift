@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MusicPlayerCard: View {
     @State var paused: Bool = false
-    var isEmptyState: Bool = true
+    @State var isEmptyState: Bool = true
+    @State var reload: Bool = true
+    
     var body: some View {
         let offset: CGFloat = 5
-        if isEmptyState {
+        ZStack {
             VStack {
                 Text("Pas de service de musique disponible")
                     .font(.appTitle2Font)
@@ -25,7 +27,11 @@ struct MusicPlayerCard: View {
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)
-        } else {
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("MusicPlayerConnected"))) { _ in
+                isEmptyState = false
+            }
+            .opacity(isEmptyState ? 1.0 : 0.0)
+            
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.appGray3)
@@ -44,22 +50,26 @@ struct MusicPlayerCard: View {
                             // Show green rectangle when there is no image
                             Rectangle()
                                 .foregroundColor(.appGreen)
-                            // TODO: add image here
+                            
                             // This is a placeholder
-                            Image(systemName: "music.quarternote.3")
+                            Image(systemName: "music.note")
                                 .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .padding(10)
-                                .background(Color.red)
-                                .hidden()
+                                .foregroundColor(.appGray1)
+                            
+                            Image(uiImage: SpotifyHandler.shared.trackImage ?? UIImage())
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                         }
                         .cornerRadius(10)
                         .frame(width: 60, height: 60)
                         
                         VStack(alignment: .leading, spacing: 0) {
-                            Text("Music title")
+                            Text(SpotifyHandler.shared.currentTrack?.name ?? "Music title")
                                 .font(.custom("DMSans-Regular", size: 18))
                                 .lineLimit(2)
-                            Text("Artist")
+                            Text(SpotifyHandler.shared.currentTrack?.artist.name ?? "Artist")
                                 .font(.custom("DMSans-Regular", size: 16))
                                 .lineLimit(1)
                         }
@@ -74,7 +84,7 @@ struct MusicPlayerCard: View {
                         Text("0:20")
                         ProgressView(value: 0.2)
                             .progressViewStyle(MusicPlayerProgressStyle())
-                        Text("2:20")
+                        Text(TimeFormatter.formatToString(timeInMilliseconds: SpotifyHandler.shared.currentTrack?.duration ?? 0))
                     }
                     .frame(height: 10)
                     .font(.custom("DMSans-Regular", size: 10))
@@ -83,15 +93,15 @@ struct MusicPlayerCard: View {
                     
                     HStack(spacing: 30) {
                         Button {
-                            // TODO: add function here
+                            SpotifyHandler.shared.previous()
                         } label: {
                             Image(systemName: "backward.fill")
                                 .font(.system(size: 32, weight: .heavy))
                         }
                         
                         Button {
-                            // TODO: add function here
                             paused.toggle()
+                            SpotifyHandler.shared.togglePlayPause(isNowPaused: paused)
                         } label: {
                             Image(systemName: paused ? "play.fill" : "pause.fill")
                                 .font(.system(size: 32, weight: .heavy))
@@ -99,7 +109,7 @@ struct MusicPlayerCard: View {
                         }
                         
                         Button {
-                            // TODO: add function here
+                            SpotifyHandler.shared.next()
                         } label: {
                             Image(systemName: "forward.fill")
                                 .font(.system(size: 32, weight: .heavy))
@@ -108,10 +118,17 @@ struct MusicPlayerCard: View {
                     }
                     .foregroundColor(.appGray1)
                     
+                    // TODO: find better way to reload this view
+                    // temp
+                    if reload {}
                 }
             }
-            .aspectRatio(1.75, contentMode: .fill)
+            .opacity(isEmptyState ? 0.0 : 1.0)
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("UpdateMusicPlayer"))) { _ in
+                reload.toggle()
+            }
         }
+        .aspectRatio(1.75, contentMode: .fill)
     }
 }
 

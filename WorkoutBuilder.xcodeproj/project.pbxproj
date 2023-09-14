@@ -24,8 +24,13 @@
 		380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */; };
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
+		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
+		389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */; };
+		389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763CB2AAA135100222CD4 /* MusicViewController.swift */; };
+		389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 389763CE2AB20DBD00222CD4 /* KeychainSwift */; };
+		389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763D02AB255DD00222CD4 /* TimeFormatter.swift */; };
 		389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B45962AA61D1100373C2D /* WorkoutElement.swift */; };
 		389B45992AA61D9F00373C2D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B45982AA61D9F00373C2D /* Workout.swift */; };
 		389B459B2AA628CA00373C2D /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459A2AA628CA00373C2D /* Rest.swift */; };
@@ -69,8 +74,13 @@
 		380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		380AF2AD2A939A7400DE1568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
+		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
+		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
+		389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHandler.swift; sourceTree = "<group>"; };
+		389763CB2AAA135100222CD4 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		389763D02AB255DD00222CD4 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		389B45962AA61D1100373C2D /* WorkoutElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutElement.swift; sourceTree = "<group>"; };
 		389B45982AA61D9F00373C2D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		389B459A2AA628CA00373C2D /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 			files = (
 				380AF29D2A8BD56900DE1568 /* RealmSwift in Frameworks */,
 				380AF2A02A8BD83A00DE1568 /* SpotifyiOS in Frameworks */,
+				389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */,
 				380AF29B2A8BD56900DE1568 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +120,7 @@
 		380AF2522A8BC53400DE1568 = {
 			isa = PBXGroup;
 			children = (
+				384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */,
 				380AF25D2A8BC53400DE1568 /* WorkoutBuilder */,
 				380AF2772A8BC53500DE1568 /* WorkoutBuilderTests */,
 				380AF2812A8BC53500DE1568 /* WorkoutBuilderUITests */,
@@ -159,6 +171,7 @@
 		380AF2942A8BC78500DE1568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				389763C72AA9FF5500222CD4 /* Music */,
 				389B45952AA61D0000373C2D /* WorkoutElements */,
 				389B45982AA61D9F00373C2D /* Workout.swift */,
 			);
@@ -181,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				380AF2AD2A939A7400DE1568 /* HomeViewController.swift */,
+				389763CB2AAA135100222CD4 /* MusicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +215,8 @@
 			children = (
 				380AF2A62A8BDC8B00DE1568 /* Fonts */,
 				380AF2A92A8BDDF900DE1568 /* Color */,
+				384084FF2AA8BC4A00030B5A /* Constant.swift */,
+				389763D02AB255DD00222CD4 /* TimeFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -228,6 +244,22 @@
 				380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		389763C72AA9FF5500222CD4 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				389763C82AA9FF5B00222CD4 /* Spotify */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		389763C82AA9FF5B00222CD4 /* Spotify */ = {
+			isa = PBXGroup;
+			children = (
+				389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */,
+			);
+			path = Spotify;
 			sourceTree = "<group>";
 		};
 		389B45952AA61D0000373C2D /* WorkoutElements */ = {
@@ -261,6 +293,7 @@
 				380AF29A2A8BD56900DE1568 /* Realm */,
 				380AF29C2A8BD56900DE1568 /* RealmSwift */,
 				380AF29F2A8BD83A00DE1568 /* SpotifyiOS */,
+				389763CE2AB20DBD00222CD4 /* KeychainSwift */,
 			);
 			productName = WorkoutBuilder;
 			productReference = 380AF25B2A8BC53400DE1568 /* WorkoutBuilder.app */;
@@ -337,6 +370,7 @@
 			packageReferences = (
 				380AF2992A8BD56900DE1568 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				380AF29E2A8BD83A00DE1568 /* XCRemoteSwiftPackageReference "ios-sdk" */,
+				389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 380AF25C2A8BC53400DE1568 /* Products */;
 			projectDirPath = "";
@@ -387,13 +421,17 @@
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
+				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
 				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
 				389B459F2AA628D500373C2D /* Exercice.swift in Sources */,
+				389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */,
+				384085002AA8BC4A00030B5A /* Constant.swift in Sources */,
 				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
 				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
 				380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */,
+				389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
 				380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */,
 			);
@@ -590,12 +628,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liliangrasset.WorkoutBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WorkoutBuilder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -624,12 +664,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liliangrasset.WorkoutBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WorkoutBuilder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -775,6 +817,14 @@
 				minimumVersion = 1.2.4;
 			};
 		};
+		389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -792,6 +842,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 380AF29E2A8BD83A00DE1568 /* XCRemoteSwiftPackageReference "ios-sdk" */;
 			productName = SpotifyiOS;
+		};
+		389763CE2AB20DBD00222CD4 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

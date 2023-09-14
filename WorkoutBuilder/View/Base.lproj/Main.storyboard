@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PhL-iv-ACA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUn-0E-JrM">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -25,15 +25,30 @@
             </objects>
             <point key="canvasLocation" x="1224" y="885"/>
         </scene>
-        <!--View Controller-->
+        <!--Music View Controller-->
         <scene sceneID="3Vd-qb-ED8">
             <objects>
-                <viewController id="YLI-L3-3qu" sceneMemberID="viewController">
+                <viewController id="YLI-L3-3qu" customClass="MusicViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32o-u6-kzG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-aA-83E">
+                                <rect key="frame" x="113" y="408.66666666666669" width="167" height="35"/>
+                                <color key="tintColor" name="Green"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connect to Spotify"/>
+                                <connections>
+                                    <action selector="tapConnectToSpotify" destination="YLI-L3-3qu" eventType="touchUpInside" id="YM5-fW-0up"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kiG-k1-nlL"/>
                         <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="Gg9-aA-83E" firstAttribute="centerY" secondItem="32o-u6-kzG" secondAttribute="centerY" id="108-cx-t9p"/>
+                            <constraint firstItem="Gg9-aA-83E" firstAttribute="centerX" secondItem="32o-u6-kzG" secondAttribute="centerX" id="sYY-f4-MYA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="music.note" catalog="system" id="3kf-ZL-psx"/>
                 </viewController>
@@ -106,34 +121,29 @@
             <point key="canvasLocation" x="1223.6641221374045" y="-1235.2112676056338"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="LRY-iW-Hb5">
+        <scene sceneID="pM7-Vo-mzB">
             <objects>
-                <tabBarController id="PhL-iv-ACA" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WYg-Bg-QHY" customClass="CustomTabBar" customModule="WorkoutBuilder" customModuleProvider="target">
+                <tabBarController id="OUn-0E-JrM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHp-Jy-HRI" customClass="CustomTabBar" customModule="WorkoutBuilder" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Gray3"/>
                         <color key="tintColor" name="Green"/>
-                        <color key="barTintColor" name="Gray1"/>
+                        <color key="barTintColor" name="Green"/>
                         <color key="selectedImageTintColor" name="Green"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="viewControllers" id="OTz-5u-b5W"/>
-                        <segue destination="zvZ-Yu-Pgd" kind="relationship" relationship="viewControllers" id="ZSi-De-57R"/>
-                        <segue destination="YLI-L3-3qu" kind="relationship" relationship="viewControllers" id="urp-QE-z3J"/>
-                        <segue destination="g4W-A5-NLi" kind="relationship" relationship="viewControllers" id="RMJ-oe-3H1"/>
+                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="viewControllers" id="ZY3-R5-jtn"/>
+                        <segue destination="zvZ-Yu-Pgd" kind="relationship" relationship="viewControllers" id="5mn-qz-tc3"/>
+                        <segue destination="YLI-L3-3qu" kind="relationship" relationship="viewControllers" id="vkB-x3-U0z"/>
+                        <segue destination="g4W-A5-NLi" kind="relationship" relationship="viewControllers" id="7tJ-Uo-KTR"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hKP-5s-VUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9e-k9-Fqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-185" y="30"/>
+            <point key="canvasLocation" x="-166" y="-141"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="WYg-Bg-QHY">
-            <size key="intrinsicContentSize" width="-1" height="83"/>
-        </designable>
-    </designables>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -141,9 +151,6 @@
         <image name="music.note" catalog="system" width="96" height="128"/>
         <namedColor name="DarkGray">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Gray1">
-            <color red="0.9649999737739563" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gray3">
             <color red="0.3449999988079071" green="0.3449999988079071" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
