@@ -13,13 +13,13 @@ struct FavoriteWorkoutsCarousel: View {
             // Empty State
             VStack {
                 Text("Pas de séances favorites")
-                    .font(.appTitle2Font)
-                    .foregroundColor(.appGray1)
+                    .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                 Text("Pour ajouter une séance à vos favoris, appuyer sur l'étoile en haut à droite d'une séance.")
-                    .font(.appContentFont)
-                    .foregroundColor(.appGray1)
+                    .font(FontFamily.DMSans.regular.swiftUIFont(size: 20))
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)

@@ -17,13 +17,13 @@ struct MusicPlayerCard: View {
         ZStack {
             VStack {
                 Text("Pas de service de musique disponible")
-                    .font(.appTitle2Font)
-                    .foregroundColor(.appGray1)
+                    .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                 Text("Pour ajouter un service de musique veuillez vous connecter dans l'onglet musique.")
-                    .font(.appContentFont)
-                    .foregroundColor(.appGray1)
+                    .font(FontFamily.DMSans.regular.swiftUIFont(size: 20))
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)
@@ -34,14 +34,14 @@ struct MusicPlayerCard: View {
             
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.appGray3)
+                    .foregroundColor(Asset.gray3.swiftUIColor)
                     .offset(y: offset)
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.appGray3)
+                    .foregroundColor(Asset.gray3.swiftUIColor)
                 
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.appGray2)
+                    .foregroundColor(Asset.gray2.swiftUIColor)
                     .padding(5)
                 
                 VStack(spacing: 20) {
@@ -50,12 +50,12 @@ struct MusicPlayerCard: View {
                             // This is a placeholder
                             // Show green rectangle when there is no image
                             Rectangle()
-                                .foregroundColor(.appGreen)
+                                .foregroundColor(Asset.green.swiftUIColor)
                             Image(systemName: "music.note")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding(10)
-                                .foregroundColor(.appGray1)
+                                .foregroundColor(Asset.gray1.swiftUIColor)
                             
                             if let trackImage = trackImage {
                                 Image(uiImage: trackImage)
@@ -71,13 +71,13 @@ struct MusicPlayerCard: View {
                         
                         VStack(alignment: .leading, spacing: 0) {
                             Text(SpotifyHandler.shared.currentTrack?.name ?? "Music title")
-                                .font(.custom("DMSans-Regular", size: 18))
+                                .font(FontFamily.DMSans.regular.swiftUIFont(size: 18))
                                 .lineLimit(2)
                             Text(SpotifyHandler.shared.currentTrack?.artist.name ?? "Artist")
-                                .font(.custom("DMSans-Regular", size: 16))
+                                .font(FontFamily.DMSans.regular.swiftUIFont(size: 18))
                                 .lineLimit(1)
                         }
-                        .foregroundColor(.appGray1)
+                        .foregroundColor(Asset.gray1.swiftUIColor)
                         
                         Spacer()
                     }
@@ -91,8 +91,8 @@ struct MusicPlayerCard: View {
                         Text(TimeFormatter.formatToString(timeInMilliseconds: SpotifyHandler.shared.currentTrack?.duration ?? 0))
                     }
                     .frame(height: 10)
-                    .font(.custom("DMSans-Regular", size: 10))
-                    .foregroundColor(.appGray1)
+                    .font(FontFamily.DMSans.regular.swiftUIFont(size: 10))
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                     .padding(.horizontal, 15)
                     
                     HStack(spacing: 30) {
@@ -122,7 +122,7 @@ struct MusicPlayerCard: View {
                         }
                         
                     }
-                    .foregroundColor(.appGray1)
+                    .foregroundColor(Asset.gray1.swiftUIColor)
                 }
             }
             .opacity(isEmptyState ? 0.0 : 1.0)
@@ -139,7 +139,6 @@ struct MusicPlayerCard_Previews: PreviewProvider {
 
 struct MusicPlayerProgressStyle: ProgressViewStyle {
     var height: Double = 10.0
-    var labelFontStyle: Font = .body
     
     func makeBody(configuration: Configuration) -> some View {
         let progress = configuration.fractionCompleted ?? 0
@@ -147,12 +146,12 @@ struct MusicPlayerProgressStyle: ProgressViewStyle {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(Color.appGray3)
+                    .fill(Asset.gray3.swiftUIColor)
                     .frame(height: height)
                     .frame(width: geometry.size.width)
                 
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(Color.appGray1)
+                    .fill(Asset.gray1.swiftUIColor)
                     .frame(width: geometry.size.width * progress, height: height)
             }
         }

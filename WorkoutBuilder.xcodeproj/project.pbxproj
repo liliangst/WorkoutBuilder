@@ -10,7 +10,7 @@
 		380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF25E2A8BC53400DE1568 /* AppDelegate.swift */; };
 		380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2602A8BC53400DE1568 /* SceneDelegate.swift */; };
 		380AF2662A8BC53400DE1568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380AF2642A8BC53400DE1568 /* Main.storyboard */; };
-		380AF26B2A8BC53500DE1568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380AF26A2A8BC53500DE1568 /* Assets.xcassets */; };
+		380AF26B2A8BC53500DE1568 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380AF26A2A8BC53500DE1568 /* Colors.xcassets */; };
 		380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380AF26C2A8BC53500DE1568 /* LaunchScreen.storyboard */; };
 		380AF2792A8BC53500DE1568 /* WorkoutBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2782A8BC53500DE1568 /* WorkoutBuilderTests.swift */; };
 		380AF2832A8BC53500DE1568 /* WorkoutBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2822A8BC53500DE1568 /* WorkoutBuilderUITests.swift */; };
@@ -20,13 +20,14 @@
 		380AF2A02A8BD83A00DE1568 /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = 380AF29F2A8BD83A00DE1568 /* SpotifyiOS */; };
 		380AF2A32A8BDB7D00DE1568 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 380AF2A22A8BDB7D00DE1568 /* DMSans-Regular.ttf */; };
 		380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */; };
-		380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2A72A8BDCA100DE1568 /* FontExtension.swift */; };
-		380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */; };
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
+		3881CB4D2AB38C960071168A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3881CB4C2AB38C960071168A /* swiftgen.yml */; };
+		3881CB562AB3A03F0071168A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3881CB552AB3A03F0071168A /* Fonts.swift */; };
+		3881CB582AB3A6490071168A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3881CB572AB3A6490071168A /* Colors.swift */; };
 		389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */; };
 		389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763CB2AAA135100222CD4 /* MusicViewController.swift */; };
 		389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 389763CE2AB20DBD00222CD4 /* KeychainSwift */; };
@@ -60,7 +61,7 @@
 		380AF25E2A8BC53400DE1568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		380AF2602A8BC53400DE1568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		380AF2652A8BC53400DE1568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		380AF26A2A8BC53500DE1568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380AF26A2A8BC53500DE1568 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		380AF26D2A8BC53500DE1568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380AF26F2A8BC53500DE1568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		380AF2742A8BC53500DE1568 /* WorkoutBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,14 +71,15 @@
 		380AF2842A8BC53500DE1568 /* WorkoutBuilderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutBuilderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		380AF2A22A8BDB7D00DE1568 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
-		380AF2A72A8BDCA100DE1568 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
-		380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		380AF2AD2A939A7400DE1568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
+		3881CB4C2AB38C960071168A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		3881CB552AB3A03F0071168A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		3881CB572AB3A6490071168A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHandler.swift; sourceTree = "<group>"; };
 		389763CB2AAA135100222CD4 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		389763D02AB255DD00222CD4 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */,
+				3881CB4C2AB38C960071168A /* swiftgen.yml */,
 				380AF25D2A8BC53400DE1568 /* WorkoutBuilder */,
 				380AF2772A8BC53500DE1568 /* WorkoutBuilderTests */,
 				380AF2812A8BC53500DE1568 /* WorkoutBuilderUITests */,
@@ -146,6 +149,8 @@
 				380AF2962A8BC79400DE1568 /* Controller */,
 				380AF2982A8BC7AB00DE1568 /* Utilities */,
 				380AF2972A8BC79E00DE1568 /* Supporting Files */,
+				3881CB502AB39B100071168A /* Ressources */,
+				3881CB512AB39B200071168A /* Generated */,
 				380AF26F2A8BC53500DE1568 /* Info.plist */,
 			);
 			path = WorkoutBuilder;
@@ -202,8 +207,6 @@
 		380AF2972A8BC79E00DE1568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				380AF2A12A8BDACB00DE1568 /* Fonts */,
-				380AF26A2A8BC53500DE1568 /* Assets.xcassets */,
 				380AF25E2A8BC53400DE1568 /* AppDelegate.swift */,
 				380AF2602A8BC53400DE1568 /* SceneDelegate.swift */,
 			);
@@ -213,8 +216,6 @@
 		380AF2982A8BC7AB00DE1568 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				380AF2A62A8BDC8B00DE1568 /* Fonts */,
-				380AF2A92A8BDDF900DE1568 /* Color */,
 				384084FF2AA8BC4A00030B5A /* Constant.swift */,
 				389763D02AB255DD00222CD4 /* TimeFormatter.swift */,
 			);
@@ -230,20 +231,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		380AF2A62A8BDC8B00DE1568 /* Fonts */ = {
+		3881CB502AB39B100071168A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				380AF2A72A8BDCA100DE1568 /* FontExtension.swift */,
+				380AF2A12A8BDACB00DE1568 /* Fonts */,
+				380AF26A2A8BC53500DE1568 /* Colors.xcassets */,
 			);
-			path = Fonts;
+			path = Ressources;
 			sourceTree = "<group>";
 		};
-		380AF2A92A8BDDF900DE1568 /* Color */ = {
+		3881CB512AB39B200071168A /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				380AF2AA2A8BDE0500DE1568 /* ColorExtension.swift */,
+				3881CB572AB3A6490071168A /* Colors.swift */,
+				3881CB552AB3A03F0071168A /* Fonts.swift */,
 			);
-			path = Color;
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		389763C72AA9FF5500222CD4 /* Music */ = {
@@ -280,6 +283,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 380AF2882A8BC53500DE1568 /* Build configuration list for PBXNativeTarget "WorkoutBuilder" */;
 			buildPhases = (
+				3881CB542AB39EC10071168A /* SwiftGen */,
 				380AF2572A8BC53400DE1568 /* Sources */,
 				380AF2582A8BC53400DE1568 /* Frameworks */,
 				380AF2592A8BC53400DE1568 /* Resources */,
@@ -390,9 +394,10 @@
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
 				380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */,
-				380AF26B2A8BC53500DE1568 /* Assets.xcassets in Resources */,
+				380AF26B2A8BC53500DE1568 /* Colors.xcassets in Resources */,
 				380AF2662A8BC53400DE1568 /* Main.storyboard in Resources */,
 				380AF2A32A8BDB7D00DE1568 /* DMSans-Regular.ttf in Resources */,
+				3881CB4D2AB38C960071168A /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,12 +417,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3881CB542AB39EC10071168A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftGen\n\n/usr/bin/xcrun --sdk macosx swift run swiftgen config run --config $SRCROOT/swiftgen.yml\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		380AF2572A8BC53400DE1568 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
+				3881CB582AB3A6490071168A /* Colors.swift in Sources */,
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
@@ -430,10 +458,9 @@
 				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
 				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
-				380AF2A82A8BDCA100DE1568 /* FontExtension.swift in Sources */,
 				389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
-				380AF2AB2A8BDE0500DE1568 /* ColorExtension.swift in Sources */,
+				3881CB562AB3A03F0071168A /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZ899C4D4A;
@@ -618,7 +646,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -646,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZ899C4D4A;
@@ -654,7 +683,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

@@ -4,6 +4,21 @@
 <dict>
 	<key>CFBundleGetInfoString</key>
 	<string></string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.liliangrasset.WorkoutBuilder</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>spotify-workout-builder</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>spotify</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-ExtraBold.ttf</string>
@@ -28,20 +43,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>spotify</string>
-	</array>
-	<key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLName</key>
-        <string>com.liliangrasset.WorkoutBuilder</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>spotify-workout-builder</string>
-        </array>
-      </dict>
-    </array>
 </dict>
 </plist>
