@@ -10,7 +10,7 @@ import SwiftUI
 struct MusicPlayerCard: View {
     @State var paused: Bool = false
     @State var isEmptyState: Bool = true
-    @State var reload: Bool = true
+    @State var trackImage: UIImage?
     
     var body: some View {
         let offset: CGFloat = 5
@@ -27,8 +27,8 @@ struct MusicPlayerCard: View {
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)
-            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("MusicPlayerConnected"))) { _ in
-                isEmptyState = false
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("MusicPlayerConnected"))) { notification in
+                isEmptyState = !(notification.object as! Bool)
             }
             .opacity(isEmptyState ? 1.0 : 0.0)
             
@@ -47,23 +47,27 @@ struct MusicPlayerCard: View {
                 VStack(spacing: 20) {
                     HStack(spacing: 15) {
                         ZStack {
+                            // This is a placeholder
                             // Show green rectangle when there is no image
                             Rectangle()
                                 .foregroundColor(.appGreen)
-                            
-                            // This is a placeholder
                             Image(systemName: "music.note")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding(10)
                                 .foregroundColor(.appGray1)
                             
-                            Image(uiImage: SpotifyHandler.shared.trackImage ?? UIImage())
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                            if let trackImage = trackImage {
+                                Image(uiImage: trackImage)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
                         }
                         .cornerRadius(10)
                         .frame(width: 60, height: 60)
+                        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("TrackImageLoaded"))) { notification in
+                            trackImage = notification.object as? UIImage
+                        }
                         
                         VStack(alignment: .leading, spacing: 0) {
                             Text(SpotifyHandler.shared.currentTrack?.name ?? "Music title")
@@ -100,12 +104,14 @@ struct MusicPlayerCard: View {
                         }
                         
                         Button {
-                            paused.toggle()
                             SpotifyHandler.shared.togglePlayPause(isNowPaused: paused)
                         } label: {
                             Image(systemName: paused ? "play.fill" : "pause.fill")
                                 .font(.system(size: 32, weight: .heavy))
                                 .frame(width: 30, height: 30)
+                        }
+                        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("IsPlayerPaused"))) { notification in
+                            paused = notification.object as! Bool
                         }
                         
                         Button {
@@ -117,16 +123,9 @@ struct MusicPlayerCard: View {
                         
                     }
                     .foregroundColor(.appGray1)
-                    
-                    // TODO: find better way to reload this view
-                    // temp
-                    if reload {}
                 }
             }
             .opacity(isEmptyState ? 0.0 : 1.0)
-            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("UpdateMusicPlayer"))) { _ in
-                reload.toggle()
-            }
         }
         .aspectRatio(1.75, contentMode: .fill)
     }

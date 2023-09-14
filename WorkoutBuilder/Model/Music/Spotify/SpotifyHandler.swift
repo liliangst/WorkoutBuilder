@@ -101,9 +101,9 @@ class SpotifyHandler: NSObject {
     
     func togglePlayPause(isNowPaused: Bool) {
         if isNowPaused {
-            appRemote.playerAPI?.pause()
-        } else {
             appRemote.playerAPI?.resume()
+        } else {
+            appRemote.playerAPI?.pause()
         }
     }
     
@@ -126,12 +126,14 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
                 debugPrint(error.localizedDescription)
             }
         })
-        let notification = Notification(name: Notification.Name("MusicPlayerConnected"))
-        NotificationCenter.default.post(notification)
+        let notificationName = Notification.Name("MusicPlayerConnected")
+        NotificationCenter.default.post(name: notificationName, object: true)
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         print("disconnected")
+        let notificationName = Notification.Name("MusicPlayerConnected")
+        NotificationCenter.default.post(name: notificationName, object: false)
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
@@ -140,10 +142,15 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
         currentTrack = playerState.track
-        fetchArtwork(for: playerState.track)
-
-        let notificationName = Notification.Name("UpdateMusicPlayer")
-        NotificationCenter.default.post(name: notificationName, object: nil)
+        if !playerState.track.isEqual(currentTrack) {
+            fetchArtwork(for: playerState.track) { image in
+                // Send notification after we get the image
+                let notificationName = Notification.Name("TrackImageLoaded")
+                NotificationCenter.default.post(name: notificationName, object: image)
+            }
+        }
+        let notificationName = Notification.Name("IsPlayerPaused")
+        NotificationCenter.default.post(name: notificationName, object: playerState.isPaused)
         
         debugPrint("Track name: \(playerState.track.name)")
         debugPrint("-> \(playerState.track.artist.name)")
@@ -202,13 +209,14 @@ extension SpotifyHandler {
         task.resume()
     }
     
-    func fetchArtwork(for track: SPTAppRemoteTrack) {
+    func fetchArtwork(for track: SPTAppRemoteTrack, callback: @escaping (UIImage) -> ()) {
         appRemote.imageAPI?.fetchImage(forItem: track, with: CGSize.zero)
         { [weak self] (image, error) in
             if let error = error {
                 print("Error fetching track image: " + error.localizedDescription)
             } else if let image = image as? UIImage {
                 self?.trackImage = image
+                callback(image)
             }
         }
     }
