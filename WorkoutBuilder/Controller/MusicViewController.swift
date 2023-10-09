@@ -12,18 +12,24 @@ class MusicViewController: UIViewController {
 
     @IBOutlet weak var connectSpotifyButton: UIButton!
     @IBOutlet weak var musicSelectionStackView: UIStackView!
-    @IBOutlet weak var collectionView: UICollectionView! {
+    @IBOutlet weak var musicCollectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            collectionView.backgroundColor = nil
+            musicCollectionView.dataSource = self
+            musicCollectionView.backgroundColor = nil
         }
     }
     @IBOutlet weak var segmentedControl: UISegmentedControl! {
         didSet {
-            self.segmentedControl.selectedSegmentIndex = 0
+            segmentedControl.selectedSegmentIndex = 0
+            segmentedControl.setTitleTextAttributes([.font : FontFamily.PoppinsExtraBold.regular.font(size: 14)], for: .normal)
         }
     }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.isHidden = true
+        }
+    }
+    
     
     var musicCollectionData: [SpotifyCollectionObject] {
         switch segmentedControl.selectedSegmentIndex {
@@ -40,18 +46,29 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(self, selector: #selector(showMusicSelection), name: Notification.Name("PlaylistsFetched"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlaylistsFetchedNotification), name: Notification.Name("PlaylistsFetched"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlayerConnectedNotification), name: Notification.Name("MusicPlayerConnected"), object: nil)
     }
     
-    @objc func showMusicSelection() {
-        connectSpotifyButton.isHidden = true
-        musicSelectionStackView.isHidden = false
-        collectionView.reloadData()
+    @objc func didReceivePlayerConnectedNotification(_ n: Notification) {
+        if let connected = n.object as? Bool, connected {
+            connectSpotifyButton.isHidden = true
+            activityIndicator.startAnimating()
+            activityIndicator.isHidden = false
+        }
+    }
+    
+    @objc func didReceivePlaylistsFetchedNotification() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.musicSelectionStackView.isHidden = false
+            self.musicCollectionView.reloadData()
+        }
     }
     
     @IBAction func tapSegmentedControl(_ sender: UISegmentedControl, forEvent event: UIEvent) {
-        // TODO: This
-        collectionView.reloadData()
+        musicCollectionView.reloadData()
     }
     
     @IBAction func tapConnectToSpotify() {
@@ -73,11 +90,10 @@ extension MusicViewController: UICollectionViewDataSource {
         let musicCollectionItem = musicCollectionData[indexPath.row]
         cell.titleLabel.text = musicCollectionItem.title
         cell.artistLabel.text = musicCollectionItem.displayName
-        cell.imageView.kf.setImage(with: URL(string: musicCollectionItem.images[0].url)!)
+        if let imageUrl = musicCollectionItem.images.first?.url {
+            cell.imageView.kf.setImage(with: URL(string: imageUrl)!)
+        }
+        cell.uri = musicCollectionItem.uri
         return cell
     }
-}
-
-extension MusicViewController: UICollectionViewDelegate {
-    
 }

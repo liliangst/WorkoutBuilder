@@ -21,9 +21,9 @@ class SpotifyHandler: NSObject {
                     print("Fetching token request error \(error)")
                     return
                 }
-                let accessToken = dictionary!["access_token"] as! String
+                self.accessToken = dictionary!["access_token"] as? String
                 DispatchQueue.main.async {
-                    self.appRemote.connectionParameters.accessToken = accessToken
+                    self.appRemote.connectionParameters.accessToken = self.accessToken
                     self.appRemote.connect()
                 }
             }
@@ -73,6 +73,8 @@ class SpotifyHandler: NSObject {
     
     var currentTrack: SPTAppRemoteTrack?
     var trackImage: UIImage?
+    var userPlaylists: [SpotifySimplifiedPlaylistObject] = []
+    var userAlbums: [SpotifyAlbumObject] = []
     
     // MARK: Initilizer
     
@@ -81,7 +83,7 @@ class SpotifyHandler: NSObject {
     // MARK: Functions
     
     func initiate() {
-        let scope: SPTScope = [.appRemoteControl]
+        let scope: SPTScope = [.appRemoteControl, .playlistReadPrivate, .userLibraryRead]
         sessionManager.initiateSession(with: scope, options: .default)
     }
     
@@ -97,6 +99,10 @@ class SpotifyHandler: NSObject {
             // Show the error
             print(error_description)
         }
+    }
+    
+    func play(_ uri: String) {
+        appRemote.authorizeAndPlayURI(uri)
     }
     
     func togglePlayPause(isNowPaused: Bool) {
@@ -128,6 +134,27 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
         })
         let notificationName = Notification.Name("MusicPlayerConnected")
         NotificationCenter.default.post(name: notificationName, object: true)
+        
+        fetchUserPlaylists { data, error in
+            if error != nil {
+                return
+            }
+            guard let playlists = data?.items else {
+                return
+            }
+            self.userPlaylists = playlists
+            NotificationCenter.default.post(name: Notification.Name("PlaylistsFetched"), object: nil)
+        }
+        fetchUserAlbums { data, error in
+            if error != nil {
+                return
+            }
+            guard let albums = data?.ablums else {
+                return
+            }
+            self.userAlbums = albums
+            NotificationCenter.default.post(name: Notification.Name("AlbumsFetched"), object: nil)
+        }
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
@@ -181,7 +208,7 @@ extension SpotifyHandler {
                                        "Content-Type": "application/x-www-form-urlencoded"]
         
         var requestBodyComponents = URLComponents()
-        let scopeAsString = "appRemoteControl"
+        let scopeAsString = "app-remote-control playlist-read-private user-library-read"
         
         requestBodyComponents.queryItems = [
             URLQueryItem(name: "client_id", value: Constant.SpotifyClientID),
@@ -219,5 +246,47 @@ extension SpotifyHandler {
                 callback(image)
             }
         }
+    }
+    
+    func fetchUserPlaylists(completion: @escaping (SpotifyPlaylistData?, Error?) -> Void) {
+        let url = URL(string: "https://api.spotify.com/v1/me/playlists")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let spotifyAuthKey = "Bearer \(accessToken!)"
+        request.allHTTPHeaderFields = ["Authorization": spotifyAuthKey]
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,                              // is there data
+                  let response = response as? HTTPURLResponse,  // is there HTTP response
+                  (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX
+                  error == nil else {                           // was there no error, otherwise ...
+                print("Error fetching playlists \(error?.localizedDescription ?? "")")
+                return completion(nil, error)
+            }
+            let playlistsData = try? JSONDecoder().decode(SpotifyPlaylistData.self, from: data)
+            completion(playlistsData, nil)
+        }
+        task.resume()
+    }
+    
+    func fetchUserAlbums(completion: @escaping (SpotifyAlbumData?, Error?) -> Void) {
+        let url = URL(string: "https://api.spotify.com/v1/me/albums")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let spotifyAuthKey = "Bearer \(accessToken!)"
+        request.allHTTPHeaderFields = ["Authorization": spotifyAuthKey]
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,                              // is there data
+                  let response = response as? HTTPURLResponse,  // is there HTTP response
+                  (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX
+                  error == nil else {                           // was there no error, otherwise ...
+                print("Error fetching albums \(error?.localizedDescription ?? "")")
+                return completion(nil, error)
+            }
+            let albumsData = try? JSONDecoder().decode(SpotifyAlbumData.self, from: data)
+            completion(albumsData, nil)
+        }
+        task.resume()
     }
 }

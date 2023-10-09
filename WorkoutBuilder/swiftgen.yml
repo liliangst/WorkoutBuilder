@@ -1,5 +1,5 @@
-input_dir: WorkoutBuilder/
-output_dir: WorkoutBuilder/Generated/
+input_dir: ./
+output_dir: ./Generated/
 xcassets:
     inputs:
         - Ressources/Colors.xcassets
@@ -8,7 +8,7 @@ xcassets:
         output: Colors.swift
 fonts:
     inputs:
-        - Ressources/Fonts/
+        - Ressources/Fonts
     outputs:
         templateName: swift5
         output: Fonts.swift

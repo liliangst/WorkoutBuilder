@@ -23,11 +23,16 @@
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
+		385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */; };
+		385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA92AC6C7B7009BF4A3 /* SpotifyAlbumData.swift */; };
+		385D9DAD2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */; };
+		385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */; };
+		385D9DB32AC6D549009BF4A3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 385D9DB22AC6D549009BF4A3 /* Kingfisher */; };
+		385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 385D9DB42AC6D847009BF4A3 /* swiftgen.yml */; };
+		385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DB62AC6EA3D009BF4A3 /* Colors.swift */; };
+		385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
-		3881CB4D2AB38C960071168A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3881CB4C2AB38C960071168A /* swiftgen.yml */; };
-		3881CB562AB3A03F0071168A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3881CB552AB3A03F0071168A /* Fonts.swift */; };
-		3881CB582AB3A6490071168A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3881CB572AB3A6490071168A /* Colors.swift */; };
 		389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */; };
 		389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763CB2AAA135100222CD4 /* MusicViewController.swift */; };
 		389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 389763CE2AB20DBD00222CD4 /* KeychainSwift */; };
@@ -75,11 +80,15 @@
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylistData.swift; sourceTree = "<group>"; };
+		385D9DA92AC6C7B7009BF4A3 /* SpotifyAlbumData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAlbumData.swift; sourceTree = "<group>"; };
+		385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyCollectionObject.swift; sourceTree = "<group>"; };
+		385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		385D9DB42AC6D847009BF4A3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = swiftgen.yml; path = WorkoutBuilder/swiftgen.yml; sourceTree = "<group>"; };
+		385D9DB62AC6EA3D009BF4A3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
-		3881CB4C2AB38C960071168A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
-		3881CB552AB3A03F0071168A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		3881CB572AB3A6490071168A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHandler.swift; sourceTree = "<group>"; };
 		389763CB2AAA135100222CD4 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		389763D02AB255DD00222CD4 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
@@ -99,6 +108,7 @@
 				380AF2A02A8BD83A00DE1568 /* SpotifyiOS in Frameworks */,
 				389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */,
 				380AF29B2A8BD56900DE1568 /* Realm in Frameworks */,
+				385D9DB32AC6D549009BF4A3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */,
-				3881CB4C2AB38C960071168A /* swiftgen.yml */,
+				385D9DB42AC6D847009BF4A3 /* swiftgen.yml */,
 				380AF25D2A8BC53400DE1568 /* WorkoutBuilder */,
 				380AF2772A8BC53500DE1568 /* WorkoutBuilderTests */,
 				380AF2812A8BC53500DE1568 /* WorkoutBuilderUITests */,
@@ -150,7 +160,7 @@
 				380AF2982A8BC7AB00DE1568 /* Utilities */,
 				380AF2972A8BC79E00DE1568 /* Supporting Files */,
 				3881CB502AB39B100071168A /* Ressources */,
-				3881CB512AB39B200071168A /* Generated */,
+				385D9DB02AC6D4B5009BF4A3 /* Generated */,
 				380AF26F2A8BC53500DE1568 /* Info.plist */,
 			);
 			path = WorkoutBuilder;
@@ -191,6 +201,7 @@
 				380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */,
 				387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */,
 				386B7A822A965E330000948E /* CustomTabBar.swift */,
+				385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +242,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		385D9DB02AC6D4B5009BF4A3 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				385D9DB62AC6EA3D009BF4A3 /* Colors.swift */,
+				385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		3881CB502AB39B100071168A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,15 +258,6 @@
 				380AF26A2A8BC53500DE1568 /* Colors.xcassets */,
 			);
 			path = Ressources;
-			sourceTree = "<group>";
-		};
-		3881CB512AB39B200071168A /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				3881CB572AB3A6490071168A /* Colors.swift */,
-				3881CB552AB3A03F0071168A /* Fonts.swift */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		389763C72AA9FF5500222CD4 /* Music */ = {
@@ -261,6 +272,9 @@
 			isa = PBXGroup;
 			children = (
 				389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */,
+				385D9DA92AC6C7B7009BF4A3 /* SpotifyAlbumData.swift */,
+				385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */,
+				385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */,
 			);
 			path = Spotify;
 			sourceTree = "<group>";
@@ -283,7 +297,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 380AF2882A8BC53500DE1568 /* Build configuration list for PBXNativeTarget "WorkoutBuilder" */;
 			buildPhases = (
-				3881CB542AB39EC10071168A /* SwiftGen */,
 				380AF2572A8BC53400DE1568 /* Sources */,
 				380AF2582A8BC53400DE1568 /* Frameworks */,
 				380AF2592A8BC53400DE1568 /* Resources */,
@@ -298,6 +311,7 @@
 				380AF29C2A8BD56900DE1568 /* RealmSwift */,
 				380AF29F2A8BD83A00DE1568 /* SpotifyiOS */,
 				389763CE2AB20DBD00222CD4 /* KeychainSwift */,
+				385D9DB22AC6D549009BF4A3 /* Kingfisher */,
 			);
 			productName = WorkoutBuilder;
 			productReference = 380AF25B2A8BC53400DE1568 /* WorkoutBuilder.app */;
@@ -375,6 +389,7 @@
 				380AF2992A8BD56900DE1568 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				380AF29E2A8BD83A00DE1568 /* XCRemoteSwiftPackageReference "ios-sdk" */,
 				389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				385D9DB12AC6D549009BF4A3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 380AF25C2A8BC53400DE1568 /* Products */;
 			projectDirPath = "";
@@ -393,11 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
+				385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */,
 				380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */,
 				380AF26B2A8BC53500DE1568 /* Colors.xcassets in Resources */,
 				380AF2662A8BC53400DE1568 /* Main.storyboard in Resources */,
 				380AF2A32A8BDB7D00DE1568 /* DMSans-Regular.ttf in Resources */,
-				3881CB4D2AB38C960071168A /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,50 +432,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3881CB542AB39EC10071168A /* SwiftGen */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftGen;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd ${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftGen\n\n/usr/bin/xcrun --sdk macosx swift run swiftgen config run --config $SRCROOT/swiftgen.yml\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		380AF2572A8BC53400DE1568 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
-				3881CB582AB3A6490071168A /* Colors.swift in Sources */,
+				385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */,
+				385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */,
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
 				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
+				385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
 				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
+				385D9DAD2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift in Sources */,
 				389B459F2AA628D500373C2D /* Exercice.swift in Sources */,
 				389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */,
 				384085002AA8BC4A00030B5A /* Constant.swift in Sources */,
+				385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */,
+				385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */,
 				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
 				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
 				389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
-				3881CB562AB3A03F0071168A /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +843,14 @@
 				minimumVersion = 1.2.4;
 			};
 		};
+		385D9DB12AC6D549009BF4A3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
 		389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -871,6 +876,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 380AF29E2A8BD83A00DE1568 /* XCRemoteSwiftPackageReference "ios-sdk" */;
 			productName = SpotifyiOS;
+		};
+		385D9DB22AC6D549009BF4A3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 385D9DB12AC6D549009BF4A3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		389763CE2AB20DBD00222CD4 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
