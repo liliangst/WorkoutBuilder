@@ -42,6 +42,7 @@
 		389B459B2AA628CA00373C2D /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459A2AA628CA00373C2D /* Rest.swift */; };
 		389B459D2AA628CE00373C2D /* Sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459C2AA628CE00373C2D /* Sets.swift */; };
 		389B459F2AA628D500373C2D /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459E2AA628D500373C2D /* Exercice.swift */; };
+		38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDA2742AD462E500540038 /* NotificationNameExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		389B459A2AA628CA00373C2D /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		389B459C2AA628CE00373C2D /* Sets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sets.swift; sourceTree = "<group>"; };
 		389B459E2AA628D500373C2D /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
+		38EDA2742AD462E500540038 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			children = (
 				384084FF2AA8BC4A00030B5A /* Constant.swift */,
 				389763D02AB255DD00222CD4 /* TimeFormatter.swift */,
+				38EDA2742AD462E500540038 /* NotificationNameExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -361,7 +364,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					380AF25A2A8BC53400DE1568 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -444,6 +447,7 @@
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
 				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
+				38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */,
 				385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
 				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
@@ -550,6 +554,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -611,6 +616,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

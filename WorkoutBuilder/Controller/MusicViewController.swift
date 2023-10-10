@@ -46,8 +46,8 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlaylistsFetchedNotification), name: Notification.Name("PlaylistsFetched"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlayerConnectedNotification), name: Notification.Name("MusicPlayerConnected"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlaylistsFetchedNotification), name: .PlaylistsFetched, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivePlayerConnectedNotification), name: .MusicPlayerConnected, object: nil)
     }
     
     @objc func didReceivePlayerConnectedNotification(_ n: Notification) {

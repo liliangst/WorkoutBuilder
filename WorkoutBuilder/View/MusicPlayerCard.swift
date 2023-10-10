@@ -11,6 +11,11 @@ struct MusicPlayerCard: View {
     @State var paused: Bool = false
     @State var isEmptyState: Bool = true
     @State var trackImage: UIImage?
+    @State var currentTrack: SPTAppRemoteTrack?
+    
+    @State private var trackTimerAmount = 0.0
+    @State private var trackTimerDuration = 0.0
+    private let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     var body: some View {
         let offset: CGFloat = 5
@@ -27,7 +32,7 @@ struct MusicPlayerCard: View {
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)
-            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("MusicPlayerConnected"))) { notification in
+            .onReceive(NotificationCenter.default.publisher(for: .MusicPlayerConnected)) { notification in
                 isEmptyState = !(notification.object as! Bool)
             }
             .opacity(isEmptyState ? 1.0 : 0.0)
@@ -65,15 +70,15 @@ struct MusicPlayerCard: View {
                         }
                         .cornerRadius(10)
                         .frame(width: 60, height: 60)
-                        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("TrackImageLoaded"))) { notification in
+                        .onReceive(NotificationCenter.default.publisher(for: .TrackImageLoaded)) { notification in
                             trackImage = notification.object as? UIImage
                         }
                         
                         VStack(alignment: .leading, spacing: 0) {
-                            Text(SpotifyHandler.shared.currentTrack?.name ?? "Music title")
+                            Text(currentTrack?.name ?? "Music")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(size: 18))
                                 .lineLimit(2)
-                            Text(SpotifyHandler.shared.currentTrack?.artist.name ?? "Artist")
+                            Text(currentTrack?.artist.name ?? "Artist")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(size: 18))
                                 .lineLimit(1)
                         }
@@ -84,16 +89,36 @@ struct MusicPlayerCard: View {
                     .padding(.horizontal, 20)
                     
                     HStack {
-                        // TODO: progress values
-                        Text("0:20")
-                        ProgressView(value: 0.2)
+                        Text(TimeFormatter.formatToString(timeInMilliseconds: UInt(trackTimerAmount) * 1000))
+                            .frame(width: 35)
+                        ProgressView(value: trackTimerAmount, total: Double(currentTrack?.duration ?? 0) / 1000)
                             .progressViewStyle(MusicPlayerProgressStyle())
-                        Text(TimeFormatter.formatToString(timeInMilliseconds: SpotifyHandler.shared.currentTrack?.duration ?? 0))
+                            .onReceive(timer) { _ in
+                                if trackTimerAmount < Double(currentTrack?.duration ?? 0 / 1000) && !paused {
+                                    trackTimerAmount += 1
+                                }
+                            }
+                            .onReceive(NotificationCenter.default.publisher(for: .TrackPlaybackPosition)) { notification in
+                                guard let position = notification.object as? Int else {
+                                    return
+                                }
+                                trackTimerAmount = Double(position / 1000)
+                            }
+                        Text(TimeFormatter.formatToString(timeInMilliseconds: currentTrack?.duration ?? 0))
+                            .frame(width: 35)
                     }
                     .frame(height: 10)
                     .font(FontFamily.DMSans.regular.swiftUIFont(size: 10))
                     .foregroundColor(Asset.gray1.swiftUIColor)
                     .padding(.horizontal, 15)
+                    .onReceive(NotificationCenter.default.publisher(for: .CurrentTrack)) { notification in
+                        let track = notification.object as? SPTAppRemoteTrack
+                        if currentTrack != nil && currentTrack?.uri != track?.uri {
+                            trackTimerAmount = 0.0
+                            trackTimerDuration = Double(currentTrack?.duration ?? 0)
+                        }
+                        currentTrack = track
+                    }
                     
                     HStack(spacing: 30) {
                         Button {
@@ -110,7 +135,7 @@ struct MusicPlayerCard: View {
                                 .font(.system(size: 32, weight: .heavy))
                                 .frame(width: 30, height: 30)
                         }
-                        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("IsPlayerPaused"))) { notification in
+                        .onReceive(NotificationCenter.default.publisher(for: .IsPlayerPaused)) { notification in
                             paused = notification.object as! Bool
                         }
                         
@@ -128,12 +153,6 @@ struct MusicPlayerCard: View {
             .opacity(isEmptyState ? 0.0 : 1.0)
         }
         .aspectRatio(1.75, contentMode: .fill)
-    }
-}
-
-struct MusicPlayerCard_Previews: PreviewProvider {
-    static var previews: some View {
-        MusicPlayerCard()
     }
 }
 

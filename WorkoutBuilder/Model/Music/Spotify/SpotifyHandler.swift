@@ -72,7 +72,6 @@ class SpotifyHandler: NSObject {
     }()
     
     var currentTrack: SPTAppRemoteTrack?
-    var trackImage: UIImage?
     var userPlaylists: [SpotifySimplifiedPlaylistObject] = []
     var userAlbums: [SpotifyAlbumObject] = []
     
@@ -132,8 +131,7 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
                 debugPrint(error.localizedDescription)
             }
         })
-        let notificationName = Notification.Name("MusicPlayerConnected")
-        NotificationCenter.default.post(name: notificationName, object: true)
+        NotificationCenter.default.post(name: .MusicPlayerConnected, object: true)
         
         fetchUserPlaylists { data, error in
             if error != nil {
@@ -143,7 +141,7 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
                 return
             }
             self.userPlaylists = playlists
-            NotificationCenter.default.post(name: Notification.Name("PlaylistsFetched"), object: nil)
+            NotificationCenter.default.post(name: .PlaylistsFetched, object: nil)
         }
         fetchUserAlbums { data, error in
             if error != nil {
@@ -153,14 +151,13 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
                 return
             }
             self.userAlbums = albums
-            NotificationCenter.default.post(name: Notification.Name("AlbumsFetched"), object: nil)
+            NotificationCenter.default.post(name: .AlbumsFetched, object: nil)
         }
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         print("disconnected")
-        let notificationName = Notification.Name("MusicPlayerConnected")
-        NotificationCenter.default.post(name: notificationName, object: false)
+        NotificationCenter.default.post(name: .MusicPlayerConnected, object: false)
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
@@ -168,16 +165,16 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
     }
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        currentTrack = playerState.track
+        NotificationCenter.default.post(name: .CurrentTrack, object: playerState.track)
+        NotificationCenter.default.post(name: .TrackPlaybackPosition, object: playerState.playbackPosition)
         if !playerState.track.isEqual(currentTrack) {
+            
             fetchArtwork(for: playerState.track) { image in
                 // Send notification after we get the image
-                let notificationName = Notification.Name("TrackImageLoaded")
-                NotificationCenter.default.post(name: notificationName, object: image)
+                NotificationCenter.default.post(name: .TrackImageLoaded, object: image)
             }
         }
-        let notificationName = Notification.Name("IsPlayerPaused")
-        NotificationCenter.default.post(name: notificationName, object: playerState.isPaused)
+        NotificationCenter.default.post(name: .IsPlayerPaused, object: playerState.isPaused)
         
         debugPrint("Track name: \(playerState.track.name)")
         debugPrint("-> \(playerState.track.artist.name)")
@@ -237,12 +234,10 @@ extension SpotifyHandler {
     }
     
     func fetchArtwork(for track: SPTAppRemoteTrack, callback: @escaping (UIImage) -> ()) {
-        appRemote.imageAPI?.fetchImage(forItem: track, with: CGSize.zero)
-        { [weak self] (image, error) in
+        appRemote.imageAPI?.fetchImage(forItem: track, with: CGSize.zero) { (image, error) in
             if let error = error {
                 print("Error fetching track image: " + error.localizedDescription)
             } else if let image = image as? UIImage {
-                self?.trackImage = image
                 callback(image)
             }
         }
