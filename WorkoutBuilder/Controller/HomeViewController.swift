@@ -93,7 +93,6 @@ class HomeViewController: UIViewController {
         stack.addArrangedSubview(label)
         
         label.text = title
-        //label.font = .appTitle1Font
         label.font = FontFamily.PoppinsExtraBold.regular.font(size: 32)
         
         label.translatesAutoresizingMaskIntoConstraints = false

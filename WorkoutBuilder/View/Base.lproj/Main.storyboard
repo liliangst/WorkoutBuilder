@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -186,22 +187,84 @@
             </objects>
             <point key="canvasLocation" x="1224" y="167"/>
         </scene>
-        <!--View Controller-->
+        <!--Workout List View Controller-->
         <scene sceneID="e3c-4c-QtC">
             <objects>
-                <viewController id="Y7V-ZL-bNQ" sceneMemberID="viewController">
+                <viewController id="Y7V-ZL-bNQ" customClass="WorkoutListViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xnG-RH-hep">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-JT-cr6">
+                                <rect key="frame" x="30" y="40" width="333" height="699"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hds-va-Saa">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="619"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <sections/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ari-i0-s5k">
+                                        <rect key="frame" x="273" y="639" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ari-i0-s5k" secondAttribute="height" multiplier="1:1" id="NUq-eM-pcz"/>
+                                            <constraint firstAttribute="height" constant="60" id="dZu-eR-Kxg"/>
+                                        </constraints>
+                                        <color key="tintColor" name="Green"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="plus.app" catalog="system" symbolScale="default"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus.app" catalog="system" symbolScale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="48" weight="heavy"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="E1o-XW-bpw" kind="show" id="CJp-Db-GyZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hds-va-Saa" firstAttribute="top" secondItem="mSh-JT-cr6" secondAttribute="top" id="CbW-XI-gs6"/>
+                                    <constraint firstItem="Hds-va-Saa" firstAttribute="leading" secondItem="mSh-JT-cr6" secondAttribute="leading" id="DxW-6X-tt3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hds-va-Saa" secondAttribute="trailing" id="xBV-mi-AS4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OvG-0h-wqH"/>
                         <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="mSh-JT-cr6" firstAttribute="leading" secondItem="OvG-0h-wqH" secondAttribute="leading" constant="30" id="ZT8-rn-j1w"/>
+                            <constraint firstItem="OvG-0h-wqH" firstAttribute="trailing" secondItem="mSh-JT-cr6" secondAttribute="trailing" constant="30" id="bel-AB-PKk"/>
+                            <constraint firstItem="mSh-JT-cr6" firstAttribute="top" secondItem="xnG-RH-hep" secondAttribute="top" constant="40" id="bjZ-zV-ygv"/>
+                            <constraint firstItem="OvG-0h-wqH" firstAttribute="bottom" secondItem="mSh-JT-cr6" secondAttribute="bottom" constant="30" id="iY4-Ce-C6f"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="list.bullet" catalog="system" id="xXh-9E-mXg" userLabel="Workout"/>
                     <navigationItem key="navigationItem" id="JzQ-n3-O7R"/>
+                    <connections>
+                        <outlet property="addWorkoutButton" destination="ari-i0-s5k" id="591-bE-rrl"/>
+                        <outlet property="workoutsTableView" destination="Hds-va-Saa" id="RoR-hG-Kjj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uq-oc-bRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2178" y="-530"/>
+        </scene>
+        <!--New Workout View Controller-->
+        <scene sceneID="oO2-rw-Pib">
+            <objects>
+                <viewController id="E1o-XW-bpw" customClass="NewWorkoutViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOj-M6-bZh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="t04-W8-ZDZ"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GFS-BJ-cRR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCG-2X-lf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149" y="-530"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HTf-pE-bKd">
@@ -211,6 +274,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vTn-6D-0k8">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Green"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Y7V-ZL-bNQ" kind="relationship" relationship="rootViewController" id="04D-kL-eOj"/>
@@ -284,6 +348,7 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="DarkGray">
             <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

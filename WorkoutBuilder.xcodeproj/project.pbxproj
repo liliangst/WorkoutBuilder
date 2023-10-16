@@ -42,6 +42,11 @@
 		389B459B2AA628CA00373C2D /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459A2AA628CA00373C2D /* Rest.swift */; };
 		389B459D2AA628CE00373C2D /* Sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459C2AA628CE00373C2D /* Sets.swift */; };
 		389B459F2AA628D500373C2D /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B459E2AA628D500373C2D /* Exercice.swift */; };
+		38C5656A2AD6E7C9002A514B /* HostingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565692AD6E7C9002A514B /* HostingCell.swift */; };
+		38C5656C2AD6EBF2002A514B /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */; };
+		38C5656E2AD6F174002A514B /* WorkoutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5656D2AD6F174002A514B /* WorkoutCard.swift */; };
+		38C565712AD6F1BB002A514B /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565702AD6F1BB002A514B /* RaisedButtonStyle.swift */; };
+		38C565732AD94402002A514B /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565722AD94402002A514B /* NewWorkoutViewController.swift */; };
 		38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDA2742AD462E500540038 /* NotificationNameExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +103,11 @@
 		389B459A2AA628CA00373C2D /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		389B459C2AA628CE00373C2D /* Sets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sets.swift; sourceTree = "<group>"; };
 		389B459E2AA628D500373C2D /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
+		38C565692AD6E7C9002A514B /* HostingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingCell.swift; sourceTree = "<group>"; };
+		38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		38C5656D2AD6F174002A514B /* WorkoutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCard.swift; sourceTree = "<group>"; };
+		38C565702AD6F1BB002A514B /* RaisedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButtonStyle.swift; sourceTree = "<group>"; };
+		38C565722AD94402002A514B /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 		38EDA2742AD462E500540038 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +214,9 @@
 				387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */,
 				386B7A822A965E330000948E /* CustomTabBar.swift */,
 				385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */,
+				38C565692AD6E7C9002A514B /* HostingCell.swift */,
+				38C5656D2AD6F174002A514B /* WorkoutCard.swift */,
+				38C5656F2AD6F194002A514B /* ButtonStyle */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				380AF2AD2A939A7400DE1568 /* HomeViewController.swift */,
+				38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */,
+				38C565722AD94402002A514B /* NewWorkoutViewController.swift */,
 				389763CB2AAA135100222CD4 /* MusicViewController.swift */,
 			);
 			path = Controller;
@@ -291,6 +306,14 @@
 				389B459E2AA628D500373C2D /* Exercice.swift */,
 			);
 			path = WorkoutElements;
+			sourceTree = "<group>";
+		};
+		38C5656F2AD6F194002A514B /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				38C565702AD6F1BB002A514B /* RaisedButtonStyle.swift */,
+			);
+			path = ButtonStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,10 +466,14 @@
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
 				385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */,
 				385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */,
+				38C565712AD6F1BB002A514B /* RaisedButtonStyle.swift in Sources */,
+				38C5656A2AD6E7C9002A514B /* HostingCell.swift in Sources */,
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
+				38C565732AD94402002A514B /* NewWorkoutViewController.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
 				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
+				38C5656C2AD6EBF2002A514B /* WorkoutListViewController.swift in Sources */,
 				38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */,
 				385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
@@ -455,6 +482,7 @@
 				389B459F2AA628D500373C2D /* Exercice.swift in Sources */,
 				389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */,
 				384085002AA8BC4A00030B5A /* Constant.swift in Sources */,
+				38C5656E2AD6F174002A514B /* WorkoutCard.swift in Sources */,
 				385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */,
 				385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */,
 				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
