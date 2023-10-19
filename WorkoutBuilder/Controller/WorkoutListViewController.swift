@@ -13,7 +13,7 @@ class WorkoutListViewController: UIViewController {
         didSet {
             workoutsTableView.delegate = self
             workoutsTableView.dataSource = self
-            workoutsTableView.register(HostingCell<WorkoutCard>.self, forCellReuseIdentifier: "WorkoutCell")
+            workoutsTableView.register(HostingCell<WorkoutCardRectangle>.self, forCellReuseIdentifier: "WorkoutCell")
             workoutsTableView.showsVerticalScrollIndicator = false
             workoutsTableView.showsHorizontalScrollIndicator = false
             workoutsTableView.separatorStyle = .none
@@ -40,8 +40,8 @@ extension WorkoutListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! HostingCell<WorkoutCard>
-        cell.set(rootView: WorkoutCard(title: "Title", numberOfExercises: 4), parentController: self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! HostingCell<WorkoutCardRectangle>
+        cell.set(rootView: WorkoutCardRectangle(title: "Title", numberOfExercises: 4), parentController: self)
         cell.backgroundColor = .clear
         return cell
     }

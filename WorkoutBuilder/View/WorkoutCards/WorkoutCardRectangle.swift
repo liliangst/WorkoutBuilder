@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkoutCard: View {
+struct WorkoutCardRectangle: View {
     @State var isFavorite: Bool = false
     let title: String
     let numberOfExercises: Int
@@ -96,5 +96,5 @@ struct WorkoutCard: View {
 }
 
 #Preview {
-    WorkoutCard(title: "Title", numberOfExercises: 4)
+    WorkoutCardRectangle(title: "Title", numberOfExercises: 4)
 }
