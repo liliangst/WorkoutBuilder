@@ -27,11 +27,27 @@ class WorkoutListViewController: UIViewController {
             addWorkoutButton.imageView?.tintColor = Asset.green.color
         }
     }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "OpenEditWorkoutSegue" else {
+            return
+        }
+        
+        if let workout = sender as? Workout {
+            (segue.destination as! EditWorkoutViewController).workout = workout
+        } else {
+            (segue.destination as! EditWorkoutViewController).workout = Workout()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        workoutsTableView.reloadData()
+    }
 }
 
 extension WorkoutListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        WorkoutManager.workouts.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,13 +57,21 @@ extension WorkoutListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! HostingCell<WorkoutCardRectangle>
-        cell.set(rootView: WorkoutCardRectangle(title: "Title", numberOfExercises: 4), parentController: self)
+        let workout = WorkoutManager.workouts[indexPath.row]
+        cell.set(rootView: WorkoutCardRectangle(workout: workout, editDelegate: self), parentController: self)
+        cell.reloadInputViews()
         cell.backgroundColor = .clear
         return cell
     }
-    
+
 }
 
 extension WorkoutListViewController: UITableViewDelegate {
     
+}
+
+extension WorkoutListViewController: EditWorkoutDelegate {
+    func edit(_ workout: Workout) {
+        performSegue(withIdentifier: "OpenEditWorkoutSegue", sender: workout)
+    }
 }

@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
-class WorkoutElement: EmbeddedObject {}
+class WorkoutElement: EmbeddedObject {
+    @Persisted(primaryKey: true) var id: ObjectId
+}
 
 

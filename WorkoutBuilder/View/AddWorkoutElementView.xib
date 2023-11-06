@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddWorkoutElementViewController" customModule="WorkoutBuilder" customModuleProvider="target">
+            <connections>
+                <outlet property="addExerciseButton" destination="7QZ-Uw-n2P" id="Bau-YG-qy8"/>
+                <outlet property="addRestButton" destination="n5n-8f-1sJ" id="cn9-zW-E8r"/>
+                <outlet property="addSetButton" destination="gUY-RU-O3r" id="veN-SR-wsh"/>
+                <outlet property="exerciseBackgroundView" destination="gT5-Fx-BP1" id="N9c-aG-0Zm"/>
+                <outlet property="restBackgroundView" destination="U9d-aG-Mv1" id="wq1-L3-U73"/>
+                <outlet property="setBackgroundView" destination="mJ0-fr-I4L" id="sa5-LV-tJ6"/>
+                <outlet property="titleLabel" destination="rri-Hs-I6r" id="g7h-gn-h78"/>
+                <outlet property="view" destination="tem-Cq-9Ff" id="iES-9s-MZO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tem-Cq-9Ff">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LsC-D2-eEq">
+                    <rect key="frame" x="0.0" y="59" width="393" height="360"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rri-Hs-I6r">
+                            <rect key="frame" x="176" y="0.0" width="41.333333333333343" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="gws-se-Csl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-fr-I4L" userLabel="Set Background Border">
+                            <rect key="frame" x="45" y="75" width="303" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUY-RU-O3r">
+                                    <rect key="frame" x="0.0" y="0.0" width="303" height="85"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="set"/>
+                                    <connections>
+                                        <action selector="didTapWorkoutElement:" destination="-1" eventType="touchUpInside" id="abu-LY-FI2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="gUY-RU-O3r" firstAttribute="top" secondItem="mJ0-fr-I4L" secondAttribute="top" id="3A3-8z-O2U"/>
+                                <constraint firstAttribute="height" constant="85" id="ZaA-5G-ACo"/>
+                                <constraint firstItem="gUY-RU-O3r" firstAttribute="leading" secondItem="mJ0-fr-I4L" secondAttribute="leading" id="eDM-0g-8Tu"/>
+                                <constraint firstAttribute="bottom" secondItem="gUY-RU-O3r" secondAttribute="bottom" id="vP8-m7-NOe"/>
+                                <constraint firstAttribute="trailing" secondItem="gUY-RU-O3r" secondAttribute="trailing" id="vt2-eJ-23a"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-Fx-BP1" userLabel="Exercise Background Border">
+                            <rect key="frame" x="45" y="175" width="303" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-Uw-n2P">
+                                    <rect key="frame" x="0.0" y="0.0" width="303" height="85"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="exercise"/>
+                                    <connections>
+                                        <action selector="didTapWorkoutElement:" destination="-1" eventType="touchUpInside" id="epn-gA-n58"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7QZ-Uw-n2P" secondAttribute="trailing" id="CPg-Es-Y7l"/>
+                                <constraint firstItem="7QZ-Uw-n2P" firstAttribute="leading" secondItem="gT5-Fx-BP1" secondAttribute="leading" id="Um1-dz-eVK"/>
+                                <constraint firstItem="7QZ-Uw-n2P" firstAttribute="top" secondItem="gT5-Fx-BP1" secondAttribute="top" id="l78-gt-w6k"/>
+                                <constraint firstAttribute="height" constant="85" id="sxu-ZT-CEQ"/>
+                                <constraint firstAttribute="bottom" secondItem="7QZ-Uw-n2P" secondAttribute="bottom" id="xmm-YO-tmE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-aG-Mv1" userLabel="Rest Background Border">
+                            <rect key="frame" x="45" y="275" width="303" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-8f-1sJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="303" height="85"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="rest"/>
+                                    <connections>
+                                        <action selector="didTapWorkoutElement:" destination="-1" eventType="touchUpInside" id="kDo-pZ-b96"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="n5n-8f-1sJ" secondAttribute="bottom" id="8t4-pG-5oa"/>
+                                <constraint firstAttribute="trailing" secondItem="n5n-8f-1sJ" secondAttribute="trailing" id="HeT-zK-XOa"/>
+                                <constraint firstItem="n5n-8f-1sJ" firstAttribute="top" secondItem="U9d-aG-Mv1" secondAttribute="top" id="l12-44-z5p"/>
+                                <constraint firstAttribute="height" constant="85" id="rUn-6y-CQW"/>
+                                <constraint firstItem="n5n-8f-1sJ" firstAttribute="leading" secondItem="U9d-aG-Mv1" secondAttribute="leading" id="wgj-ck-5KH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mJ0-fr-I4L" secondAttribute="trailing" constant="45" id="AvU-Si-786"/>
+                        <constraint firstAttribute="trailing" secondItem="U9d-aG-Mv1" secondAttribute="trailing" constant="45" id="gIW-t4-Rcb"/>
+                        <constraint firstItem="U9d-aG-Mv1" firstAttribute="leading" secondItem="LsC-D2-eEq" secondAttribute="leading" constant="45" id="jGM-Xs-Zj0"/>
+                        <constraint firstItem="mJ0-fr-I4L" firstAttribute="leading" secondItem="LsC-D2-eEq" secondAttribute="leading" constant="45" id="lMf-Lg-oTN"/>
+                        <constraint firstItem="gT5-Fx-BP1" firstAttribute="leading" secondItem="LsC-D2-eEq" secondAttribute="leading" constant="45" id="vkt-sG-QBE"/>
+                        <constraint firstAttribute="trailing" secondItem="gT5-Fx-BP1" secondAttribute="trailing" constant="45" id="xBu-7z-SP6"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="aAx-ap-PaP"/>
+            <color key="backgroundColor" name="Gray3"/>
+            <constraints>
+                <constraint firstItem="LsC-D2-eEq" firstAttribute="leading" secondItem="aAx-ap-PaP" secondAttribute="leading" id="7ml-p1-bSY"/>
+                <constraint firstItem="LsC-D2-eEq" firstAttribute="top" secondItem="aAx-ap-PaP" secondAttribute="top" id="LZd-hq-beA"/>
+                <constraint firstItem="aAx-ap-PaP" firstAttribute="trailing" secondItem="LsC-D2-eEq" secondAttribute="trailing" id="Pi6-hy-cgF"/>
+            </constraints>
+            <point key="canvasLocation" x="-398" y="-627"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Gray3">
+            <color red="0.3449999988079071" green="0.3449999988079071" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

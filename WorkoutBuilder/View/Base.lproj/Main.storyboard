@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUn-0E-JrM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUn-0E-JrM">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-ExtraBold.ttf">
+            <string>Poppins-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="jiC-Br-M8I">
@@ -219,7 +224,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="48" weight="heavy"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="E1o-XW-bpw" kind="show" id="CJp-Db-GyZ"/>
+                                            <segue destination="E1o-XW-bpw" kind="show" identifier="OpenEditWorkoutSegue" id="CJp-Db-GyZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -250,21 +255,60 @@
             </objects>
             <point key="canvasLocation" x="2178" y="-530"/>
         </scene>
-        <!--New Workout View Controller-->
+        <!--Edit Workout View Controller-->
         <scene sceneID="oO2-rw-Pib">
             <objects>
-                <viewController id="E1o-XW-bpw" customClass="NewWorkoutViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E1o-XW-bpw" customClass="EditWorkoutViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOj-M6-bZh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-lC-fhv">
+                                <rect key="frame" x="35" y="103" width="323" height="666"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Titre..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-vR-TlK">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="uuC-fc-dYo"/>
+                                        </constraints>
+                                        <color key="textColor" name="Gray1"/>
+                                        <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins ExtraBold" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a34-Mx-wmK">
+                                        <rect key="frame" x="0.0" y="75" width="323" height="591"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t04-W8-ZDZ"/>
                         <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="fWY-lC-fhv" firstAttribute="leading" secondItem="t04-W8-ZDZ" secondAttribute="leading" constant="35" id="0Pv-bY-sRa"/>
+                            <constraint firstItem="fWY-lC-fhv" firstAttribute="top" secondItem="t04-W8-ZDZ" secondAttribute="top" id="3EJ-9m-4ix"/>
+                            <constraint firstItem="t04-W8-ZDZ" firstAttribute="bottom" secondItem="fWY-lC-fhv" secondAttribute="bottom" id="Vla-HR-TXs"/>
+                            <constraint firstItem="t04-W8-ZDZ" firstAttribute="trailing" secondItem="fWY-lC-fhv" secondAttribute="trailing" constant="35" id="cbb-1y-uNg"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sd6-H2-tJb" appends="YES" id="to0-xR-Scp"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="GFS-BJ-cRR"/>
+                    <connections>
+                        <outlet property="tableView" destination="a34-Mx-wmK" id="aPo-0B-hsi"/>
+                        <outlet property="titleTextField" destination="ezb-vR-TlK" id="rqp-6Z-1sO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCG-2X-lf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sd6-H2-tJb">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="E1o-XW-bpw" id="jqs-oH-ALc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3149" y="-530"/>
+            <point key="canvasLocation" x="3148.8549618320608" y="-530.28169014084506"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HTf-pE-bKd">

@@ -10,8 +10,9 @@ import RealmSwift
 
 class Workout: Object {
     @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var isFavorite: Bool = false
     @Persisted var title: String
     @Persisted var numberOfExercice: Int
     @Persisted var totalDuration: TimeInterval?
-    @Persisted var elements: List<WorkoutElement>
+    @Persisted var elements: LinkedList<WorkoutElement>? = LinkedList<WorkoutElement>()
 }

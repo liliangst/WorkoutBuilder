@@ -9,8 +9,16 @@ import SwiftUI
 
 struct WorkoutCardSquare: View {
     @State var isFavorite: Bool = false
-    let title: String
-    let numberOfExercises: Int
+    
+    let delegate: EditWorkoutDelegate
+    var workout: Workout
+    
+    init(workout: Workout, editDelegate: EditWorkoutDelegate) {
+        delegate = editDelegate
+        
+        self.workout = workout
+        isFavorite = workout.isFavorite
+    }
     
     var body: some View {
         Button {
@@ -19,14 +27,19 @@ struct WorkoutCardSquare: View {
             ZStack {
                 VStack(spacing: 5) {
                     HStack {
-                        Text(title)
+                        Text(workout.title)
                             .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 24))
                             .foregroundColor(Asset.gray1.swiftUIColor)
                         
                         Spacer()
                         
                         Button {
-                            isFavorite.toggle()
+                            if workout.isFavorite {
+                                WorkoutManager.removeFromFavorite(workout: workout)
+                            } else {
+                                WorkoutManager.addToFavorite(workout: workout)
+                            }
+                            isFavorite = workout.isFavorite
                         } label: {
                             Image(systemName: isFavorite ? "star.fill" : "star")
                                 .resizable()
@@ -41,8 +54,8 @@ struct WorkoutCardSquare: View {
                     
                     Spacer()
                     
-                    Text(String(numberOfExercises) +
-                         String(numberOfExercises > 1 ? " exercices" : " exercice") +
+                    Text(String(workout.numberOfExercice) +
+                         String(workout.numberOfExercice > 1 ? " exercices" : " exercice") +
                          "\n1h10")
                     .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                     .foregroundColor(Asset.gray1.swiftUIColor)
@@ -67,7 +80,7 @@ struct WorkoutCardSquare: View {
                         }
                         
                         Button {
-                            // TODO: Open workout edition page
+                            delegate.edit(workout)
                         } label: {
                             Image(systemName: "square.and.pencil")
                                 .resizable()
@@ -86,8 +99,4 @@ struct WorkoutCardSquare: View {
         .padding(.vertical, 10)
         .buttonStyle(RaisedButtonStyle())
     }
-}
-
-#Preview {
-    WorkoutCardSquare(title: "Title", numberOfExercises: 5)
 }

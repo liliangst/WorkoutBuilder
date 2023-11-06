@@ -13,7 +13,7 @@ struct FavoriteWorkoutsCarousel: View {
     @State var favoriteWorkoutTransition: AnyTransition = .identity
     var body: some View {
         Group {
-            if isEmptyState {
+            if WorkoutManager.favoriteWorkouts.count == 0 {
                 VStack {
                     Text("Pas de séances favorites")
                         .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
@@ -48,14 +48,14 @@ struct FavoriteWorkoutsCarousel: View {
                     Spacer()
                     
                     VStack {
-                        ForEach(WorkoutManager.favoriteWorkouts, id: \.self) { index in
+                        ForEach(0..<WorkoutManager.favoriteWorkouts.count) { index in
                             if index == currentIndex {
-                                WorkoutCardSquare(title: "Title", numberOfExercises: currentIndex)
+                                WorkoutCardSquare(workout: WorkoutManager.favoriteWorkouts[index], editDelegate: self)
                                     .transition(favoriteWorkoutTransition)
                             }
                         }
                         HStack {
-                            ForEach(WorkoutManager.favoriteWorkouts,  id: \.self) { index in
+                            ForEach(0..<WorkoutManager.favoriteWorkouts.count) { index in
                                 Image(systemName: "circle.fill")
                                     .resizable()
                                     .aspectRatio(1.0, contentMode: .fit)
@@ -89,4 +89,10 @@ struct FavoriteWorkoutsCarousel: View {
 
 #Preview {
     FavoriteWorkoutsCarousel()
+}
+
+extension FavoriteWorkoutsCarousel: EditWorkoutDelegate {
+    func edit(_ workout: Workout) {
+        
+    }
 }

@@ -33,6 +33,18 @@
 		385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
+		387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */; };
+		387F16C82AEABF06006827E4 /* WorkoutExerciceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C72AEABF06006827E4 /* WorkoutExerciceCell.xib */; };
+		387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */; };
+		387F16CC2AEABF45006827E4 /* WorkoutSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16CB2AEABF45006827E4 /* WorkoutSetCell.xib */; };
+		38802E302AEFF48700195D45 /* AddWorkoutElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38802E2E2AEFF48700195D45 /* AddWorkoutElementViewController.swift */; };
+		38802E312AEFF48700195D45 /* AddWorkoutElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38802E2F2AEFF48700195D45 /* AddWorkoutElementView.xib */; };
+		38802E332AF2578300195D45 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38802E322AF2578300195D45 /* LinkedList.swift */; };
+		3887D1B92AE82B090086FA2C /* AddWorkoutElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D1B82AE82B090086FA2C /* AddWorkoutElementCell.swift */; };
+		3887D1BC2AE918DA0086FA2C /* WorkoutExerciceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D1BB2AE918DA0086FA2C /* WorkoutExerciceCell.swift */; };
+		3887D1BE2AE9600E0086FA2C /* WorkoutRestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D1BD2AE9600E0086FA2C /* WorkoutRestCell.swift */; };
+		3887D1C02AE9A8040086FA2C /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D1BF2AE9A8040086FA2C /* WorkoutSetCell.swift */; };
+		3887D1C22AE9AB180086FA2C /* WorkoutSetCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D1C12AE9AB180086FA2C /* WorkoutSetCell+Extension.swift */; };
 		389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */; };
 		389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389763CB2AAA135100222CD4 /* MusicViewController.swift */; };
 		389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 389763CE2AB20DBD00222CD4 /* KeychainSwift */; };
@@ -46,7 +58,7 @@
 		38C5656C2AD6EBF2002A514B /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */; };
 		38C5656E2AD6F174002A514B /* WorkoutCardRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5656D2AD6F174002A514B /* WorkoutCardRectangle.swift */; };
 		38C565712AD6F1BB002A514B /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565702AD6F1BB002A514B /* RaisedButtonStyle.swift */; };
-		38C565732AD94402002A514B /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565722AD94402002A514B /* NewWorkoutViewController.swift */; };
+		38C565732AD94402002A514B /* EditWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565722AD94402002A514B /* EditWorkoutViewController.swift */; };
 		38C565762ADEBF62002A514B /* WorkoutCardSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565752ADEBF62002A514B /* WorkoutCardSquare.swift */; };
 		38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDA2742AD462E500540038 /* NotificationNameExtension.swift */; };
 		38F6DF132AE16F60002CB3E5 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6DF122AE16F60002CB3E5 /* WorkoutManager.swift */; };
@@ -97,6 +109,18 @@
 		385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
+		387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkoutElementCell.xib; sourceTree = "<group>"; };
+		387F16C72AEABF06006827E4 /* WorkoutExerciceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutExerciceCell.xib; sourceTree = "<group>"; };
+		387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutRestCell.xib; sourceTree = "<group>"; };
+		387F16CB2AEABF45006827E4 /* WorkoutSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutSetCell.xib; sourceTree = "<group>"; };
+		38802E2E2AEFF48700195D45 /* AddWorkoutElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutElementViewController.swift; sourceTree = "<group>"; };
+		38802E2F2AEFF48700195D45 /* AddWorkoutElementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkoutElementView.xib; sourceTree = "<group>"; };
+		38802E322AF2578300195D45 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		3887D1B82AE82B090086FA2C /* AddWorkoutElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutElementCell.swift; sourceTree = "<group>"; };
+		3887D1BB2AE918DA0086FA2C /* WorkoutExerciceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutExerciceCell.swift; sourceTree = "<group>"; };
+		3887D1BD2AE9600E0086FA2C /* WorkoutRestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRestCell.swift; sourceTree = "<group>"; };
+		3887D1BF2AE9A8040086FA2C /* WorkoutSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSetCell.swift; sourceTree = "<group>"; };
+		3887D1C12AE9AB180086FA2C /* WorkoutSetCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutSetCell+Extension.swift"; sourceTree = "<group>"; };
 		389763C92AA9FFA200222CD4 /* SpotifyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHandler.swift; sourceTree = "<group>"; };
 		389763CB2AAA135100222CD4 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		389763D02AB255DD00222CD4 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
@@ -109,7 +133,7 @@
 		38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
 		38C5656D2AD6F174002A514B /* WorkoutCardRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardRectangle.swift; sourceTree = "<group>"; };
 		38C565702AD6F1BB002A514B /* RaisedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButtonStyle.swift; sourceTree = "<group>"; };
-		38C565722AD94402002A514B /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		38C565722AD94402002A514B /* EditWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkoutViewController.swift; sourceTree = "<group>"; };
 		38C565752ADEBF62002A514B /* WorkoutCardSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardSquare.swift; sourceTree = "<group>"; };
 		38EDA2742AD462E500540038 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		38F6DF122AE16F60002CB3E5 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
@@ -220,6 +244,8 @@
 				386B7A822A965E330000948E /* CustomTabBar.swift */,
 				385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */,
 				38C565692AD6E7C9002A514B /* HostingCell.swift */,
+				38802E2F2AEFF48700195D45 /* AddWorkoutElementView.xib */,
+				3887D1BA2AE918BB0086FA2C /* EditWorkoutCells */,
 				38C565742ADEBF29002A514B /* WorkoutCards */,
 				38C5656F2AD6F194002A514B /* ButtonStyle */,
 			);
@@ -231,7 +257,9 @@
 			children = (
 				380AF2AD2A939A7400DE1568 /* HomeViewController.swift */,
 				38C5656B2AD6EBF2002A514B /* WorkoutListViewController.swift */,
-				38C565722AD94402002A514B /* NewWorkoutViewController.swift */,
+				38C565722AD94402002A514B /* EditWorkoutViewController.swift */,
+				38802E2E2AEFF48700195D45 /* AddWorkoutElementViewController.swift */,
+				3887D1C12AE9AB180086FA2C /* WorkoutSetCell+Extension.swift */,
 				389763CB2AAA135100222CD4 /* MusicViewController.swift */,
 			);
 			path = Controller;
@@ -252,6 +280,7 @@
 				384084FF2AA8BC4A00030B5A /* Constant.swift */,
 				389763D02AB255DD00222CD4 /* TimeFormatter.swift */,
 				38EDA2742AD462E500540038 /* NotificationNameExtension.swift */,
+				38802E322AF2578300195D45 /* LinkedList.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -274,6 +303,43 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		387F16C32AEABEA1006827E4 /* AddWorkoutElementCell */ = {
+			isa = PBXGroup;
+			children = (
+				3887D1B82AE82B090086FA2C /* AddWorkoutElementCell.swift */,
+				387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */,
+			);
+			path = AddWorkoutElementCell;
+			sourceTree = "<group>";
+		};
+		387F16C42AEABEB8006827E4 /* WorkoutExerciceCell */ = {
+			isa = PBXGroup;
+			children = (
+				3887D1BB2AE918DA0086FA2C /* WorkoutExerciceCell.swift */,
+				387F16C72AEABF06006827E4 /* WorkoutExerciceCell.xib */,
+			);
+			path = WorkoutExerciceCell;
+			sourceTree = "<group>";
+		};
+		387F16C52AEABEC4006827E4 /* WorkoutRestCell */ = {
+			isa = PBXGroup;
+			children = (
+				3887D1BD2AE9600E0086FA2C /* WorkoutRestCell.swift */,
+				387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */,
+			);
+			path = WorkoutRestCell;
+			sourceTree = "<group>";
+		};
+		387F16C62AEABEC6006827E4 /* WorkoutSetCell */ = {
+			isa = PBXGroup;
+			children = (
+				3887D1BF2AE9A8040086FA2C /* WorkoutSetCell.swift */,
+				387F16CB2AEABF45006827E4 /* WorkoutSetCell.xib */,
+			);
+			name = WorkoutSetCell;
+			path = "New Group/WorkoutSetCell";
+			sourceTree = "<group>";
+		};
 		3881CB502AB39B100071168A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +347,17 @@
 				380AF26A2A8BC53500DE1568 /* Colors.xcassets */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		3887D1BA2AE918BB0086FA2C /* EditWorkoutCells */ = {
+			isa = PBXGroup;
+			children = (
+				387F16C32AEABEA1006827E4 /* AddWorkoutElementCell */,
+				387F16C42AEABEB8006827E4 /* WorkoutExerciceCell */,
+				387F16C52AEABEC4006827E4 /* WorkoutRestCell */,
+				387F16C62AEABEC6006827E4 /* WorkoutSetCell */,
+			);
+			path = EditWorkoutCells;
 			sourceTree = "<group>";
 		};
 		389763C72AA9FF5500222CD4 /* Music */ = {
@@ -448,10 +525,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
+				387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */,
 				385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */,
+				387F16C82AEABF06006827E4 /* WorkoutExerciceCell.xib in Resources */,
+				387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */,
 				380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */,
 				380AF26B2A8BC53500DE1568 /* Colors.xcassets in Resources */,
 				380AF2662A8BC53400DE1568 /* Main.storyboard in Resources */,
+				38802E312AEFF48700195D45 /* AddWorkoutElementView.xib in Resources */,
+				387F16CC2AEABF45006827E4 /* WorkoutSetCell.xib in Resources */,
 				380AF2A32A8BDB7D00DE1568 /* DMSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,17 +561,23 @@
 			files = (
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
 				385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */,
+				3887D1B92AE82B090086FA2C /* AddWorkoutElementCell.swift in Sources */,
 				385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */,
 				38C565712AD6F1BB002A514B /* RaisedButtonStyle.swift in Sources */,
 				38C5656A2AD6E7C9002A514B /* HostingCell.swift in Sources */,
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
-				38C565732AD94402002A514B /* NewWorkoutViewController.swift in Sources */,
+				38C565732AD94402002A514B /* EditWorkoutViewController.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
+				38802E302AEFF48700195D45 /* AddWorkoutElementViewController.swift in Sources */,
+				3887D1BE2AE9600E0086FA2C /* WorkoutRestCell.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
+				3887D1C22AE9AB180086FA2C /* WorkoutSetCell+Extension.swift in Sources */,
 				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
 				38C5656C2AD6EBF2002A514B /* WorkoutListViewController.swift in Sources */,
+				3887D1BC2AE918DA0086FA2C /* WorkoutExerciceCell.swift in Sources */,
 				38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */,
 				38F6DF132AE16F60002CB3E5 /* WorkoutManager.swift in Sources */,
+				38802E332AF2578300195D45 /* LinkedList.swift in Sources */,
 				38C565762ADEBF62002A514B /* WorkoutCardSquare.swift in Sources */,
 				385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
@@ -502,6 +590,7 @@
 				385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */,
 				385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */,
 				389B45972AA61D1100373C2D /* WorkoutElement.swift in Sources */,
+				3887D1C02AE9A8040086FA2C /* WorkoutSetCell.swift in Sources */,
 				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
 				389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */,
@@ -613,7 +702,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -669,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -697,7 +786,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -734,7 +823,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

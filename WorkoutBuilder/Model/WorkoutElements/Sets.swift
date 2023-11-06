@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class Sets: WorkoutElement {
-    @Persisted var exercices: List<Exercice>
+    @Persisted var elements: LinkedList<WorkoutElement>? = LinkedList<WorkoutElement>()
     @Persisted var restBetweenSet: TimeInterval?
     @Persisted var numberOfSets: Int
 }

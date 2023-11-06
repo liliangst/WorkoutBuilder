@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkoutRestCell" rowHeight="105" id="vVG-ff-vAn" customClass="WorkoutRestCell" customModule="WorkoutBuilder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vVG-ff-vAn" id="iEh-Ld-u8J">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-Nn-7cQ">
+                        <rect key="frame" x="10" y="10" width="283" height="85"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jPo-9E-cgc">
+                                <rect key="frame" x="88" y="31.333333333333336" width="107.33333333333331" height="22.333333333333336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77K-U7-qNz" userLabel="Rest">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcJ-dt-zVI">
+                                        <rect key="frame" x="58.666666666666657" y="1" width="48.666666666666657" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ie-yT-dpP">
+                                <rect key="frame" x="233" y="0.0" width="50" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="6Md-7e-hOz"/>
+                                    <constraint firstAttribute="width" secondItem="6ie-yT-dpP" secondAttribute="height" multiplier="50:85" id="i1m-Jn-zuK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jPo-9E-cgc" firstAttribute="centerX" secondItem="cZ7-Nn-7cQ" secondAttribute="centerX" id="2hI-17-bNa"/>
+                            <constraint firstAttribute="bottom" secondItem="6ie-yT-dpP" secondAttribute="bottom" id="DPO-Ae-Sdz"/>
+                            <constraint firstItem="jPo-9E-cgc" firstAttribute="centerY" secondItem="cZ7-Nn-7cQ" secondAttribute="centerY" id="djg-jq-P24"/>
+                            <constraint firstAttribute="trailing" secondItem="6ie-yT-dpP" secondAttribute="trailing" id="fqd-7B-0pm"/>
+                            <constraint firstItem="6ie-yT-dpP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jPo-9E-cgc" secondAttribute="trailing" id="ghg-ld-oiQ"/>
+                            <constraint firstItem="6ie-yT-dpP" firstAttribute="top" secondItem="cZ7-Nn-7cQ" secondAttribute="top" id="z2m-6H-pt5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cZ7-Nn-7cQ" secondAttribute="trailing" constant="10" id="B0g-DV-fhb"/>
+                    <constraint firstItem="cZ7-Nn-7cQ" firstAttribute="leading" secondItem="iEh-Ld-u8J" secondAttribute="leading" constant="10" id="rjL-Kg-diG"/>
+                    <constraint firstAttribute="bottom" secondItem="cZ7-Nn-7cQ" secondAttribute="bottom" constant="10" id="xbh-7h-eqJ"/>
+                    <constraint firstItem="cZ7-Nn-7cQ" firstAttribute="top" secondItem="iEh-Ld-u8J" secondAttribute="top" constant="10" id="yPj-55-FQD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="borderView" destination="cZ7-Nn-7cQ" id="azz-5f-agp"/>
+                <outlet property="editButton" destination="6ie-yT-dpP" id="Mrc-PV-XK0"/>
+                <outlet property="restTimeLabel" destination="BcJ-dt-zVI" id="2d3-Eu-axh"/>
+                <outlet property="restTitle" destination="77K-U7-qNz" id="ZXl-G8-Vqc"/>
+            </connections>
+            <point key="canvasLocation" x="656" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
