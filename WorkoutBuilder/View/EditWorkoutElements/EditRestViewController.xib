@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditRestViewController" customModule="WorkoutBuilder" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="ywx-wy-qgu" id="jhf-Fw-vRc"/>
+                <outlet property="backgroundView" destination="i5M-Pr-FkT" id="EDs-gl-YNt"/>
+                <outlet property="cardBackgroundView" destination="4Ly-bh-r8y" id="cac-lM-lqM"/>
+                <outlet property="deleteButton" destination="ION-eg-YOd" id="ckn-El-taI"/>
+                <outlet property="label" destination="Ecg-az-RPR" id="LTH-Ez-vMd"/>
+                <outlet property="restTimePicker" destination="6EH-dM-DlY" id="6lD-xc-s0y"/>
+                <outlet property="validateButton" destination="ene-rz-mhB" id="Rwd-pz-yrv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ly-bh-r8y">
+                    <rect key="frame" x="26.666666666666657" y="273.66666666666663" width="340" height="304.66666666666663"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5xs-Cf-xLB">
+                            <rect key="frame" x="10" y="10" width="320" height="284.66666666666669"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-g7-kfZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="34.333333333333336"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywx-wy-qgu" userLabel="Back Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="tapBackButton" destination="-1" eventType="touchUpInside" id="f9l-Mw-lYf"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-az-RPR">
+                                            <rect key="frame" x="139.33333333333334" y="6.9999999999999982" width="41.333333333333343" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ene-rz-mhB" userLabel="Validate Button">
+                                            <rect key="frame" x="245" y="0.0" width="75" height="34.333333333333336"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="tapValidateButton" destination="-1" eventType="touchUpInside" id="1eS-aY-Drs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ene-rz-mhB" secondAttribute="trailing" id="2fz-SH-h10"/>
+                                        <constraint firstItem="ywx-wy-qgu" firstAttribute="leading" secondItem="fYb-g7-kfZ" secondAttribute="leading" id="rWp-0b-cC2"/>
+                                        <constraint firstItem="Ecg-az-RPR" firstAttribute="centerX" secondItem="fYb-g7-kfZ" secondAttribute="centerX" id="xR2-Ux-H2W"/>
+                                    </constraints>
+                                </stackView>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6EH-dM-DlY">
+                                    <rect key="frame" x="0.0" y="34.333333333333314" width="320" height="216"/>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ION-eg-YOd">
+                                    <rect key="frame" x="25" y="250.33333333333334" width="270" height="34.333333333333343"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="tapDeleteButton" destination="-1" eventType="touchUpInside" id="xAX-CK-HTF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ION-eg-YOd" secondAttribute="trailing" constant="25" id="1lC-20-ROb"/>
+                                <constraint firstAttribute="trailing" secondItem="fYb-g7-kfZ" secondAttribute="trailing" id="Mz1-HZ-Wg3"/>
+                                <constraint firstItem="ION-eg-YOd" firstAttribute="leading" secondItem="5xs-Cf-xLB" secondAttribute="leading" constant="25" id="RpP-yV-kKb"/>
+                                <constraint firstItem="fYb-g7-kfZ" firstAttribute="leading" secondItem="5xs-Cf-xLB" secondAttribute="leading" id="iwP-g9-yhd"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="Gray3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5xs-Cf-xLB" secondAttribute="bottom" constant="10" id="BhU-MV-Y9h"/>
+                        <constraint firstItem="5xs-Cf-xLB" firstAttribute="top" secondItem="4Ly-bh-r8y" secondAttribute="top" constant="10" id="EMT-CH-fqu"/>
+                        <constraint firstAttribute="trailing" secondItem="5xs-Cf-xLB" secondAttribute="trailing" constant="10" id="LtC-Qf-u4y"/>
+                        <constraint firstItem="5xs-Cf-xLB" firstAttribute="leading" secondItem="4Ly-bh-r8y" secondAttribute="leading" constant="10" id="MMG-CE-BFT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="DarkGray"/>
+            <constraints>
+                <constraint firstItem="4Ly-bh-r8y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="868-5a-ZaE"/>
+                <constraint firstItem="4Ly-bh-r8y" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UHC-FV-LWZ"/>
+            </constraints>
+            <point key="canvasLocation" x="47" y="18"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkGray">
+            <color red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray3">
+            <color red="0.3449999988079071" green="0.3449999988079071" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

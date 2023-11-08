@@ -11,6 +11,15 @@ class WorkoutRestCell: UITableViewCell {
 
     static let identifier = "WorkoutRestCell"
     
+    var parentViewController: UIViewController!
+    var dataModifier: EditWorkoutDataModifier!
+    
+    var rest: Rest! {
+        didSet {
+            setUpRestTimeLabel(from: rest.duration ?? 0)
+        }
+    }
+    
     @IBOutlet var restTitle: UILabel! {
         didSet {
             restTitle.font = FontFamily.DMSans.regular.font(size: 20)
@@ -41,6 +50,10 @@ class WorkoutRestCell: UITableViewCell {
         }
     }
     
+    @IBAction func openEditRestView(_ sender: UIButton) {
+        let editRestVC = EditRestViewController(rest: rest, dataModifier: dataModifier)
+        parentViewController.present(editRestVC, animated: true)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,6 +68,10 @@ class WorkoutRestCell: UITableViewCell {
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(false, animated: false)
+    }
+    
+    private func setUpRestTimeLabel(from duration: TimeInterval) {
+        restTimeLabel.text = TimeFormatter.formatToString(timeInMilliseconds: UInt(duration) * 1000)
     }
     
 }

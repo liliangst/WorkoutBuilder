@@ -11,6 +11,11 @@ protocol EditWorkoutDelegate {
     func edit(_ workout: Workout)
 }
 
+protocol EditWorkoutDataModifier {
+    func delete(_ workoutElement: WorkoutElement)
+    func refreshData()
+}
+
 class EditWorkoutViewController: UIViewController {
 
     var workout: Workout?
@@ -54,7 +59,6 @@ class EditWorkoutViewController: UIViewController {
     }
     
     @objc private func tapValidateButton() {
-        // TODO: Validate the workout?
         guard let workout = workout else { return }
         
         if let index = WorkoutManager.workouts.firstIndex(of: workout) {
@@ -102,7 +106,12 @@ extension EditWorkoutViewController: UITableViewDataSource {
         
         switch workout?.elements?.asArray()[indexPath.row].self {
         case is Exercice: cell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciceCell.identifier, for: indexPath) as! WorkoutExerciceCell
-        case is Rest: cell = tableView.dequeueReusableCell(withIdentifier: WorkoutRestCell.identifier, for: indexPath) as! WorkoutRestCell
+        case is Rest: let restCell = tableView.dequeueReusableCell(withIdentifier: WorkoutRestCell.identifier, for: indexPath) as! WorkoutRestCell
+            let rest = workout?.elements?.asArray()[indexPath.row] as! Rest
+            restCell.parentViewController = self
+            restCell.rest = rest
+            restCell.dataModifier = self
+            cell = restCell
         case is Sets: let setsCell = tableView.dequeueReusableCell(withIdentifier: WorkoutSetCell.identifier, for: indexPath) as! WorkoutSetCell
             setsCell.delegate = self
             setsCell.set = workout?.elements?.asArray()[indexPath.row] as! Sets
@@ -170,5 +179,16 @@ extension EditWorkoutViewController: AddWorkoutElementSheetDelegate {
     func closeSheet() {
         tableView.reloadData()
         presentedViewController?.dismiss(animated: true)
+    }
+}
+
+extension EditWorkoutViewController: EditWorkoutDataModifier {
+    func refreshData() {
+        tableView.reloadData()
+    }
+    
+    func delete(_ workoutElement: WorkoutElement) {
+        workout?.elements?.remove(workoutElement)
+        refreshData()
     }
 }

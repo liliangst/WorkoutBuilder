@@ -59,7 +59,6 @@ extension WorkoutListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! HostingCell<WorkoutCardRectangle>
         let workout = WorkoutManager.workouts[indexPath.row]
         cell.set(rootView: WorkoutCardRectangle(workout: workout, editDelegate: self), parentController: self)
-        cell.reloadInputViews()
         cell.backgroundColor = .clear
         return cell
     }

@@ -32,7 +32,7 @@ class LinkedList<T: Equatable>: EmbeddedObject where T: EmbeddedObject {
     
     func remove(_ element: T) {
         if head?.element == element {
-            head = head?.next!
+            head = head?.next ?? nil
       }
     if head?.element != nil {
         var node = head

@@ -27,16 +27,16 @@
                         <rect key="frame" x="10" y="10" width="283" height="85"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jPo-9E-cgc">
-                                <rect key="frame" x="88" y="31.333333333333336" width="107.33333333333331" height="22.333333333333336"/>
+                                <rect key="frame" x="87.333333333333314" y="32.333333333333336" width="108.66666666666669" height="20.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77K-U7-qNz" userLabel="Rest">
-                                        <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="22.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.3333333333333286" width="49.333333333333336" height="20"/>
                                         <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcJ-dt-zVI">
-                                        <rect key="frame" x="58.666666666666657" y="1" width="48.666666666666657" height="20.333333333333332"/>
+                                        <rect key="frame" x="59.333333333333329" y="0.0" width="49.333333333333329" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,6 +53,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="openEditRestView:" destination="vVG-ff-vAn" eventType="touchUpInside" id="q3P-47-H7V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
