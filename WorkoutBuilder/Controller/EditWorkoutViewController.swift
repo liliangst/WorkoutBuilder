@@ -32,7 +32,7 @@ class EditWorkoutViewController: UIViewController {
             tableView.delegate = self
             tableView.allowsSelection = false
             tableView.register(UINib(nibName: AddWorkoutElementCell.identifier, bundle: nil), forCellReuseIdentifier: AddWorkoutElementCell.identifier)
-            tableView.register(UINib(nibName: WorkoutExerciceCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutExerciceCell.identifier)
+            tableView.register(UINib(nibName: WorkoutExerciseCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutExerciseCell.identifier)
             tableView.register(UINib(nibName: WorkoutRestCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutRestCell.identifier)
             tableView.register(UINib(nibName: WorkoutSetCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutSetCell.identifier)
         }
@@ -71,7 +71,7 @@ class EditWorkoutViewController: UIViewController {
     
     @objc private func tapAddWorkoutElementCell() {
         if titleTextField.isEditing { return }
-        openSheet(self, sheetElements: [Sets.self, Exercice.self, Rest.self])
+        openSheet(self, sheetElements: [Sets.self, Exercise.self, Rest.self])
     }
 
     @IBAction func dismissKeyboard(_ sender: Any) {
@@ -105,7 +105,12 @@ extension EditWorkoutViewController: UITableViewDataSource {
         }
         
         switch workout?.elements?.asArray()[indexPath.row].self {
-        case is Exercice: cell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciceCell.identifier, for: indexPath) as! WorkoutExerciceCell
+        case is Exercise: let exerciseCell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciseCell.identifier, for: indexPath) as! WorkoutExerciseCell
+            let exercise = workout?.elements?.asArray()[indexPath.row] as! Exercise
+            exerciseCell.parentViewController = self
+            exerciseCell.exercise = exercise
+            exerciseCell.dataModifier = self
+            cell = exerciseCell
         case is Rest: let restCell = tableView.dequeueReusableCell(withIdentifier: WorkoutRestCell.identifier, for: indexPath) as! WorkoutRestCell
             let rest = workout?.elements?.asArray()[indexPath.row] as! Rest
             restCell.parentViewController = self
@@ -144,8 +149,8 @@ extension EditWorkoutViewController: AddWorkoutElementDelegate {
         switch element {
         case is Sets.Type:
             workout?.elements?.insert(Sets())
-        case is Exercice.Type:
-            workout?.elements?.insert(Exercice())
+        case is Exercise.Type:
+            workout?.elements?.insert(Exercise())
         case is Rest.Type:
             workout?.elements?.insert(Rest())
         default:

@@ -60,7 +60,7 @@ class WorkoutSetCell: UITableViewCell {
             tableView.isScrollEnabled = false
             tableView.dataSource = self
             tableView.register(UINib(nibName: AddWorkoutElementCell.identifier, bundle: nil), forCellReuseIdentifier: AddWorkoutElementCell.identifier)
-            tableView.register(UINib(nibName: WorkoutExerciceCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutExerciceCell.identifier)
+            tableView.register(UINib(nibName: WorkoutExerciseCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutExerciseCell.identifier)
             tableView.register(UINib(nibName: WorkoutRestCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutRestCell.identifier)
         }
     }
@@ -74,7 +74,7 @@ class WorkoutSetCell: UITableViewCell {
     }
     
     @objc func tapAddWorkoutElementCell() {
-        delegate?.openSheet(self, sheetElements: [Exercice.self, Rest.self])
+        delegate?.openSheet(self, sheetElements: [Exercise.self, Rest.self])
     }
     
     @IBAction func openEditSetView(_ sender: UIButton) {

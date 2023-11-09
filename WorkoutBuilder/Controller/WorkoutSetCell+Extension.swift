@@ -22,7 +22,12 @@ extension WorkoutSetCell: UITableViewDataSource {
         }
         
         switch `set`.elements?.asArray()[indexPath.row].self {
-        case is Exercice: cell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciceCell.identifier, for: indexPath) as! WorkoutExerciceCell
+        case is Exercise: let exerciseCell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciseCell.identifier, for: indexPath) as! WorkoutExerciseCell
+            let exercise = `set`.elements?.asArray()[indexPath.row] as! Exercise
+            exerciseCell.parentViewController = self.parentViewController
+            exerciseCell.exercise = exercise
+            exerciseCell.dataModifier = self
+            cell = exerciseCell
         case is Rest: let restCell = tableView.dequeueReusableCell(withIdentifier: WorkoutRestCell.identifier, for: indexPath) as! WorkoutRestCell
             let rest = `set`.elements?.asArray()[indexPath.row] as! Rest
             restCell.parentViewController = self.parentViewController
@@ -39,8 +44,8 @@ extension WorkoutSetCell: UITableViewDataSource {
 extension WorkoutSetCell: AddWorkoutElementDelegate {
     func addElement(_ element: WorkoutElement.Type) {
         switch element {
-        case is Exercice.Type:
-            `set`.elements?.insert(Exercice())
+        case is Exercise.Type:
+            `set`.elements?.insert(Exercise())
         case is Rest.Type:
             `set`.elements?.insert(Rest())
         default:

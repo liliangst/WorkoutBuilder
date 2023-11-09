@@ -54,8 +54,8 @@ struct WorkoutCardRectangle: View {
 
                     HStack {
                         VStack {
-                            Text(String(workout.numberOfExercice) +
-                                 String(workout.numberOfExercice > 1 ? " exercices" : " exercice") +
+                            Text(String(workout.numberOfExercise) +
+                                 String(workout.numberOfExercise > 1 ? " exercices" : " exercice") +
                                  "\n1h10")
                             .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                             .foregroundColor(Asset.gray1.swiftUIColor)

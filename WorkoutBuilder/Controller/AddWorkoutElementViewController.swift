@@ -25,7 +25,7 @@ class AddWorkoutElementViewController: UIViewController {
                 switch element {
                 case is Sets.Type:
                     setBackgroundView.isHidden = false
-                case is Exercice.Type:
+                case is Exercise.Type:
                     exerciseBackgroundView.isHidden = false
                 case is Rest.Type:
                     restBackgroundView.isHidden = false
@@ -73,8 +73,8 @@ class AddWorkoutElementViewController: UIViewController {
     }
     @IBOutlet var addExerciseButton: UIButton! {
         didSet {
-            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercise", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.green.color]), for: .normal)
-            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercise", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.gray1.color]), for: .highlighted)
+            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.green.color]), for: .normal)
+            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.gray1.color]), for: .highlighted)
         }
     }
     
@@ -106,7 +106,7 @@ class AddWorkoutElementViewController: UIViewController {
         case addSetButton:
             delegate?.addElement(Sets.self)
         case addExerciseButton:
-            delegate?.addElement(Exercice.self)
+            delegate?.addElement(Exercise.self)
         case addRestButton:
             delegate?.addElement(Rest.self)
         default:
@@ -119,7 +119,7 @@ class AddWorkoutElementViewController: UIViewController {
             switch element {
             case is Sets.Type:
                 setBackgroundView.isHidden = false
-            case is Exercice.Type:
+            case is Exercise.Type:
                 exerciseBackgroundView.isHidden = false
             case is Rest.Type:
                 restBackgroundView.isHidden = false
