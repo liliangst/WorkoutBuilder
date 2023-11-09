@@ -48,8 +48,8 @@ class EditWorkoutViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: validateButtonImage, style: .done, target: self, action: #selector(tapValidateButton))
         navigationItem.rightBarButtonItem?.isEnabled = false
         
-        if workout != nil {
-            titleTextField.text = workout?.title
+        if let workout, !workout.title.isEmpty {
+            titleTextField.text = workout.title
             navigationItem.rightBarButtonItem?.isEnabled = true
         }
     }
@@ -113,8 +113,11 @@ extension EditWorkoutViewController: UITableViewDataSource {
             restCell.dataModifier = self
             cell = restCell
         case is Sets: let setsCell = tableView.dequeueReusableCell(withIdentifier: WorkoutSetCell.identifier, for: indexPath) as! WorkoutSetCell
+            let set = workout?.elements?.asArray()[indexPath.row] as! Sets
             setsCell.delegate = self
-            setsCell.set = workout?.elements?.asArray()[indexPath.row] as! Sets
+            setsCell.set = set
+            setsCell.dataModifier = self
+            setsCell.parentViewController = self
             cell = setsCell
         default:
             break

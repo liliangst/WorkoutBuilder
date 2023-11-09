@@ -9,10 +9,5 @@ import Foundation
 import RealmSwift
 
 class Rest: WorkoutElement {
-    @Persisted var duration: TimeInterval?
-    
-    override init() {
-        super.init()
-        duration = 30.0
-    }
+    @Persisted var duration: TimeInterval? = 30
 }

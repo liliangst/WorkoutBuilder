@@ -10,6 +10,6 @@ import RealmSwift
 
 class Sets: WorkoutElement {
     @Persisted var elements: LinkedList<WorkoutElement>? = LinkedList<WorkoutElement>()
-    @Persisted var restBetweenSet: TimeInterval?
-    @Persisted var numberOfSets: Int
+    @Persisted var restBetweenSet: TimeInterval? = 60
+    @Persisted var numberOfSets: Int = 1
 }

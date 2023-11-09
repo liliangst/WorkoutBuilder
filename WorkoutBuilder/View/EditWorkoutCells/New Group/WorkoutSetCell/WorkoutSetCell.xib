@@ -27,6 +27,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziX-Lj-wuC" userLabel="TitleBorder">
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="85"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL1-G0-sEg" userLabel="Rest Time Label">
+                                                <rect key="frame" x="10" y="0.0" width="223" height="85"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Série" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wG-lI-XdT">
                                                 <rect key="frame" x="122" y="32.333333333333336" width="39" height="20.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,15 +49,22 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="openEditSetView:" destination="sP2-fM-Dfd" eventType="touchUpInside" id="eQN-2K-QGv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="c6o-Fe-7OK" secondAttribute="bottom" id="6NA-G0-n7A"/>
                                             <constraint firstItem="c6o-Fe-7OK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ziX-Lj-wuC" secondAttribute="leading" id="7S4-HK-qy7"/>
+                                            <constraint firstItem="ZL1-G0-sEg" firstAttribute="leading" secondItem="ziX-Lj-wuC" secondAttribute="leading" constant="10" id="DtM-de-70B"/>
                                             <constraint firstItem="8wG-lI-XdT" firstAttribute="centerX" secondItem="ziX-Lj-wuC" secondAttribute="centerX" id="NfE-y7-Uf9"/>
+                                            <constraint firstItem="c6o-Fe-7OK" firstAttribute="leading" secondItem="ZL1-G0-sEg" secondAttribute="trailing" id="Rxo-Vu-IHO"/>
+                                            <constraint firstItem="ZL1-G0-sEg" firstAttribute="top" secondItem="ziX-Lj-wuC" secondAttribute="top" id="TdF-Ya-wAS"/>
                                             <constraint firstItem="8wG-lI-XdT" firstAttribute="centerY" secondItem="ziX-Lj-wuC" secondAttribute="centerY" id="by3-bl-K7y"/>
                                             <constraint firstItem="c6o-Fe-7OK" firstAttribute="top" secondItem="ziX-Lj-wuC" secondAttribute="top" id="t3n-K1-qkU"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZL1-G0-sEg" secondAttribute="bottom" id="xSu-g9-OLq"/>
                                             <constraint firstAttribute="trailing" secondItem="c6o-Fe-7OK" secondAttribute="trailing" id="zZb-HA-L0K"/>
                                         </constraints>
                                     </view>
@@ -89,6 +102,7 @@
             <connections>
                 <outlet property="borderView" destination="2IK-2a-AMb" id="gbo-V5-zbP"/>
                 <outlet property="editButton" destination="c6o-Fe-7OK" id="Vef-Ge-eWU"/>
+                <outlet property="restTimeLabel" destination="ZL1-G0-sEg" id="A4T-MW-8H9"/>
                 <outlet property="tableView" destination="hdU-t4-6Ul" id="66p-Ee-bPT"/>
                 <outlet property="titleBorderView" destination="ziX-Lj-wuC" id="LDU-ZP-qLm"/>
                 <outlet property="titleLabel" destination="8wG-lI-XdT" id="SXY-1B-uUv"/>

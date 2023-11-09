@@ -12,15 +12,29 @@ class WorkoutSetCell: UITableViewCell {
 
     static let identifier = "WorkoutSetCell"
     
-    var set: Sets = Sets()
+    var set: Sets = Sets() {
+        didSet {
+            setUpRestTimeLabel(from: set.restBetweenSet ?? 0)
+            setUpTitleLabel(with: set.numberOfSets)
+        }
+    }
     
     var delegate: AddWorkoutElementSheetDelegate?
+    var parentViewController: UIViewController!
+    var dataModifier: EditWorkoutDataModifier!
     
     @IBOutlet var titleLabel: UILabel! {
         didSet {
             titleLabel.font = FontFamily.DMSans.regular.font(size: 30)
             titleLabel.textColor = Asset.green.color
             titleLabel.text = "Série"
+        }
+    }
+    @IBOutlet var restTimeLabel: UILabel! {
+        didSet {
+            restTimeLabel.font = FontFamily.DMSans.regular.font(size: 20)
+            restTimeLabel.textColor = Asset.gray2.color
+            restTimeLabel.numberOfLines = 2
         }
     }
     @IBOutlet var editButton: UIButton! {
@@ -63,6 +77,11 @@ class WorkoutSetCell: UITableViewCell {
         delegate?.openSheet(self, sheetElements: [Exercice.self, Rest.self])
     }
     
+    @IBAction func openEditSetView(_ sender: UIButton) {
+        let editSetVC = EditSetViewController(set: set, dataModifier: dataModifier)
+        parentViewController.present(editSetVC, animated: true)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
@@ -74,5 +93,13 @@ class WorkoutSetCell: UITableViewCell {
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(false, animated: false)
+    }
+    
+    private func setUpRestTimeLabel(from duration: TimeInterval) {
+        restTimeLabel.text = "Repos: \n\(TimeFormatter.formatToString(timeInMilliseconds: UInt(duration) * 1000))"
+    }
+    
+    private func setUpTitleLabel(with numberOfSets: Int) {
+        titleLabel.text = "Série ×\(numberOfSets)"
     }
 }
