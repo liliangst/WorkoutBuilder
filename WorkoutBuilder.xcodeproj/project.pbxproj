@@ -39,6 +39,9 @@
 		387243F02AF95002003B1BC9 /* EditRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387243EE2AF95002003B1BC9 /* EditRestViewController.swift */; };
 		387243F12AF95002003B1BC9 /* EditRestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387243EF2AF95002003B1BC9 /* EditRestViewController.xib */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
+		387A354A2AFD73110064DB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387A35492AFD73110064DB19 /* GoogleService-Info.plist */; };
+		387A354D2AFD73AB0064DB19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */; };
+		387A354F2AFD73AB0064DB19 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */; };
 		387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */; };
 		387F16C82AEABF06006827E4 /* WorkoutExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C72AEABF06006827E4 /* WorkoutExerciseCell.xib */; };
 		387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */; };
@@ -121,6 +124,7 @@
 		387243EE2AF95002003B1BC9 /* EditRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRestViewController.swift; sourceTree = "<group>"; };
 		387243EF2AF95002003B1BC9 /* EditRestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRestViewController.xib; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
+		387A35492AFD73110064DB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkoutElementCell.xib; sourceTree = "<group>"; };
 		387F16C72AEABF06006827E4 /* WorkoutExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutExerciseCell.xib; sourceTree = "<group>"; };
 		387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutRestCell.xib; sourceTree = "<group>"; };
@@ -158,7 +162,9 @@
 			files = (
 				380AF29D2A8BD56900DE1568 /* RealmSwift in Frameworks */,
 				380AF2A02A8BD83A00DE1568 /* SpotifyiOS in Frameworks */,
+				387A354D2AFD73AB0064DB19 /* FirebaseAnalytics in Frameworks */,
 				389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */,
+				387A354F2AFD73AB0064DB19 /* FirebaseAnalyticsSwift in Frameworks */,
 				380AF29B2A8BD56900DE1568 /* Realm in Frameworks */,
 				385D9DB32AC6D549009BF4A3 /* Kingfisher in Frameworks */,
 			);
@@ -214,6 +220,7 @@
 				3881CB502AB39B100071168A /* Ressources */,
 				385D9DB02AC6D4B5009BF4A3 /* Generated */,
 				380AF26F2A8BC53500DE1568 /* Info.plist */,
+				387A35492AFD73110064DB19 /* GoogleService-Info.plist */,
 			);
 			path = WorkoutBuilder;
 			sourceTree = "<group>";
@@ -455,6 +462,8 @@
 				380AF29F2A8BD83A00DE1568 /* SpotifyiOS */,
 				389763CE2AB20DBD00222CD4 /* KeychainSwift */,
 				385D9DB22AC6D549009BF4A3 /* Kingfisher */,
+				387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */,
+				387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */,
 			);
 			productName = WorkoutBuilder;
 			productReference = 380AF25B2A8BC53400DE1568 /* WorkoutBuilder.app */;
@@ -533,6 +542,7 @@
 				380AF29E2A8BD83A00DE1568 /* XCRemoteSwiftPackageReference "ios-sdk" */,
 				389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				385D9DB12AC6D549009BF4A3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 380AF25C2A8BC53400DE1568 /* Products */;
 			projectDirPath = "";
@@ -552,6 +562,7 @@
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
 				387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */,
+				387A354A2AFD73110064DB19 /* GoogleService-Info.plist in Resources */,
 				385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */,
 				387F16C82AEABF06006827E4 /* WorkoutExerciseCell.xib in Resources */,
 				387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */,
@@ -1022,6 +1033,14 @@
 				minimumVersion = 7.9.1;
 			};
 		};
+		387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.17.0;
+			};
+		};
 		389763CD2AB20DBD00222CD4 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -1052,6 +1071,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 385D9DB12AC6D549009BF4A3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 		389763CE2AB20DBD00222CD4 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
