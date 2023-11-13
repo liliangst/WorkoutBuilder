@@ -8,7 +8,9 @@
 import Foundation
 import RealmSwift
 
-class Exercise: WorkoutElement {
+class Exercise: Object, WorkoutElementObject {
+    @Persisted(primaryKey: true) var id: ObjectId
+    
     @Persisted var title: String
     @Persisted var numberOfReps: Int?
     @Persisted var weight: Int?

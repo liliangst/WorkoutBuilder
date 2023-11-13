@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
-class Rest: WorkoutElement {
+class Rest: Object, WorkoutElementObject {
+    @Persisted(primaryKey: true) var id: ObjectId
+    
     @Persisted var duration: TimeInterval? = 30
 }

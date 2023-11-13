@@ -84,6 +84,8 @@ class WorkoutExerciseCell: UITableViewCell {
     private func setUpExerciseDesc() {
         if let weight = exercise.weight, let numberOfReps = exercise.numberOfReps {
             exerciseDescLabel.text = "\(weight)kg \n×\(numberOfReps)"
+        } else if let numberOfReps = exercise.numberOfReps {
+            exerciseDescLabel.text = "×\(numberOfReps)"
         }
         
         if let duration = exercise.duration {

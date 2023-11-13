@@ -16,7 +16,6 @@ class EditSetViewController: UIViewController {
     private let minutes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     var numberOfSets: Int {
         didSet {
-            set.numberOfSets = numberOfSets
             numberOfSetsLabel.text = "Nombre de séries: \(numberOfSets)"
         }
     }
@@ -116,7 +115,10 @@ class EditSetViewController: UIViewController {
         let secondesRow = restTimePicker.selectedRow(inComponent: 1)
         let secondesSelected = secondes[secondesRow]
         
-        set.restBetweenSet = TimeInterval(minutesSelected * 60 + secondesSelected)
+        WorkoutManager.saveChanges {
+            set.restBetweenSet = TimeInterval(minutesSelected * 60 + secondesSelected)
+            set.numberOfSets = numberOfSets
+        }
         
         dataModifier.refreshData()
         dismiss(animated: true)

@@ -8,18 +8,18 @@
 import UIKit
 
 protocol AddWorkoutElementDelegate {
-    func addElement(_ element: WorkoutElement.Type)
+    func addElement(_ element: WorkoutElementObject.Type)
 }
 
 protocol AddWorkoutElementSheetDelegate {
-    func openSheet(_ addWorkoutElementDelegate: AddWorkoutElementDelegate, sheetElements: [WorkoutElement.Type])
+    func openSheet(_ addWorkoutElementDelegate: AddWorkoutElementDelegate, sheetElements: [WorkoutElementObject.Type])
     func closeSheet()
 }
 
 class AddWorkoutElementViewController: UIViewController {
 
     var delegate: AddWorkoutElementDelegate?
-    var sheetElements: [WorkoutElement.Type]? {
+    var sheetElements: [WorkoutElementObject.Type]? {
         didSet {
             for element in sheetElements! {
                 switch element {
@@ -114,7 +114,7 @@ class AddWorkoutElementViewController: UIViewController {
         }
     }
 
-    func setSheetElements(_ sheetElements: [WorkoutElement.Type]) {
+    func setSheetElements(_ sheetElements: [WorkoutElementObject.Type]) {
         for element in sheetElements {
             switch element {
             case is Sets.Type:

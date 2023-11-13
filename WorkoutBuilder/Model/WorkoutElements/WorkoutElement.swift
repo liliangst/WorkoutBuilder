@@ -8,8 +8,36 @@
 import Foundation
 import RealmSwift
 
+protocol WorkoutElementObject {}
+
 class WorkoutElement: EmbeddedObject {
-    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var id: ObjectId
+    @Persisted var type: WorkoutElementType.RawValue
+    
+    convenience init(id: ObjectId, type: WorkoutElementType.RawValue) {
+        self.init()
+        self.id = id
+        self.type = type
+    }
+}
+
+enum WorkoutElementType: Int {
+    case exercise = 0
+    case rest = 1
+    case set = 2
+    
+    init(type: WorkoutElementObject) {
+        switch type {
+        case is Exercise:
+            self.init(rawValue: 0)!
+        case is Rest:
+            self.init(rawValue: 1)!
+        case is Sets:
+            self.init(rawValue: 2)!
+        default:
+            self.init(rawValue: 0)!
+        }
+    }
 }
 
 

@@ -35,12 +35,14 @@ class WorkoutListViewController: UIViewController {
         
         if let workout = sender as? Workout {
             (segue.destination as! EditWorkoutViewController).workout = workout
+            WorkoutManager.fetchElements(for: workout)
         } else {
             (segue.destination as! EditWorkoutViewController).workout = Workout()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        WorkoutManager.fetchWorkouts()
         workoutsTableView.reloadData()
     }
 }

@@ -174,14 +174,18 @@ class EditExerciseViewController: UIViewController {
             
             picker.reloadAllComponents()
             
-            if let weight = exercise.weight, let numberOfReps = exercise.numberOfReps  {
-                self.weight = weight
+            if let numberOfReps = exercise.numberOfReps  {
                 self.numberOfReps = numberOfReps
                 
-                weightTextField.text = "\(weight)"
                 setUpPickerValues(from: numberOfReps)
             } else {
                 picker.selectRow(0, inComponent: 0, animated: true)
+            }
+            
+            if let weight = exercise.weight {
+                self.weight = weight
+                
+                weightTextField.text = "\(weight)"
             }
         case ExerciseType.withTime.rawValue:
             weightLabel.isHidden = true
@@ -212,13 +216,15 @@ class EditExerciseViewController: UIViewController {
     }
     
     @IBAction func tapValidateButton() {
-        if let exerciseTitle = exerciseTitle {
-            exercise.title = exerciseTitle
+        WorkoutManager.saveChanges {
+            if let exerciseTitle = exerciseTitle {
+                exercise.title = exerciseTitle
+            }
+            
+            exercise.numberOfReps = numberOfReps
+            exercise.weight = weight
+            exercise.duration = duration
         }
-        
-        exercise.numberOfReps = numberOfReps
-        exercise.weight = weight
-        exercise.duration = duration
         
         dataModifier.refreshData()
         dismiss(animated: true)

@@ -48,7 +48,7 @@ struct FavoriteWorkoutsCarousel: View {
                     Spacer()
                     
                     VStack {
-                        ForEach(0..<WorkoutManager.favoriteWorkouts.count) { index in
+                        ForEach(0..<WorkoutManager.favoriteWorkouts.count)  { index in
                             if index == currentIndex {
                                 WorkoutCardSquare(workout: WorkoutManager.favoriteWorkouts[index], editDelegate: self)
                                     .transition(favoriteWorkoutTransition)

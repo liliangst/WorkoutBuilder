@@ -96,7 +96,9 @@ class EditRestViewController: UIViewController {
         let secondesRow = restTimePicker.selectedRow(inComponent: 1)
         let secondesSelected = secondes[secondesRow]
         
-        rest.duration = TimeInterval(minutesSelected * 60 + secondesSelected)
+        WorkoutManager.saveChanges {
+            rest.duration = TimeInterval(minutesSelected * 60 + secondesSelected)
+        }
         
         dataModifier.refreshData()
         dismiss(animated: true)
