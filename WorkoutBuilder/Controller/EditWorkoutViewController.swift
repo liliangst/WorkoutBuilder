@@ -39,6 +39,15 @@ class EditWorkoutViewController: UIViewController {
             tableView.register(UINib(nibName: WorkoutSetCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutSetCell.identifier)
         }
     }
+    @IBOutlet var deleteWorkoutButton: UIButton! {
+        didSet {
+            let btnConfiguration = UIImage.SymbolConfiguration(weight: .heavy)
+            let deleteButtonImage = UIImage(systemName: "trash", withConfiguration: btnConfiguration)
+            deleteWorkoutButton.setImage(deleteButtonImage?.withTintColor(Asset.gray1.color), for: .normal)
+            deleteWorkoutButton.setAttributedTitle(NSAttributedString(string: "Supprimer", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.gray1.color]), for: .normal)
+            deleteWorkoutButton.tintColor = Asset.gray2.color
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -73,6 +82,17 @@ class EditWorkoutViewController: UIViewController {
             WorkoutManager.workouts[index] = workout
         } else {
             WorkoutManager.insert(workout)
+        }
+        tapBackButton()
+    }
+    
+    @IBAction func tapDeleteButton() {
+        guard let workout = workout else {
+            tapBackButton()
+            return
+        }
+        if WorkoutManager.workouts.contains(workout) {
+            WorkoutManager.remove(workout)
         }
         tapBackButton()
     }

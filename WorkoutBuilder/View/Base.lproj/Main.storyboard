@@ -264,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-lC-fhv">
-                                <rect key="frame" x="35" y="103" width="323" height="666"/>
+                                <rect key="frame" x="35" y="103" width="323" height="651"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Titre..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-vR-TlK">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="65"/>
@@ -276,10 +276,18 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a34-Mx-wmK">
-                                        <rect key="frame" x="0.0" y="75" width="323" height="591"/>
+                                        <rect key="frame" x="0.0" y="75" width="323" height="531.66666666666663"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <sections/>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycN-2B-dQt">
+                                        <rect key="frame" x="0.0" y="616.66666666666663" width="323" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="tapDeleteButton" destination="E1o-XW-bpw" eventType="touchUpInside" id="UGc-bR-ECV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -288,7 +296,7 @@
                         <constraints>
                             <constraint firstItem="fWY-lC-fhv" firstAttribute="leading" secondItem="t04-W8-ZDZ" secondAttribute="leading" constant="35" id="0Pv-bY-sRa"/>
                             <constraint firstItem="fWY-lC-fhv" firstAttribute="top" secondItem="t04-W8-ZDZ" secondAttribute="top" id="3EJ-9m-4ix"/>
-                            <constraint firstItem="t04-W8-ZDZ" firstAttribute="bottom" secondItem="fWY-lC-fhv" secondAttribute="bottom" id="Vla-HR-TXs"/>
+                            <constraint firstItem="t04-W8-ZDZ" firstAttribute="bottom" secondItem="fWY-lC-fhv" secondAttribute="bottom" constant="15" id="Vla-HR-TXs"/>
                             <constraint firstItem="t04-W8-ZDZ" firstAttribute="trailing" secondItem="fWY-lC-fhv" secondAttribute="trailing" constant="35" id="cbb-1y-uNg"/>
                         </constraints>
                         <connections>
@@ -297,6 +305,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GFS-BJ-cRR"/>
                     <connections>
+                        <outlet property="deleteWorkoutButton" destination="ycN-2B-dQt" id="dha-WT-MgR"/>
                         <outlet property="tableView" destination="a34-Mx-wmK" id="aPo-0B-hsi"/>
                         <outlet property="titleTextField" destination="ezb-vR-TlK" id="rqp-6Z-1sO"/>
                     </connections>
