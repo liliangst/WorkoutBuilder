@@ -153,6 +153,8 @@ class EditSetViewController: UIViewController {
         if let restDuration = set.restBetweenSet {
             setUpPickersValues(from: restDuration)
         }
+        
+        numberOfSetsStepper.value = Double(set.numberOfSets)
     }
     
     private func setUpPickersValues(from duration: TimeInterval) {
