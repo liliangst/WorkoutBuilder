@@ -42,6 +42,7 @@
 		387A354A2AFD73110064DB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387A35492AFD73110064DB19 /* GoogleService-Info.plist */; };
 		387A354D2AFD73AB0064DB19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */; };
 		387A354F2AFD73AB0064DB19 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */; };
+		387A35512B052F300064DB19 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 387A35502B052F300064DB19 /* FirebaseCrashlytics */; };
 		387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */; };
 		387F16C82AEABF06006827E4 /* WorkoutExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C72AEABF06006827E4 /* WorkoutExerciseCell.xib */; };
 		387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */; };
@@ -163,6 +164,7 @@
 				387A354D2AFD73AB0064DB19 /* FirebaseAnalytics in Frameworks */,
 				389763CF2AB20DBD00222CD4 /* KeychainSwift in Frameworks */,
 				387A354F2AFD73AB0064DB19 /* FirebaseAnalyticsSwift in Frameworks */,
+				387A35512B052F300064DB19 /* FirebaseCrashlytics in Frameworks */,
 				380AF29B2A8BD56900DE1568 /* Realm in Frameworks */,
 				385D9DB32AC6D549009BF4A3 /* Kingfisher in Frameworks */,
 			);
@@ -447,6 +449,7 @@
 				380AF2572A8BC53400DE1568 /* Sources */,
 				380AF2582A8BC53400DE1568 /* Frameworks */,
 				380AF2592A8BC53400DE1568 /* Resources */,
+				387A35522B057EEA0064DB19 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -461,6 +464,7 @@
 				385D9DB22AC6D549009BF4A3 /* Kingfisher */,
 				387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */,
 				387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */,
+				387A35502B052F300064DB19 /* FirebaseCrashlytics */,
 			);
 			productName = WorkoutBuilder;
 			productReference = 380AF25B2A8BC53400DE1568 /* WorkoutBuilder.app */;
@@ -590,6 +594,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		387A35522B057EEA0064DB19 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		380AF2572A8BC53400DE1568 /* Sources */ = {
@@ -815,7 +845,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VZ899C4D4A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutBuilder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;
@@ -853,6 +885,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZ899C4D4A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutBuilder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;
@@ -1077,6 +1110,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
+		};
+		387A35502B052F300064DB19 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 387A354B2AFD73AB0064DB19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		389763CE2AB20DBD00222CD4 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
