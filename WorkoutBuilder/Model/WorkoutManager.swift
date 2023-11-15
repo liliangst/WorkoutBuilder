@@ -12,7 +12,11 @@ class WorkoutManager {
     
     static let shared = WorkoutManager()
     
-    private init() {}
+    private init() {
+        #if DEBUG
+        print("Realm : \(realm.configuration.fileURL!)")
+        #endif
+    }
     
     private let realm = try! Realm()
 
@@ -36,6 +40,10 @@ class WorkoutManager {
     }
     
     func remove(_ workout: Workout) {
+        fetchElements(for: workout)
+        workout.elementsObjects.forEach { element in
+            removeElement(element)
+        }
         try! realm.write {
             realm.delete(workout)
         }
