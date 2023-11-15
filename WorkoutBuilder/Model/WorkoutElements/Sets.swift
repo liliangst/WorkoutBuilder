@@ -30,11 +30,11 @@ class Sets: Object, WorkoutElementObject {
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
         
-        WorkoutManager.saveChanges {
+        WorkoutManager.shared.saveChanges {
             elements.append(workoutElement)
         }
         elementsObjects.append(element)
-        WorkoutManager.saveElement(element)
+        WorkoutManager.shared.saveElement(element)
     }
     
     func remove(_ element: WorkoutElementObject) {
@@ -66,10 +66,10 @@ class Sets: Object, WorkoutElementObject {
             return
         }
         
-        WorkoutManager.saveChanges {
+        WorkoutManager.shared.saveChanges {
             elements.remove(at: elementIndex)
         }
         elementsObjects.remove(at: elementIndex)
-        WorkoutManager.removeElement(element)
+        WorkoutManager.shared.removeElement(element)
     }
 }

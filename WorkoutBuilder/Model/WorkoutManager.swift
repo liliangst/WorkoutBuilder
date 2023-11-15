@@ -10,57 +10,64 @@ import RealmSwift
 
 class WorkoutManager {
     
-    static private let realm = try! Realm()
-
-    static var favoriteWorkouts: [Workout] =  [Workout]()
-    static var workouts: [Workout] = [Workout]()
+    static let shared = WorkoutManager()
     
-    static func addToFavorite(workout: Workout) {
+    private init() {}
+    
+    private let realm = try! Realm()
+
+    var favoriteWorkouts: [Workout] {
+        workouts.filter({$0.isFavorite})
+    }
+    var workouts: [Workout] = [Workout]()
+    
+    func addToFavorite(workout: Workout) {
         if favoriteWorkouts.count < 5 {
             try! realm.write {
-                workout.isFavorite = true
+                workout.thaw()?.isFavorite = true
             }
         }
     }
     
-    static func insert(_ workout: Workout) {
+    func insert(_ workout: Workout) {
         try! realm.write {
             realm.add(workout)
         }
     }
     
-    static func remove(_ workout: Workout) {
+    func remove(_ workout: Workout) {
         try! realm.write {
             realm.delete(workout)
         }
     }
     
     /// Save changes on Realm objects
-    static func saveChanges(_ completion: () -> ()) {
+    func saveChanges(_ completion: () -> ()) {
         try! realm.write {
             completion()
         }
     }
 
-    static func removeFromFavorite(workout: Workout) {
+    func removeFromFavorite(workout: Workout) {
         try! realm.write {
-            workout.isFavorite = false
+            workout.thaw()?.isFavorite = false
+            NotificationCenter.default.post(name: .DeleteFavoriteWorkout, object: nil)
         }
     }
     
-    static func add(element: WorkoutElement, to workout: Workout) {
+    func add(element: WorkoutElement, to workout: Workout) {
         try! realm.write {
             workout.elements.append(element)
         }
     }
     
-    static func add(element: WorkoutElement, to set: Sets) {
+    func add(element: WorkoutElement, to set: Sets) {
         try! realm.write {
             set.elements.append(element)
         }
     }
     
-    static func saveElement(_ element: WorkoutElementObject) {
+    func saveElement(_ element: WorkoutElementObject) {
         try! realm.write {
             switch element {
             case is Exercise:
@@ -75,7 +82,7 @@ class WorkoutManager {
         }
     }
     
-    static func removeElement(_ element: WorkoutElementObject) {
+    func removeElement(_ element: WorkoutElementObject) {
         try! realm.write {
             switch element {
             case is Exercise:
@@ -90,12 +97,12 @@ class WorkoutManager {
         }
     }
     
-    static func fetchWorkouts() {
+    func fetchWorkouts() {
         workouts = realm.objects(Workout.self).map({$0})
-        favoriteWorkouts = workouts.filter({$0.isFavorite})
+        //favoriteWorkouts = workouts.filter({$0.isFavorite})
     }
     
-    static func fetchElements(for workout: Workout) {
+    func fetchElements(for workout: Workout) {
         workout.elementsObjects = []
         workout.elements.forEach { element in
             switch element.type {
@@ -114,7 +121,7 @@ class WorkoutManager {
         }
     }
     
-    static func fetchElements(for set: Sets) {
+    func fetchElements(for set: Sets) {
         set.elementsObjects = []
         set.elements.forEach { element in
             switch element.type {

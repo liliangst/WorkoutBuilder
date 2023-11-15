@@ -6,18 +6,19 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct WorkoutCardRectangle: View {
-    @State var isFavorite: Bool = false
+    @State var isFavorite: Bool
     
     let delegate: EditWorkoutDelegate
-    let workout: Workout
+    var workout: Workout
     
     init(workout: Workout, editDelegate: EditWorkoutDelegate) {
         delegate = editDelegate
         
         self.workout = workout
-        isFavorite = workout.isFavorite
+        _isFavorite = State(initialValue: workout.isFavorite)
     }
     
     var body: some View {
@@ -35,9 +36,9 @@ struct WorkoutCardRectangle: View {
 
                         Button {
                             if workout.isFavorite {
-                                WorkoutManager.removeFromFavorite(workout: workout)
+                                WorkoutManager.shared.removeFromFavorite(workout: workout)
                             } else {
-                                WorkoutManager.addToFavorite(workout: workout)
+                                WorkoutManager.shared.addToFavorite(workout: workout)
                             }
                             isFavorite = workout.isFavorite
                         } label: {
@@ -54,9 +55,9 @@ struct WorkoutCardRectangle: View {
 
                     HStack {
                         VStack {
-                            Text(String(workout.numberOfExercise) +
+                            Text(""/*String(workout.numberOfExercise) +
                                  String(workout.numberOfExercise > 1 ? " exercices" : " exercice") +
-                                 "\n1h10")
+                                 "\n1h10"*/)
                             .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                             .foregroundColor(Asset.gray1.swiftUIColor)
                             .frame(maxWidth: .infinity, alignment: .leading)

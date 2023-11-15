@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setUpWorkoutsCarouselView() {
-        let workoutsCarousel = FavoriteWorkoutsCarousel()
+        let workoutsCarousel = FavoriteWorkoutsCarousel(delegate: self)
         let hostingWorkoutsCarousel = UIHostingController(rootView: workoutsCarousel)
         
         self.addChild(hostingWorkoutsCarousel)
@@ -99,4 +99,23 @@ class HomeViewController: UIViewController {
         label.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 15).isActive = true
     }
 
+}
+
+extension HomeViewController: EditWorkoutDelegate {
+    func edit(_ workout: Workout) {
+        performSegue(withIdentifier: "OpenEditWorkoutSegue", sender: workout)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "OpenEditWorkoutSegue" else {
+            return
+        }
+        
+        if let workout = sender as? Workout {
+            (segue.destination as! EditWorkoutViewController).workout = workout
+            WorkoutManager.shared.fetchElements(for: workout)
+        } else {
+            (segue.destination as! EditWorkoutViewController).workout = Workout()
+        }
+    }
 }

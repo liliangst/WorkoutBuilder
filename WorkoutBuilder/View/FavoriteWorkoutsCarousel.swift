@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct FavoriteWorkoutsCarousel: View {
     @State private var isEmptyState: Bool = false
-    @State private var currentIndex = WorkoutManager.favoriteWorkouts.startIndex
+    @State private var currentIndex: Int = 0
     @State var favoriteWorkoutTransition: AnyTransition = .identity
+    @ObservedResults(Workout.self, where: { $0.isFavorite }) var favoriteWorkouts
+    let delegate: EditWorkoutDelegate
+    
     var body: some View {
-        Group {
-            if WorkoutManager.favoriteWorkouts.count == 0 {
+        ZStack {
+            if favoriteWorkouts.count == 0 {
                 VStack {
                     Text("Pas de séances favorites")
                         .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
@@ -26,17 +30,16 @@ struct FavoriteWorkoutsCarousel: View {
                         .multilineTextAlignment(.center)
                 }
                 .minimumScaleFactor(0.01)
-            } else
-            {
+            } else {
                 HStack {
                     
                     Spacer()
                     Button {
                         withAnimation(.interpolatingSpring(stiffness: 150, damping: 15)) {
-                            if currentIndex > WorkoutManager.favoriteWorkouts.startIndex {
+                            if currentIndex > favoriteWorkouts.startIndex {
                                 currentIndex -= 1
                             } else {
-                                currentIndex = WorkoutManager.favoriteWorkouts.endIndex - 1
+                                currentIndex = favoriteWorkouts.endIndex - 1
                             }
                             favoriteWorkoutTransition = .asymmetric(insertion: .move(edge: .leading), removal: .identity)
                         }
@@ -48,14 +51,14 @@ struct FavoriteWorkoutsCarousel: View {
                     Spacer()
                     
                     VStack {
-                        ForEach(0..<WorkoutManager.favoriteWorkouts.count)  { index in
-                            if index == currentIndex {
-                                WorkoutCardSquare(workout: WorkoutManager.favoriteWorkouts[index], editDelegate: self)
+                        ForEach(0..<favoriteWorkouts.count, id: \.self)  { index in
+                            if index == currentIndex, favoriteWorkouts.count > index {
+                                WorkoutCardSquare(workout: favoriteWorkouts[index], editDelegate: delegate)
                                     .transition(favoriteWorkoutTransition)
                             }
                         }
                         HStack {
-                            ForEach(0..<WorkoutManager.favoriteWorkouts.count) { index in
+                            ForEach(0..<favoriteWorkouts.count, id: \.self) { index in
                                 Image(systemName: "circle.fill")
                                     .resizable()
                                     .aspectRatio(1.0, contentMode: .fit)
@@ -67,10 +70,10 @@ struct FavoriteWorkoutsCarousel: View {
                     Spacer()
                     Button {
                         withAnimation(.interpolatingSpring(stiffness: 150, damping: 15)) {
-                            if currentIndex < WorkoutManager.favoriteWorkouts.endIndex - 1 {
+                            if currentIndex < favoriteWorkouts.endIndex - 1 {
                                 currentIndex += 1
                             } else {
-                                currentIndex = WorkoutManager.favoriteWorkouts.startIndex
+                                currentIndex = favoriteWorkouts.startIndex
                             }
                             favoriteWorkoutTransition = .asymmetric(insertion: .move(edge: .trailing), removal: .identity)
                         }
@@ -82,17 +85,16 @@ struct FavoriteWorkoutsCarousel: View {
                     Spacer()
                 }
                 .padding(.horizontal, 15)
+                .onReceive(NotificationCenter.default.publisher(for: .DeleteFavoriteWorkout)) { _ in
+                    withAnimation(.interpolatingSpring(stiffness: 150, damping: 15)) {
+                        if currentIndex > 0 {
+                            currentIndex -= 1
+                        }
+                        favoriteWorkoutTransition = .asymmetric(insertion: .move(edge: .trailing), removal: .identity)
+                    }
+                }
             }
         }
-    }
-}
-
-#Preview {
-    FavoriteWorkoutsCarousel()
-}
-
-extension FavoriteWorkoutsCarousel: EditWorkoutDelegate {
-    func edit(_ workout: Workout) {
-        
+        .frame(height: 250 )
     }
 }

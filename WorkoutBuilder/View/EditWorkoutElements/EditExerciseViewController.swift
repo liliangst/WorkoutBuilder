@@ -216,7 +216,7 @@ class EditExerciseViewController: UIViewController {
     }
     
     @IBAction func tapValidateButton() {
-        WorkoutManager.saveChanges {
+        WorkoutManager.shared.saveChanges {
             if let exerciseTitle = exerciseTitle {
                 exercise.title = exerciseTitle
             }

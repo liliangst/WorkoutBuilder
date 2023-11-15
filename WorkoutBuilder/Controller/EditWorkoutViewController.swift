@@ -73,15 +73,15 @@ class EditWorkoutViewController: UIViewController {
         guard let workout = workout else { return }
         
         if let title = workoutTitle {
-            WorkoutManager.saveChanges {
+            WorkoutManager.shared.saveChanges {
                 workout.title = title
             }
         }
         
-        if let index = WorkoutManager.workouts.firstIndex(of: workout) {
-            WorkoutManager.workouts[index] = workout
+        if let index = WorkoutManager.shared.workouts.firstIndex(where: {$0.id == workout.id}) {
+            WorkoutManager.shared.workouts[index] = workout
         } else {
-            WorkoutManager.insert(workout)
+            WorkoutManager.shared.insert(workout)
         }
         tapBackButton()
     }
@@ -91,8 +91,8 @@ class EditWorkoutViewController: UIViewController {
             tapBackButton()
             return
         }
-        if WorkoutManager.workouts.contains(workout) {
-            WorkoutManager.remove(workout)
+        if let workoutToDelete = WorkoutManager.shared.workouts.first(where: {$0.id == workout.id}) {
+            WorkoutManager.shared.remove(workoutToDelete)
         }
         tapBackButton()
     }
@@ -114,7 +114,6 @@ extension EditWorkoutViewController: UITextFieldDelegate {
             navigationItem.rightBarButtonItem?.isEnabled = false
             return
         }
-        //workout?.title = title
         workoutTitle = title
         navigationItem.rightBarButtonItem?.isEnabled = true
     }
@@ -151,7 +150,7 @@ extension EditWorkoutViewController: UITableViewDataSource {
             let set = workout?.elementsObjects[indexPath.row] as! Sets
             setsCell.delegate = self
             setsCell.set = set
-            WorkoutManager.fetchElements(for: set)
+            WorkoutManager.shared.fetchElements(for: set)
             setsCell.dataModifier = self
             setsCell.parentViewController = self
             cell = setsCell

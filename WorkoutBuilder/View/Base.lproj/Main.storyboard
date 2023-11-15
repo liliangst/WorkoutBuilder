@@ -337,6 +337,24 @@
             </objects>
             <point key="canvasLocation" x="1224" y="-530"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9DD-8b-W0G">
+            <objects>
+                <navigationController id="HiL-Ie-Bep" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="UKg-Ga-Jeo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HbK-u6-9hw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Green"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="rootViewController" id="QWl-le-HsF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jH-QF-pd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="-1242"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="ofb-Ey-D1v">
             <objects>
@@ -346,7 +364,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-6l-cPx">
-                                <rect key="frame" x="20" y="114" width="353" height="655"/>
+                                <rect key="frame" x="20" y="158" width="353" height="611"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UrV-Un-RAF"/>
@@ -359,13 +377,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="fqz-ze-v8e" userLabel="Home"/>
+                    <navigationItem key="navigationItem" id="gbL-1d-8gu"/>
                     <connections>
                         <outlet property="stackView" destination="eMG-6l-cPx" id="GOv-lk-sfl"/>
+                        <segue destination="E1o-XW-bpw" kind="show" identifier="OpenEditWorkoutSegue" id="JQ4-e6-b7r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yum-zc-416" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223.6641221374045" y="-1235.2112676056338"/>
+            <point key="canvasLocation" x="2178" y="-1241"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pM7-Vo-mzB">
@@ -380,10 +400,10 @@
                         <color key="selectedImageTintColor" name="Green"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="viewControllers" id="ZY3-R5-jtn"/>
-                        <segue destination="zvZ-Yu-Pgd" kind="relationship" relationship="viewControllers" id="5mn-qz-tc3"/>
-                        <segue destination="YLI-L3-3qu" kind="relationship" relationship="viewControllers" id="vkB-x3-U0z"/>
-                        <segue destination="g4W-A5-NLi" kind="relationship" relationship="viewControllers" id="7tJ-Uo-KTR"/>
+                        <segue destination="HiL-Ie-Bep" kind="relationship" relationship="viewControllers" id="niG-7s-xa6"/>
+                        <segue destination="zvZ-Yu-Pgd" kind="relationship" relationship="viewControllers" id="FJR-64-6KI"/>
+                        <segue destination="YLI-L3-3qu" kind="relationship" relationship="viewControllers" id="sg7-Ja-QGK"/>
+                        <segue destination="g4W-A5-NLi" kind="relationship" relationship="viewControllers" id="Fsk-jo-uxH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9e-k9-Fqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -396,6 +416,9 @@
             <size key="intrinsicContentSize" width="-1" height="83"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="JQ4-e6-b7r"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorkoutCardSquare: View {
-    @State var isFavorite: Bool = false
+    @State var isFavorite: Bool
     
     let delegate: EditWorkoutDelegate
     var workout: Workout
@@ -17,7 +17,7 @@ struct WorkoutCardSquare: View {
         delegate = editDelegate
         
         self.workout = workout
-        isFavorite = workout.isFavorite
+        _isFavorite = State(initialValue: workout.isFavorite)
     }
     
     var body: some View {
@@ -35,9 +35,9 @@ struct WorkoutCardSquare: View {
                         
                         Button {
                             if workout.isFavorite {
-                                WorkoutManager.removeFromFavorite(workout: workout)
+                                WorkoutManager.shared.removeFromFavorite(workout: workout)
                             } else {
-                                WorkoutManager.addToFavorite(workout: workout)
+                                WorkoutManager.shared.addToFavorite(workout: workout)
                             }
                             isFavorite = workout.isFavorite
                         } label: {
@@ -54,9 +54,9 @@ struct WorkoutCardSquare: View {
                     
                     Spacer()
                     
-                    Text(String(workout.numberOfExercise) +
+                    Text(""/*String(workout.numberOfExercise) +
                          String(workout.numberOfExercise > 1 ? " exercices" : " exercice") +
-                         "\n1h10")
+                         "\n1h10"*/)
                     .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                     .foregroundColor(Asset.gray1.swiftUIColor)
                     .frame(maxWidth: .infinity, alignment: .leading)

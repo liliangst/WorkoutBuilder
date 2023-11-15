@@ -35,21 +35,21 @@ class WorkoutListViewController: UIViewController {
         
         if let workout = sender as? Workout {
             (segue.destination as! EditWorkoutViewController).workout = workout
-            WorkoutManager.fetchElements(for: workout)
+            WorkoutManager.shared.fetchElements(for: workout)
         } else {
             (segue.destination as! EditWorkoutViewController).workout = Workout()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        WorkoutManager.fetchWorkouts()
+        WorkoutManager.shared.fetchWorkouts()
         workoutsTableView.reloadData()
     }
 }
 
 extension WorkoutListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        WorkoutManager.workouts.count
+        WorkoutManager.shared.workouts.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -59,7 +59,7 @@ extension WorkoutListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! HostingCell<WorkoutCardRectangle>
-        let workout = WorkoutManager.workouts[indexPath.row]
+        let workout = WorkoutManager.shared.workouts[indexPath.row]
         cell.set(rootView: WorkoutCardRectangle(workout: workout, editDelegate: self), parentController: self)
         cell.backgroundColor = .clear
         return cell

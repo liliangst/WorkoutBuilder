@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Workout: Object {
+class Workout: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var isFavorite: Bool = false
     @Persisted var title: String
@@ -31,11 +31,11 @@ class Workout: Object {
             elementId = ObjectId("")
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
-        WorkoutManager.saveChanges {
-            elements.append(workoutElement)
+        WorkoutManager.shared.saveChanges {
+            thaw()?.elements.append(workoutElement)
         }
         elementsObjects.append(element)
-        WorkoutManager.saveElement(element)
+        WorkoutManager.shared.saveElement(element)
     }
     
     func remove(_ element: WorkoutElementObject) {
@@ -75,10 +75,10 @@ class Workout: Object {
         guard let elementIndex = elementIndex else {
             return
         }
-        WorkoutManager.saveChanges {
-            elements.remove(at: elementIndex)
+        WorkoutManager.shared.saveChanges {
+            thaw()?.elements.remove(at: elementIndex)
         }
         elementsObjects.remove(at: elementIndex)
-        WorkoutManager.removeElement(element)
+        WorkoutManager.shared.removeElement(element)
     }
 }

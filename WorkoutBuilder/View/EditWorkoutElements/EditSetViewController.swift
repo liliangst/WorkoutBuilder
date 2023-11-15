@@ -115,7 +115,7 @@ class EditSetViewController: UIViewController {
         let secondesRow = restTimePicker.selectedRow(inComponent: 1)
         let secondesSelected = secondes[secondesRow]
         
-        WorkoutManager.saveChanges {
+        WorkoutManager.shared.saveChanges {
             set.restBetweenSet = TimeInterval(minutesSelected * 60 + secondesSelected)
             set.numberOfSets = numberOfSets
         }
