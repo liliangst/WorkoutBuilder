@@ -23,6 +23,7 @@
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
+		384F306C2B0D27BB00AAF6C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F306B2B0D27BB00AAF6C5 /* HomeView.swift */; };
 		385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */; };
 		385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA92AC6C7B7009BF4A3 /* SpotifyAlbumData.swift */; };
 		385D9DAD2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */; };
@@ -71,6 +72,7 @@
 		38C565762ADEBF62002A514B /* WorkoutCardSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C565752ADEBF62002A514B /* WorkoutCardSquare.swift */; };
 		38EDA2752AD462E500540038 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDA2742AD462E500540038 /* NotificationNameExtension.swift */; };
 		38F6DF132AE16F60002CB3E5 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6DF122AE16F60002CB3E5 /* WorkoutManager.swift */; };
+		38F95B5F2B06A3D900DC36CC /* WorkoutPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F95B5E2B06A3D900DC36CC /* WorkoutPlayerCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,7 @@
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		384F306B2B0D27BB00AAF6C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyPlaylistData.swift; sourceTree = "<group>"; };
 		385D9DA92AC6C7B7009BF4A3 /* SpotifyAlbumData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAlbumData.swift; sourceTree = "<group>"; };
 		385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyCollectionObject.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		38C565752ADEBF62002A514B /* WorkoutCardSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardSquare.swift; sourceTree = "<group>"; };
 		38EDA2742AD462E500540038 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		38F6DF122AE16F60002CB3E5 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		38F95B5E2B06A3D900DC36CC /* WorkoutPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +262,9 @@
 			children = (
 				380AF2642A8BC53400DE1568 /* Main.storyboard */,
 				380AF26C2A8BC53500DE1568 /* LaunchScreen.storyboard */,
+				384F306B2B0D27BB00AAF6C5 /* HomeView.swift */,
 				380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */,
+				38F95B5E2B06A3D900DC36CC /* WorkoutPlayerCard.swift */,
 				387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */,
 				386B7A822A965E330000948E /* CustomTabBar.swift */,
 				385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */,
@@ -639,6 +645,7 @@
 				3887D1BE2AE9600E0086FA2C /* WorkoutRestCell.swift in Sources */,
 				380AF25F2A8BC53400DE1568 /* AppDelegate.swift in Sources */,
 				3887D1C22AE9AB180086FA2C /* WorkoutSetCell+Extension.swift in Sources */,
+				384F306C2B0D27BB00AAF6C5 /* HomeView.swift in Sources */,
 				389763CC2AAA135100222CD4 /* MusicViewController.swift in Sources */,
 				38C5656C2AD6EBF2002A514B /* WorkoutListViewController.swift in Sources */,
 				3887D1BC2AE918DA0086FA2C /* WorkoutExerciseCell.swift in Sources */,
@@ -663,6 +670,7 @@
 				389B459B2AA628CA00373C2D /* Rest.swift in Sources */,
 				386B7A832A965E330000948E /* CustomTabBar.swift in Sources */,
 				389763D12AB255DD00222CD4 /* TimeFormatter.swift in Sources */,
+				38F95B5F2B06A3D900DC36CC /* WorkoutPlayerCard.swift in Sources */,
 				380AF2612A8BC53400DE1568 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,11 +851,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VZ899C4D4A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutBuilder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;
@@ -864,8 +873,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liliangrasset.WorkoutBuilder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liliangrasset.WorkoutBuilder1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -885,7 +895,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZ899C4D4A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutBuilder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorkoutBuilder;

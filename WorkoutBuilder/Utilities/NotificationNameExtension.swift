@@ -16,4 +16,5 @@ extension Notification.Name {
     static let CurrentTrack = Notification.Name("CurrentTrack")
     static let TrackPlaybackPosition = Notification.Name("TrackPlaybackPosition")
     static let DeleteFavoriteWorkout = Notification.Name("DeleteFavoriteWorkout")
+    static let WorkoutToPlaySelected = Notification.Name("WorkoutToPlaySelected")
 }

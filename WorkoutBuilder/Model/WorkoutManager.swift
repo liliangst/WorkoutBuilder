@@ -12,6 +12,16 @@ class WorkoutManager {
     
     static let shared = WorkoutManager()
     
+    var playingWorkout: Workout? {
+        didSet {
+            guard playingWorkout != nil else {
+                NotificationCenter.default.post(name: .WorkoutToPlaySelected, object: false)
+                return
+            }
+            NotificationCenter.default.post(name: .WorkoutToPlaySelected, object: true)
+        }
+    }
+    
     private init() {
         #if DEBUG
         print("Realm : \(realm.configuration.fileURL!)")

@@ -68,7 +68,7 @@ struct WorkoutCardSquare: View {
                         Spacer()
                         
                         Button {
-                            // TODO: Start workout
+                            WorkoutManager.shared.playingWorkout = workout
                         } label: {
                             Image(systemName: "play.fill")
                                 .resizable()

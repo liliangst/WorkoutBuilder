@@ -348,7 +348,7 @@
                         <color key="tintColor" name="Green"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="rootViewController" id="QWl-le-HsF"/>
+                        <segue destination="PfQ-Cb-e9Y" kind="relationship" relationship="rootViewController" id="zjs-Ks-1X8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jH-QF-pd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -363,7 +363,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-6l-cPx">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-6l-cPx">
                                 <rect key="frame" x="20" y="158" width="353" height="611"/>
                             </stackView>
                         </subviews>

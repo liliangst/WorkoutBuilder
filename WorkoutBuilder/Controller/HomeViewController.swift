@@ -36,24 +36,39 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Set up music section
-        setUpLabel(in: musicStack, title: "Musique")
-        setUpMusicPlayerView()
-        stackView.addArrangedSubview(musicStack)
-        NSLayoutConstraint.activate([
-            musicStack.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            musicStack.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
-        ])
+        let homeView = HomeView(delegate: self)
+        let hostingHomeView = UIHostingController(rootView: homeView)
         
-        // Set up favorite workouts section
-        setUpLabel(in: workoutsStack, title: "Séances")
-        setUpWorkoutsCarouselView()
-        stackView.addArrangedSubview(workoutsStack)
+        addChild(hostingHomeView)
+        view.addSubview(hostingHomeView.view)
+        hostingHomeView.didMove(toParent: self)
         
-        // Adding an empty view at the bottom to fill the space
-        let emptyView = UIView()
-        emptyView.backgroundColor = nil
-        stackView.addArrangedSubview(emptyView)
+        hostingHomeView.view.backgroundColor = nil
+        
+        hostingHomeView.view.translatesAutoresizingMaskIntoConstraints = false
+        hostingHomeView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        hostingHomeView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        hostingHomeView.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        hostingHomeView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+//        // Set up music section
+//        setUpLabel(in: musicStack, title: "Musique")
+//        setUpMusicPlayerView()
+//        stackView.addArrangedSubview(musicStack)
+//        NSLayoutConstraint.activate([
+//            musicStack.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+//            musicStack.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+//        ])
+//        
+//        // Set up favorite workouts section
+//        setUpLabel(in: workoutsStack, title: "Séances")
+//        setUpWorkoutsCarouselView()
+//        stackView.addArrangedSubview(workoutsStack)
+//        
+//        // Adding an empty view at the bottom to fill the space
+//        let emptyView = UIView()
+//        emptyView.backgroundColor = nil
+//        stackView.addArrangedSubview(emptyView)
     }
     
     private func setUpMusicPlayerView() {
@@ -69,6 +84,13 @@ class HomeViewController: UIViewController {
         hostingMusicPlayerView.view.translatesAutoresizingMaskIntoConstraints = false
         hostingMusicPlayerView.view.leadingAnchor.constraint(equalTo: musicStack.leadingAnchor).isActive = true
         hostingMusicPlayerView.view.trailingAnchor.constraint(equalTo: musicStack.trailingAnchor).isActive = true
+    }
+    
+    private func setUpWorkoutPlayerView() {
+        let workoutPlayerCard = WorkoutPlayerCard()
+        let hostingWorkoutPlayerView = UIHostingController(rootView: workoutPlayerCard)
+        
+        self.addChild(hostingWorkoutPlayerView)
     }
     
     private func setUpWorkoutsCarouselView() {
