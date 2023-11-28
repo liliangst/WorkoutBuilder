@@ -50,8 +50,7 @@ class WorkoutManager {
     }
     
     func remove(_ workout: Workout) {
-        fetchElements(for: workout)
-        workout.elementsObjects.forEach { element in
+        workout.elements.forEach { element in
             removeElement(element)
         }
         try! realm.write {
@@ -100,7 +99,27 @@ class WorkoutManager {
         }
     }
     
-    func removeElement(_ element: WorkoutElementObject) {
+    func removeElement(_ element: WorkoutElement) {
+        switch element.type {
+        case WorkoutElementType.exercise.rawValue:
+            guard let exercise = realm.object(ofType: Exercise.self, forPrimaryKey: element.id) else { break }
+            removeElementObject(exercise)
+        case WorkoutElementType.rest.rawValue:
+            guard let rest = realm.object(ofType: Rest.self, forPrimaryKey: element.id) else { break }
+            removeElementObject(rest)
+        case WorkoutElementType.set.rawValue:
+            guard let `set` = realm.object(ofType: Sets.self, forPrimaryKey: element.id) else { break }
+            `set`.elements.forEach { element in
+                removeElement(element)
+            }
+            removeElementObject(`set`)
+        default:
+            break
+        }
+        
+    }
+    
+    func removeElementObject(_ element: WorkoutElementObject) {
         try! realm.write {
             switch element {
             case is Exercise:
@@ -117,7 +136,6 @@ class WorkoutManager {
     
     func fetchWorkouts() {
         workouts = realm.objects(Workout.self).map({$0})
-        //favoriteWorkouts = workouts.filter({$0.isFavorite})
     }
     
     func fetchElements(for workout: Workout) {

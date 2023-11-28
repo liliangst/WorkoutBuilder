@@ -48,7 +48,11 @@ struct WorkoutCardRectangle: View {
                                 .font(.system(size: 24, weight: .heavy))
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(Asset.green.swiftUIColor)
-                        }.padding(.bottom, 15)
+                        }
+                        .padding(.bottom, 15)
+                        .onReceive(NotificationCenter.default.publisher(for: .DeleteFavoriteWorkout)) { _ in
+                            isFavorite = workout.isFavorite
+                        }
 
                     }
                     .padding([.horizontal, .top], 15)

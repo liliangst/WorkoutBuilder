@@ -70,6 +70,6 @@ class Sets: Object, WorkoutElementObject {
             elements.remove(at: elementIndex)
         }
         elementsObjects.remove(at: elementIndex)
-        WorkoutManager.shared.removeElement(element)
+        WorkoutManager.shared.removeElementObject(element)
     }
 }

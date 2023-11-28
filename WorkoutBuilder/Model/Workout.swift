@@ -32,7 +32,11 @@ class Workout: Object, ObjectKeyIdentifiable {
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
         WorkoutManager.shared.saveChanges {
-            thaw()?.elements.append(workoutElement)
+            if isFrozen {
+                thaw()?.elements.append(workoutElement)
+            } else {
+                elements.append(workoutElement)
+            }
         }
         elementsObjects.append(element)
         WorkoutManager.shared.saveElement(element)
@@ -76,9 +80,13 @@ class Workout: Object, ObjectKeyIdentifiable {
             return
         }
         WorkoutManager.shared.saveChanges {
-            thaw()?.elements.remove(at: elementIndex)
+            if isFrozen {
+                thaw()?.elements.remove(at: elementIndex)
+            } else {
+                elements.remove(at: elementIndex)
+            }
         }
         elementsObjects.remove(at: elementIndex)
-        WorkoutManager.shared.removeElement(element)
+        WorkoutManager.shared.removeElementObject(element)
     }
 }

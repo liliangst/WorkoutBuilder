@@ -9,8 +9,21 @@ import SwiftUI
 
 struct WorkoutPlayerCard: View {
     
-    var workout: Workout
-    var workoutElementsToPlay: [WorkoutElementObject] = []
+    @State var workout: Workout {
+        didSet {
+            WorkoutManager.shared.fetchElements(for: workout)
+            workoutElementsToPlay = setUpWorkoutElements(workout.elementsObjects)
+            if workoutElementsToPlay.count > 0 {
+                currentElement = workoutElementsToPlay[0]
+            }
+            if workoutElementsToPlay.count > 1 {
+                nextElement = workoutElementsToPlay[1]
+            } else {
+                nextElement = nil
+            }
+        }
+    }
+    @State var workoutElementsToPlay: [WorkoutElementObject]!
     @State private var currentElement: WorkoutElementObject! {
         didSet {
             if let duration = (currentElement as? Rest)?.duration ?? (currentElement as? Exercise)?.duration  {
@@ -32,12 +45,25 @@ struct WorkoutPlayerCard: View {
     private let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     init() {
-        workout = WorkoutManager.shared.playingWorkout!
+        _workout = State(initialValue: WorkoutManager.shared.playingWorkout!)
+        WorkoutManager.shared.fetchElements(for: workout)
         
-        workoutElementsToPlay = setUpWorkoutElements(workout.elementsObjects)
-        
-        _currentElement = State(initialValue: workoutElementsToPlay[0])
-        _nextElement = State(initialValue: workoutElementsToPlay[1])
+        _workoutElementsToPlay = State(initialValue: setUpWorkoutElements(workout.elementsObjects))
+        if workoutElementsToPlay.count > 0 {
+            _currentElement = State(initialValue: workoutElementsToPlay[0])
+        }
+        if workoutElementsToPlay.count > 1 {
+            _nextElement = State(initialValue: workoutElementsToPlay[1])
+        } else {
+            nextElement = nil
+        }
+        if let duration = (currentElement as? Rest)?.duration ?? (currentElement as? Exercise)?.duration  {
+            isPausedDisabled = false
+            _timerAmount = State(initialValue: duration)
+        } else {
+            isPausedDisabled = true
+            isPaused = false
+        }
     }
     
     var body: some View {
@@ -188,6 +214,7 @@ struct WorkoutPlayerCard: View {
                 
                 HStack {
                     Button {
+                        // TODO: Refresh better
                         currentElement = workoutElementsToPlay[0]
                         nextElement = workoutElementsToPlay[1]
                         currentElementIndex = 0
@@ -221,6 +248,11 @@ struct WorkoutPlayerCard: View {
             .padding(.bottom, 10)
         }
         .frame(height: 300)
+        .onReceive(NotificationCenter.default.publisher(for: .WorkoutToPlaySelected)) { notification in
+            if let isAWorkoutSelected = notification.object as? Bool, isAWorkoutSelected {
+                workout = WorkoutManager.shared.playingWorkout!
+            }
+        }
     }
     
     private func goToNextElement() {
@@ -253,7 +285,7 @@ struct WorkoutPlayerCard: View {
     
     private func setUpSetElements(_ set: Sets) -> [WorkoutElementObject] {
         var result: [WorkoutElementObject] = []
-        
+        WorkoutManager.shared.fetchElements(for: set)
         for _ in 0..<set.numberOfSets {
             set.elementsObjects.forEach { element in
                 result.append(element)
