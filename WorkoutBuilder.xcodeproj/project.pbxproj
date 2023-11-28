@@ -22,6 +22,7 @@
 		380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */; };
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
+		383CBCF42B1691020043D7F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
 		384F306C2B0D27BB00AAF6C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F306B2B0D27BB00AAF6C5 /* HomeView.swift */; };
 		385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */; };
@@ -40,7 +41,6 @@
 		387243F02AF95002003B1BC9 /* EditRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387243EE2AF95002003B1BC9 /* EditRestViewController.swift */; };
 		387243F12AF95002003B1BC9 /* EditRestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387243EF2AF95002003B1BC9 /* EditRestViewController.xib */; };
 		387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */; };
-		387A354A2AFD73110064DB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387A35492AFD73110064DB19 /* GoogleService-Info.plist */; };
 		387A354D2AFD73AB0064DB19 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354C2AFD73AB0064DB19 /* FirebaseAnalytics */; };
 		387A354F2AFD73AB0064DB19 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 387A354E2AFD73AB0064DB19 /* FirebaseAnalyticsSwift */; };
 		387A35512B052F300064DB19 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 387A35502B052F300064DB19 /* FirebaseCrashlytics */; };
@@ -109,6 +109,7 @@
 		380AF2A42A8BDB9500DE1568 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		380AF2AD2A939A7400DE1568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
+		383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		384F306B2B0D27BB00AAF6C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		387243EE2AF95002003B1BC9 /* EditRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRestViewController.swift; sourceTree = "<group>"; };
 		387243EF2AF95002003B1BC9 /* EditRestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRestViewController.xib; sourceTree = "<group>"; };
 		387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsCarousel.swift; sourceTree = "<group>"; };
-		387A35492AFD73110064DB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		387F16BB2AEABBC5006827E4 /* AddWorkoutElementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkoutElementCell.xib; sourceTree = "<group>"; };
 		387F16C72AEABF06006827E4 /* WorkoutExerciseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutExerciseCell.xib; sourceTree = "<group>"; };
 		387F16C92AEABF30006827E4 /* WorkoutRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutRestCell.xib; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 				3881CB502AB39B100071168A /* Ressources */,
 				385D9DB02AC6D4B5009BF4A3 /* Generated */,
 				380AF26F2A8BC53500DE1568 /* Info.plist */,
-				387A35492AFD73110064DB19 /* GoogleService-Info.plist */,
+				383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */,
 			);
 			path = WorkoutBuilder;
 			sourceTree = "<group>";
@@ -569,13 +569,13 @@
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
 				387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */,
-				387A354A2AFD73110064DB19 /* GoogleService-Info.plist in Resources */,
 				385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */,
 				387F16C82AEABF06006827E4 /* WorkoutExerciseCell.xib in Resources */,
 				387F16CA2AEABF30006827E4 /* WorkoutRestCell.xib in Resources */,
 				380AF2A52A8BDB9500DE1568 /* Poppins-ExtraBold.ttf in Resources */,
 				380AF26B2A8BC53500DE1568 /* Colors.xcassets in Resources */,
 				380AF2662A8BC53400DE1568 /* Main.storyboard in Resources */,
+				383CBCF42B1691020043D7F3 /* GoogleService-Info.plist in Resources */,
 				387243F12AF95002003B1BC9 /* EditRestViewController.xib in Resources */,
 				387243E92AF94FE4003B1BC9 /* EditExerciseViewController.xib in Resources */,
 				38802E312AEFF48700195D45 /* AddWorkoutElementView.xib in Resources */,
