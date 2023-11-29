@@ -21,6 +21,7 @@ class EditWorkoutViewController: UIViewController {
     var workout: Workout?
     
     var workoutTitle: String?
+    var workoutElementsList: [WorkoutElementObject] = []
     
     @IBOutlet var titleTextField: UITextField! {
         didSet {
@@ -59,10 +60,14 @@ class EditWorkoutViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: validateButtonImage, style: .done, target: self, action: #selector(tapValidateButton))
         navigationItem.rightBarButtonItem?.isEnabled = false
         
-        if let workout, !workout.title.isEmpty {
+        guard let workout = workout else { return }
+        
+        if !workout.title.isEmpty {
             titleTextField.text = workout.title
             navigationItem.rightBarButtonItem?.isEnabled = true
         }
+        
+        workoutElementsList = workout.elementsObjects
     }
     
     @objc private func tapBackButton() {
@@ -76,6 +81,13 @@ class EditWorkoutViewController: UIViewController {
             WorkoutManager.shared.saveChanges {
                 workout.title = title
             }
+        }
+        
+        workoutElementsList.forEach { element in
+            if let element = element as? Sets {
+                element.saveElements()
+            }
+            workout.insert(element)
         }
         
         if let index = WorkoutManager.shared.workouts.firstIndex(where: {$0.id == workout.id}) {
@@ -121,36 +133,37 @@ extension EditWorkoutViewController: UITextFieldDelegate {
 
 extension EditWorkoutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        (workout?.elementsObjects.count ?? 0) + 1
+        //(workout?.elementsObjects.count ?? 0) + 1
+        workoutElementsList.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         
-        guard (workout?.elementsObjects.count ?? 0) > indexPath.row else {
+        guard workoutElementsList.count > indexPath.row else {
             cell = tableView.dequeueReusableCell(withIdentifier: AddWorkoutElementCell.identifier, for: indexPath) as! AddWorkoutElementCell
             (cell as! AddWorkoutElementCell).action = #selector(tapAddWorkoutElementCell)
             return cell
         }
         
-        switch workout?.elementsObjects[indexPath.row].self {
+        switch workoutElementsList[indexPath.row].self {
         case is Exercise: let exerciseCell = tableView.dequeueReusableCell(withIdentifier: WorkoutExerciseCell.identifier, for: indexPath) as! WorkoutExerciseCell
-            let exercise = workout?.elementsObjects[indexPath.row] as! Exercise
+            let exercise = workoutElementsList[indexPath.row] as! Exercise
             exerciseCell.parentViewController = self
             exerciseCell.exercise = exercise
             exerciseCell.dataModifier = self
             cell = exerciseCell
         case is Rest: let restCell = tableView.dequeueReusableCell(withIdentifier: WorkoutRestCell.identifier, for: indexPath) as! WorkoutRestCell
-            let rest = workout?.elementsObjects[indexPath.row] as! Rest
+            let rest = workoutElementsList[indexPath.row] as! Rest
             restCell.parentViewController = self
             restCell.rest = rest
             restCell.dataModifier = self
             cell = restCell
         case is Sets: let setsCell = tableView.dequeueReusableCell(withIdentifier: WorkoutSetCell.identifier, for: indexPath) as! WorkoutSetCell
-            let set = workout?.elementsObjects[indexPath.row] as! Sets
+            let set = workoutElementsList[indexPath.row] as! Sets
             setsCell.delegate = self
-            setsCell.set = set
             WorkoutManager.shared.fetchElements(for: set)
+            setsCell.set = set
             setsCell.dataModifier = self
             setsCell.parentViewController = self
             cell = setsCell
@@ -164,13 +177,13 @@ extension EditWorkoutViewController: UITableViewDataSource {
 
 extension EditWorkoutViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard indexPath.row < workout?.elementsObjects.count ?? 0, workout?.elementsObjects[indexPath.row] is Sets else {
+        guard indexPath.row < workoutElementsList.count, workoutElementsList[indexPath.row] is Sets else {
             return 105
         }
-        guard let set = workout?.elementsObjects[indexPath.row] as? Sets else {
+        guard let set = workoutElementsList[indexPath.row] as? Sets else {
             return 215
         }
-        return CGFloat(110 + 105 * (set.elementsObjects.count + 1))
+        return CGFloat(110 + 105 * (set.editedElementsObjectsList.count + 1))
     }
 }
 
@@ -178,11 +191,14 @@ extension EditWorkoutViewController: AddWorkoutElementDelegate {
     func addElement(_ element: WorkoutElementObject.Type) {
         switch element {
         case is Sets.Type:
-            workout?.insert(Sets())
+            //workout?.insert(Sets())
+            workoutElementsList.append(Sets())
         case is Exercise.Type:
-            workout?.insert(Exercise())
+            //workout?.insert(Exercise())
+            workoutElementsList.append(Exercise())
         case is Rest.Type:
-            workout?.insert(Rest())
+            //workout?.insert(Rest())
+            workoutElementsList.append(Rest())
         default:
             break
         }
@@ -226,6 +242,7 @@ extension EditWorkoutViewController: EditWorkoutDataModifier {
     }
     
     func delete(_ workoutElement: WorkoutElementObject) {
+        workoutElementsList.removeAll(where: {$0 === workoutElement})
         workout?.remove(workoutElement)
         refreshData()
     }

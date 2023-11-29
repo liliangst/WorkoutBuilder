@@ -113,6 +113,7 @@ class EditExerciseViewController: UIViewController {
         didSet {
             repLabel.font = FontFamily.DMSans.regular.font(size: 18)
             repLabel.textColor = Asset.gray1.color
+            repLabel.text = "Nombre de répétitions:"
         }
     }
     @IBOutlet var picker: UIPickerView! {

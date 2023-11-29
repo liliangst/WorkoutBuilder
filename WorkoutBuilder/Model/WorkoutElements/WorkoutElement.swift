@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-protocol WorkoutElementObject {}
+protocol WorkoutElementObject: AnyObject {}
 
 class WorkoutElement: EmbeddedObject {
     @Persisted var id: ObjectId

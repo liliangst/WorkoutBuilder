@@ -13,7 +13,10 @@ class Sets: Object, WorkoutElementObject {
     @Persisted var restBetweenSet: TimeInterval? = 60
     @Persisted var numberOfSets: Int = 1
     @Persisted var elements: List<WorkoutElement> = List<WorkoutElement>()
+    /// - Array of WorkoutElementObject linked to this Set
+    /// - Must be fetch before being used
     var elementsObjects: [WorkoutElementObject] = []
+    var editedElementsObjectsList: [WorkoutElementObject] = []
     
     func insert(_ element: WorkoutElementObject) {
         let type = WorkoutElementType(type: element)
@@ -29,12 +32,19 @@ class Sets: Object, WorkoutElementObject {
             elementId = ObjectId("")
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
-        
-        WorkoutManager.shared.saveChanges {
-            elements.append(workoutElement)
+        if !elements.contains(where: {$0.id == workoutElement.id}) {
+            WorkoutManager.shared.saveChanges {
+                elements.append(workoutElement)
+            }
         }
         elementsObjects.append(element)
         WorkoutManager.shared.saveElement(element)
+    }
+    
+    func saveElements() {
+        editedElementsObjectsList.forEach { element in
+            insert(element)
+        }
     }
     
     func remove(_ element: WorkoutElementObject) {

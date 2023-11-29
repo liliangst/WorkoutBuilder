@@ -16,6 +16,7 @@ class WorkoutSetCell: UITableViewCell {
         didSet {
             setUpRestTimeLabel(from: set.restBetweenSet ?? 0)
             setUpTitleLabel(with: set.numberOfSets)
+            setUpTableView()
         }
     }
     
@@ -101,5 +102,12 @@ class WorkoutSetCell: UITableViewCell {
     
     private func setUpTitleLabel(with numberOfSets: Int) {
         titleLabel.text = "Série ×\(numberOfSets)"
+    }
+    
+    private func setUpTableView() {
+        if `set`.editedElementsObjectsList.isEmpty {
+            `set`.editedElementsObjectsList = `set`.elementsObjects
+        }
+        tableView.reloadData()
     }
 }

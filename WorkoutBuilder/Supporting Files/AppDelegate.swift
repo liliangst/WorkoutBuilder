@@ -11,7 +11,7 @@ import FirebaseCore
 import FirebaseAnalytics
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 

@@ -31,11 +31,13 @@ class Workout: Object, ObjectKeyIdentifiable {
             elementId = ObjectId("")
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
-        WorkoutManager.shared.saveChanges {
-            if isFrozen {
-                thaw()?.elements.append(workoutElement)
-            } else {
-                elements.append(workoutElement)
+        if !elements.contains(where: {$0.id == workoutElement.id}) {
+            WorkoutManager.shared.saveChanges {
+                if isFrozen {
+                    thaw()?.elements.append(workoutElement)
+                } else {
+                    elements.append(workoutElement)
+                }
             }
         }
         elementsObjects.append(element)
@@ -46,37 +48,40 @@ class Workout: Object, ObjectKeyIdentifiable {
         let elementId: ObjectId?
         let elementIndex: Int?
         
-        switch element {
-        case is Exercise:
-            elementId = (element as! Exercise).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                guard let exercise = (elementObject as? Exercise) else {
-                    return false
-                }
-                return exercise.id == elementId
-            })!
-        case is Rest:
-            elementId = (element as! Rest).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                guard let rest = (elementObject as? Rest) else {
-                    return false
-                }
-                return rest.id == elementId
-            })!
-        case is Sets:
-            elementId = (element as! Sets).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                guard let sets = (elementObject as? Sets) else {
-                    return false
-                }
-                return sets.id == elementId
-            })!
-        default:
-            elementId = nil
-            elementIndex = nil
-        }
-        
-        guard let elementIndex = elementIndex else {
+//        switch element {
+//        case is Exercise:
+//            elementId = (element as! Exercise).id
+//            elementIndex = elementsObjects.firstIndex(where: { elementObject in
+//                guard let exercise = (elementObject as? Exercise) else {
+//                    return false
+//                }
+//                return exercise.id == elementId
+//            })!
+//        case is Rest:
+//            elementId = (element as! Rest).id
+//            elementIndex = elementsObjects.firstIndex(where: { elementObject in
+//                guard let rest = (elementObject as? Rest) else {
+//                    return false
+//                }
+//                return rest.id == elementId
+//            })!
+//        case is Sets:
+//            elementId = (element as! Sets).id
+//            elementIndex = elementsObjects.firstIndex(where: { elementObject in
+//                guard let sets = (elementObject as? Sets) else {
+//                    return false
+//                }
+//                return sets.id == elementId
+//            })!
+//        default:
+//            elementId = nil
+//            elementIndex = nil
+//        }
+//        
+//        guard let elementIndex = elementIndex else {
+//            return
+//        }
+        guard let elementIndex = elementsObjects.firstIndex(where: {$0 === element}) else {
             return
         }
         WorkoutManager.shared.saveChanges {

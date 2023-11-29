@@ -3,4 +3,198 @@
    uuid = "638F8C21-266C-4DD0-87BE-7A2F8BEA44FA"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09080715-EE80-4C29-8A10-BF801FA1C8BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/WorkoutSetCell+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "addElement(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2130924-C4E5-4AB2-9ACC-41DB3061FCEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "tapAddWorkoutElementCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1A96782-497F-476A-802B-EA73AC70DE3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/View/EditWorkoutCells/New Group/WorkoutSetCell/WorkoutSetCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E1A96782-497F-476A-802B-EA73AC70DE3C - 294d63af2e4db612"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkoutBuilder.WorkoutSetCell.openEditSetView(__C.UIButton) -&gt; ()"
+                  moduleName = "WorkoutBuilder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilian/Desktop/OPENCLASSROOM/12/WorkoutBuilder/WorkoutBuilder/View/EditWorkoutCells/New%20Group/WorkoutSetCell/WorkoutSetCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "588">
+               </Location>
+               <Location
+                  uuid = "E1A96782-497F-476A-802B-EA73AC70DE3C - 54b8590e04635739"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkoutBuilder.WorkoutSetCell.awakeFromNib() -&gt; ()"
+                  moduleName = "WorkoutBuilder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilian/Desktop/OPENCLASSROOM/12/WorkoutBuilder/WorkoutBuilder/View/EditWorkoutCells/New%20Group/WorkoutSetCell/WorkoutSetCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C39C0DEF-D6D5-422E-AC4B-45D81176D45C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tapValidateButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C39C0DEF-D6D5-422E-AC4B-45D81176D45C - eed1652f44a685b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorkoutBuilder.EditWorkoutViewController.tapValidateButton() -&gt; ()"
+                  moduleName = "WorkoutBuilder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilian/Desktop/OPENCLASSROOM/12/WorkoutBuilder/WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "480">
+               </Location>
+               <Location
+                  uuid = "C39C0DEF-D6D5-422E-AC4B-45D81176D45C - 2e90f8b468945823"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (WorkoutBuilder.WorkoutElementObject) -&gt; () in WorkoutBuilder.EditWorkoutViewController.tapValidateButton() -&gt; ()"
+                  moduleName = "WorkoutBuilder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilian/Desktop/OPENCLASSROOM/12/WorkoutBuilder/WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DB6A261-82E0-4CDC-AE10-79766F6AC0FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C65910FA-5F0F-4FAF-8BB7-5F7EB42D91B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/EditWorkoutViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E84F331A-47FB-4DCA-87E9-9DB66B89B323"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/View/EditWorkoutCells/New Group/WorkoutSetCell/WorkoutSetCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "set"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50BE765E-FBB5-42D8-810E-ECB2B68FA0A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorkoutBuilder/Controller/WorkoutSetCell+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
