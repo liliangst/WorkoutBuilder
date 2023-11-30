@@ -3,9 +3,10 @@ output_dir: ./Generated/
 xcassets:
     inputs:
         - Ressources/Colors.xcassets
+        - Ressources/Images.xcassets
     outputs:
         templateName: swift5
-        output: Colors.swift
+        output: Assets.swift
 fonts:
     inputs:
         - Ressources/Fonts

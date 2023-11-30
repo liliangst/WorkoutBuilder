@@ -12,15 +12,15 @@ struct RaisedButtonStyle: ButtonStyle {
         let offset: CGFloat = 5
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Asset.gray3.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                 .offset(y: offset)
 
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Asset.gray3.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                 .offset(y: configuration.isPressed ? offset : 0)
             
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Asset.gray2.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray2.swiftUIColor)
                 .padding(5)
                 .offset(y: configuration.isPressed ? offset : 0)
 

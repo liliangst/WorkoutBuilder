@@ -22,7 +22,7 @@ struct HomeView: View {
             VStack(alignment: .leading) {
                 Text("Musique")
                     .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 32))
-                    .foregroundStyle(Asset.gray1.swiftUIColor)
+                    .foregroundStyle(Asset.Colors.gray1.swiftUIColor)
                     .padding(.leading, 15)
                 
                 MusicPlayerCard()
@@ -30,7 +30,7 @@ struct HomeView: View {
                 if isWorkoutPlayerEnabled {
                     Text("Séance en cours")
                         .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 32))
-                        .foregroundStyle(Asset.gray1.swiftUIColor)
+                        .foregroundStyle(Asset.Colors.gray1.swiftUIColor)
                         .padding(.leading, 15)
                     
                     WorkoutPlayerCard()
@@ -38,7 +38,7 @@ struct HomeView: View {
                 
                 Text("Séances")
                     .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 32))
-                    .foregroundStyle(Asset.gray1.swiftUIColor)
+                    .foregroundStyle(Asset.Colors.gray1.swiftUIColor)
                     .padding(.leading, 15)
                 
                FavoriteWorkoutsCarousel(delegate: delegate)
@@ -54,7 +54,7 @@ struct HomeView: View {
                 isWorkoutPlayerEnabled = isEnabled
             }
         }
-        .background(Asset.darkGray.swiftUIColor)
+        .background(Asset.Colors.darkGray.swiftUIColor)
         
     }
 }

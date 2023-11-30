@@ -70,21 +70,21 @@ struct WorkoutPlayerCard: View {
         let offset: CGFloat = 5
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Asset.gray3.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                 .offset(y: offset)
             
             RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Asset.gray3.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray3.swiftUIColor)
             
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Asset.gray2.swiftUIColor)
+                .foregroundColor(Asset.Colors.gray2.swiftUIColor)
                 .padding(5)
             
             VStack(spacing: 10) {
                 HStack {
                     Text(workout.title)
                         .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 24))
-                        .foregroundColor(Asset.gray1.swiftUIColor)
+                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                         .lineLimit(2)
                     
                     Spacer()
@@ -97,7 +97,7 @@ struct WorkoutPlayerCard: View {
                             .scaledToFit()
                             .font(.system(size: 30, weight: .heavy))
                             .frame(width: 20, height: 20)
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     }
                 }
                 
@@ -105,18 +105,18 @@ struct WorkoutPlayerCard: View {
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Asset.gray3.swiftUIColor)
+                        .foregroundStyle(Asset.Colors.gray3.swiftUIColor)
                     HStack(spacing: 15) {
                         if currentElement is Exercise {
                             Text((currentElement as! Exercise).title)
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                                .foregroundColor(Asset.gray1.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                 .lineLimit(2)
                                 .padding(.leading, 5)
                         } else if currentElement is Rest {
                             Text("Repos")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                                .foregroundColor(Asset.gray1.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                 .lineLimit(2)
                                 .padding(.leading, 5)
                         }
@@ -126,7 +126,7 @@ struct WorkoutPlayerCard: View {
                         if let _ = (currentElement as? Rest)?.duration ?? (currentElement as? Exercise)?.duration {
                             Text(TimeFormatter.formatToString(timeInMilliseconds: UInt(timerAmount * 1000)))
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 24))
-                                .foregroundColor(Asset.green.swiftUIColor)
+                                .foregroundColor(Asset.Colors.green.swiftUIColor)
                                 .lineLimit(2)
                                 .padding(.trailing, 10)
                                 .onReceive(timer) { _ in
@@ -144,13 +144,13 @@ struct WorkoutPlayerCard: View {
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)
-                                        .foregroundStyle(Asset.green.swiftUIColor)
+                                        .foregroundStyle(Asset.Colors.green.swiftUIColor)
                                     Image(systemName: "checkmark")
                                         .resizable()
                                         .scaledToFit()
                                         .font(.system(size: 30, weight: .heavy))
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(Asset.gray3.swiftUIColor)
+                                        .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                                 }
                             }
                             .frame(width: 30)
@@ -162,7 +162,7 @@ struct WorkoutPlayerCard: View {
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Asset.gray3.swiftUIColor)
+                        .foregroundStyle(Asset.Colors.gray3.swiftUIColor)
                     VStack(alignment: .leading, spacing: 0) {
                         HStack(spacing: 5) {
                             Image(systemName: "arrow.turn.down.right")
@@ -170,10 +170,10 @@ struct WorkoutPlayerCard: View {
                                 .scaledToFit()
                                 .font(.system(size: 30, weight: .heavy))
                                 .frame(width: 15, height: 15)
-                                .foregroundColor(Asset.gray2.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray2.swiftUIColor)
                             Text("Suivant")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 16))
-                                .foregroundColor(Asset.gray2.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray2.swiftUIColor)
                                 .lineLimit(2)
                             Spacer()
                         }
@@ -182,13 +182,13 @@ struct WorkoutPlayerCard: View {
                         if nextElement is Exercise {
                             Text((nextElement as! Exercise).title)
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                                .foregroundColor(Asset.gray1.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                 .lineLimit(2)
                                 .padding(.leading, 5)
                         } else if nextElement is Rest {
                             Text("Repos \(TimeFormatter.formatToString(timeInMilliseconds: UInt((nextElement as! Rest).duration! * 1000)))")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                                .foregroundColor(Asset.gray1.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                 .lineLimit(2)
                         } else {
                             HStack {
@@ -196,7 +196,7 @@ struct WorkoutPlayerCard: View {
                                 
                                 Text("Terminé")
                                     .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                                    .foregroundColor(Asset.gray1.swiftUIColor)
+                                    .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                     .lineLimit(2)
                                 
                                 Spacer()
@@ -224,7 +224,7 @@ struct WorkoutPlayerCard: View {
                             .scaledToFit()
                             .font(.system(size: 30, weight: .heavy))
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     }
                     
                     Spacer()
@@ -237,7 +237,7 @@ struct WorkoutPlayerCard: View {
                             .scaledToFit()
                             .font(.system(size: 30, weight: .heavy))
                             .frame(width: 25, height: 25)
-                            .foregroundColor(isPausedDisabled ? Asset.gray3.swiftUIColor : Asset.gray1.swiftUIColor)
+                            .foregroundColor(isPausedDisabled ? Asset.Colors.gray3.swiftUIColor : Asset.Colors.gray1.swiftUIColor)
                     }
                     .disabled(isPausedDisabled)
                 }

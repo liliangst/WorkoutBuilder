@@ -24,7 +24,7 @@ class WorkoutListViewController: UIViewController {
             let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 48, weight: .heavy)
             addWorkoutButton.setImage(UIImage(systemName: "plus.app", withConfiguration: symbolConfiguration), for: .normal)
             addWorkoutButton.setTitle("", for: .normal)
-            addWorkoutButton.imageView?.tintColor = Asset.green.color
+            addWorkoutButton.imageView?.tintColor = Asset.Colors.green.color
         }
     }
         

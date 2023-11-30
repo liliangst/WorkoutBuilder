@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Spotify_logo_without_text_80x80.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

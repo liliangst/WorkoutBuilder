@@ -10,7 +10,12 @@ import Kingfisher
 
 class MusicViewController: UIViewController {
 
-    @IBOutlet weak var connectSpotifyButton: UIButton!
+    @IBOutlet weak var connectSpotifyButton: UIButton! {
+        didSet {
+            connectSpotifyButton.setTitle("", for: .normal)
+            connectSpotifyButton.setImage(UIImage(named: "SpotifyLogo"), for: .normal)
+        }
+    }
     @IBOutlet weak var musicSelectionStackView: UIStackView!
     @IBOutlet weak var musicCollectionView: UICollectionView! {
         didSet {

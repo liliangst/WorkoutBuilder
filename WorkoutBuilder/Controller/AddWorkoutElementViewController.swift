@@ -40,14 +40,14 @@ class AddWorkoutElementViewController: UIViewController {
         didSet {
             titleLabel.text = "Ajouter"
             titleLabel.font = FontFamily.PoppinsExtraBold.regular.font(size: 20)
-            titleLabel.textColor = Asset.gray1.color
+            titleLabel.textColor = Asset.Colors.gray1.color
         }
     }
     
     @IBOutlet var setBackgroundView: UIView! {
         didSet {
             setBackgroundView.layer.borderWidth = 5
-            setBackgroundView.layer.borderColor = Asset.green.color.cgColor
+            setBackgroundView.layer.borderColor = Asset.Colors.green.color.cgColor
             setBackgroundView.layer.cornerRadius = 10
             setBackgroundView.backgroundColor = .clear
             
@@ -56,15 +56,15 @@ class AddWorkoutElementViewController: UIViewController {
     }
     @IBOutlet var addSetButton: UIButton! {
         didSet {
-            addSetButton.setAttributedTitle(NSAttributedString(string: "Série", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.green.color]), for: .normal)
-            addSetButton.setAttributedTitle(NSAttributedString(string: "Série", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.gray1.color]), for: .highlighted)
+            addSetButton.setAttributedTitle(NSAttributedString(string: "Série", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.green.color]), for: .normal)
+            addSetButton.setAttributedTitle(NSAttributedString(string: "Série", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.gray1.color]), for: .highlighted)
         }
     }
     
     @IBOutlet var exerciseBackgroundView: UIView! {
         didSet {
             exerciseBackgroundView.layer.borderWidth = 5
-            exerciseBackgroundView.layer.borderColor = Asset.green.color.cgColor
+            exerciseBackgroundView.layer.borderColor = Asset.Colors.green.color.cgColor
             exerciseBackgroundView.layer.cornerRadius = 10
             exerciseBackgroundView.backgroundColor = .clear
             
@@ -73,15 +73,15 @@ class AddWorkoutElementViewController: UIViewController {
     }
     @IBOutlet var addExerciseButton: UIButton! {
         didSet {
-            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.green.color]), for: .normal)
-            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.gray1.color]), for: .highlighted)
+            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.green.color]), for: .normal)
+            addExerciseButton.setAttributedTitle(NSAttributedString(string: "Exercice", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.gray1.color]), for: .highlighted)
         }
     }
     
     @IBOutlet var restBackgroundView: UIView! {
         didSet {
             restBackgroundView.layer.borderWidth = 5
-            restBackgroundView.layer.borderColor = Asset.green.color.cgColor
+            restBackgroundView.layer.borderColor = Asset.Colors.green.color.cgColor
             restBackgroundView.layer.cornerRadius = 10
             restBackgroundView.backgroundColor = .clear
             
@@ -90,8 +90,8 @@ class AddWorkoutElementViewController: UIViewController {
     }
     @IBOutlet var addRestButton: UIButton! {
         didSet {
-            addRestButton.setAttributedTitle(NSAttributedString(string: "Repos", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.green.color]), for: .normal)
-            addRestButton.setAttributedTitle(NSAttributedString(string: "Repos", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.gray1.color]), for: .highlighted)
+            addRestButton.setAttributedTitle(NSAttributedString(string: "Repos", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.green.color]), for: .normal)
+            addRestButton.setAttributedTitle(NSAttributedString(string: "Repos", attributes: [.font : FontFamily.DMSans.regular.font(size: 32), .foregroundColor: Asset.Colors.gray1.color]), for: .highlighted)
         }
     }
     

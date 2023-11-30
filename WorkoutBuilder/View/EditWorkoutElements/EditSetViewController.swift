@@ -22,14 +22,14 @@ class EditSetViewController: UIViewController {
     
     @IBOutlet var backgroundView: UIView! {
         didSet {
-            backgroundView.backgroundColor = Asset.darkGray.color.withAlphaComponent(0.4)
+            backgroundView.backgroundColor = Asset.Colors.darkGray.color.withAlphaComponent(0.4)
         }
     }
     
     @IBOutlet var cardBackgroundView: UIView! {
         didSet {
             cardBackgroundView.layer.cornerRadius = 10
-            cardBackgroundView.backgroundColor = Asset.gray3.color
+            cardBackgroundView.backgroundColor = Asset.Colors.gray3.color
         }
     }
     
@@ -39,7 +39,7 @@ class EditSetViewController: UIViewController {
             let backButtonImage = UIImage(systemName: "xmark", withConfiguration: btnConfiguration)
             backButton.setImage(backButtonImage, for: .normal)
             backButton.setTitle("", for: .normal)
-            backButton.tintColor = Asset.green.color
+            backButton.tintColor = Asset.Colors.green.color
         }
     }
     @IBOutlet var validateButton: UIButton! {
@@ -48,16 +48,16 @@ class EditSetViewController: UIViewController {
             let validateButtonImage = UIImage(systemName: "checkmark", withConfiguration: btnConfiguration)
             validateButton.setImage(validateButtonImage, for: .normal)
             validateButton.setTitle("", for: .normal)
-            validateButton.tintColor = Asset.green.color
+            validateButton.tintColor = Asset.Colors.green.color
         }
     }
     @IBOutlet var deleteButton: UIButton! {
         didSet {
             let btnConfiguration = UIImage.SymbolConfiguration(weight: .heavy)
             let deleteButtonImage = UIImage(systemName: "trash", withConfiguration: btnConfiguration)
-            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.gray1.color), for: .normal)
-            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.gray1.color]), for: .normal)
-            deleteButton.tintColor = Asset.gray2.color
+            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.Colors.gray1.color), for: .normal)
+            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.Colors.gray1.color]), for: .normal)
+            deleteButton.tintColor = Asset.Colors.gray2.color
         }
     }
     
@@ -65,14 +65,14 @@ class EditSetViewController: UIViewController {
         didSet {
             setLabel.text = "Série"
             setLabel.font = FontFamily.PoppinsExtraBold.regular.font(size: 20)
-            setLabel.textColor = Asset.gray1.color
+            setLabel.textColor = Asset.Colors.gray1.color
         }
     }
     @IBOutlet var numberOfSetsLabel: UILabel! {
         didSet {
             numberOfSetsLabel.text = "Nombre de séries: \(set.numberOfSets)"
             numberOfSetsLabel.font = FontFamily.DMSans.regular.font(size: 18)
-            numberOfSetsLabel.textColor = Asset.gray1.color
+            numberOfSetsLabel.textColor = Asset.Colors.gray1.color
             numberOfSetsLabel.textAlignment = .right
         }
     }
@@ -80,7 +80,7 @@ class EditSetViewController: UIViewController {
         didSet {
             restTimeBetweenSetsLabel.text = "Repos entre les séries:"
             restTimeBetweenSetsLabel.font = FontFamily.DMSans.regular.font(size: 18)
-            restTimeBetweenSetsLabel.textColor = Asset.gray1.color
+            restTimeBetweenSetsLabel.textColor = Asset.Colors.gray1.color
         }
     }
     
@@ -90,9 +90,9 @@ class EditSetViewController: UIViewController {
             numberOfSetsStepper.maximumValue = 10
             numberOfSetsStepper.value = 1
             numberOfSetsStepper.stepValue = 1
-            numberOfSetsStepper.backgroundColor = Asset.gray2.color
+            numberOfSetsStepper.backgroundColor = Asset.Colors.gray2.color
             numberOfSetsStepper.layer.cornerRadius = 10
-            numberOfSetsStepper.tintColor = Asset.green.color
+            numberOfSetsStepper.tintColor = Asset.Colors.green.color
             numberOfSetsStepper.setIncrementImage(numberOfSetsStepper.incrementImage(for: .normal), for: .normal)
             numberOfSetsStepper.setDecrementImage(numberOfSetsStepper.decrementImage(for: .normal), for: .normal)
         }

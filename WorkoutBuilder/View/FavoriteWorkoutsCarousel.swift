@@ -21,12 +21,12 @@ struct FavoriteWorkoutsCarousel: View {
                 VStack {
                     Text("Pas de séances favorites")
                         .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
-                        .foregroundColor(Asset.gray1.swiftUIColor)
+                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                     Text("Pour ajouter une séance à vos favoris, appuyer sur l'étoile en haut à droite d'une séance.")
                         .font(FontFamily.DMSans.regular.swiftUIFont(size: 20))
-                        .foregroundColor(Asset.gray1.swiftUIColor)
+                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                         .multilineTextAlignment(.center)
                 }
                 .minimumScaleFactor(0.01)
@@ -45,7 +45,7 @@ struct FavoriteWorkoutsCarousel: View {
                         }
                     } label: {
                         Image(systemName: "chevron.left")
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                             .font(.system(size: 40, weight: .heavy))
                     }
                     Spacer()
@@ -63,7 +63,7 @@ struct FavoriteWorkoutsCarousel: View {
                                     .resizable()
                                     .aspectRatio(1.0, contentMode: .fit)
                                     .frame(width: 10)
-                                    .foregroundColor(index == currentIndex ? Asset.green.swiftUIColor : Asset.gray2.swiftUIColor)
+                                    .foregroundColor(index == currentIndex ? Asset.Colors.green.swiftUIColor : Asset.Colors.gray2.swiftUIColor)
                             }
                         }
                     }
@@ -79,7 +79,7 @@ struct FavoriteWorkoutsCarousel: View {
                         }
                     } label: {
                         Image(systemName: "chevron.right")
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                             .font(.system(size: 40, weight: .heavy))
                     }
                     Spacer()

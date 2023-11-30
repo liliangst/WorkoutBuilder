@@ -30,7 +30,7 @@ struct WorkoutCardRectangle: View {
                     HStack {
                         Text(workout.title)
                             .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(fixedSize: 24))
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
 
                         Spacer()
 
@@ -47,7 +47,7 @@ struct WorkoutCardRectangle: View {
                                 .scaledToFit()
                                 .font(.system(size: 24, weight: .heavy))
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(Asset.green.swiftUIColor)
+                                .foregroundColor(Asset.Colors.green.swiftUIColor)
                         }
                         .padding(.bottom, 15)
                         .onReceive(NotificationCenter.default.publisher(for: .DeleteFavoriteWorkout)) { _ in
@@ -63,7 +63,7 @@ struct WorkoutCardRectangle: View {
                                  String(workout.numberOfExercise > 1 ? " exercices" : " exercice") +
                                  "\n1h10"*/)
                             .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
-                            .foregroundColor(Asset.gray1.swiftUIColor)
+                            .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 15)
 
@@ -85,7 +85,7 @@ struct WorkoutCardRectangle: View {
                                         .scaledToFit()
                                         .font(.system(size: 24, weight: .heavy))
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(Asset.gray1.swiftUIColor)
+                                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                         .padding(10)
                                 }
 
@@ -97,7 +97,7 @@ struct WorkoutCardRectangle: View {
                                         .scaledToFit()
                                         .font(.system(size: 24, weight: .heavy))
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(Asset.gray1.swiftUIColor)
+                                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                         .padding(10)
                                 }
                             }

@@ -17,14 +17,14 @@ class EditRestViewController: UIViewController {
     
     @IBOutlet var backgroundView: UIView! {
         didSet {
-            backgroundView.backgroundColor = Asset.darkGray.color.withAlphaComponent(0.4)
+            backgroundView.backgroundColor = Asset.Colors.darkGray.color.withAlphaComponent(0.4)
         }
     }
     
     @IBOutlet var cardBackgroundView: UIView! {
         didSet {
             cardBackgroundView.layer.cornerRadius = 10
-            cardBackgroundView.backgroundColor = Asset.gray3.color
+            cardBackgroundView.backgroundColor = Asset.Colors.gray3.color
         }
     }
     
@@ -34,7 +34,7 @@ class EditRestViewController: UIViewController {
             let backButtonImage = UIImage(systemName: "xmark", withConfiguration: btnConfiguration)
             backButton.setImage(backButtonImage, for: .normal)
             backButton.setTitle("", for: .normal)
-            backButton.tintColor = Asset.green.color
+            backButton.tintColor = Asset.Colors.green.color
         }
     }
     
@@ -44,7 +44,7 @@ class EditRestViewController: UIViewController {
             let validateButtonImage = UIImage(systemName: "checkmark", withConfiguration: btnConfiguration)
             validateButton.setImage(validateButtonImage, for: .normal)
             validateButton.setTitle("", for: .normal)
-            validateButton.tintColor = Asset.green.color
+            validateButton.tintColor = Asset.Colors.green.color
         }
     }
     
@@ -52,9 +52,9 @@ class EditRestViewController: UIViewController {
         didSet {
             let btnConfiguration = UIImage.SymbolConfiguration(weight: .heavy)
             let deleteButtonImage = UIImage(systemName: "trash", withConfiguration: btnConfiguration)
-            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.gray1.color), for: .normal)
-            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.gray1.color]), for: .normal)
-            deleteButton.tintColor = Asset.gray2.color
+            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.Colors.gray1.color), for: .normal)
+            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.Colors.gray1.color]), for: .normal)
+            deleteButton.tintColor = Asset.Colors.gray2.color
         }
     }
     
@@ -62,7 +62,7 @@ class EditRestViewController: UIViewController {
         didSet {
             label.text = "Repos"
             label.font = FontFamily.PoppinsExtraBold.regular.font(size: 20)
-            label.textColor = Asset.gray1.color
+            label.textColor = Asset.Colors.gray1.color
         }
     }
     @IBOutlet var restTimePicker: UIPickerView! {

@@ -22,13 +22,13 @@ class AddWorkoutElementCell: UITableViewCell {
             let configuration = UIImage.SymbolConfiguration(pointSize: 36, weight: .heavy)
             button.setImage(UIImage(systemName: "plus", withConfiguration: configuration), for: .normal)
             button.setTitle("", for: .normal)
-            button.tintColor = Asset.gray2.color
+            button.tintColor = Asset.Colors.gray2.color
         }
     }
     @IBOutlet var borderView: UIView! {
         didSet {
             borderView.layer.borderWidth = 5
-            borderView.layer.borderColor = Asset.gray2.color.cgColor
+            borderView.layer.borderColor = Asset.Colors.gray2.color.cgColor
             borderView.layer.cornerRadius = 10
             borderView.backgroundColor = .clear
         }

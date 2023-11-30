@@ -26,7 +26,7 @@ class EditWorkoutViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField! {
         didSet {
             titleTextField.delegate = self
-            titleTextField.tintColor = Asset.green.color
+            titleTextField.tintColor = Asset.Colors.green.color
         }
     }
     @IBOutlet var tableView: UITableView! {
@@ -44,9 +44,9 @@ class EditWorkoutViewController: UIViewController {
         didSet {
             let btnConfiguration = UIImage.SymbolConfiguration(weight: .heavy)
             let deleteButtonImage = UIImage(systemName: "trash", withConfiguration: btnConfiguration)
-            deleteWorkoutButton.setImage(deleteButtonImage?.withTintColor(Asset.gray1.color), for: .normal)
-            deleteWorkoutButton.setAttributedTitle(NSAttributedString(string: "Supprimer", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.gray1.color]), for: .normal)
-            deleteWorkoutButton.tintColor = Asset.gray2.color
+            deleteWorkoutButton.setImage(deleteButtonImage?.withTintColor(Asset.Colors.gray1.color), for: .normal)
+            deleteWorkoutButton.setAttributedTitle(NSAttributedString(string: "Supprimer", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.Colors.gray1.color]), for: .normal)
+            deleteWorkoutButton.tintColor = Asset.Colors.gray2.color
         }
     }
     

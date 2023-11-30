@@ -45,7 +45,10 @@
                                 <color key="color" name="Green"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-aA-83E">
-                                <rect key="frame" x="113.33333333333333" y="409" width="166.66666666666669" height="34.333333333333314"/>
+                                <rect key="frame" x="113.33333333333333" y="386" width="166.66666666666669" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9Iy-XA-4Me"/>
+                                </constraints>
                                 <color key="tintColor" name="Green"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Connect to Spotify"/>

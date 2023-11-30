@@ -27,14 +27,14 @@ class WorkoutSetCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel! {
         didSet {
             titleLabel.font = FontFamily.DMSans.regular.font(size: 30)
-            titleLabel.textColor = Asset.green.color
+            titleLabel.textColor = Asset.Colors.green.color
             titleLabel.text = "Série"
         }
     }
     @IBOutlet var restTimeLabel: UILabel! {
         didSet {
             restTimeLabel.font = FontFamily.DMSans.regular.font(size: 20)
-            restTimeLabel.textColor = Asset.gray2.color
+            restTimeLabel.textColor = Asset.Colors.gray2.color
             restTimeLabel.numberOfLines = 2
         }
     }
@@ -43,13 +43,13 @@ class WorkoutSetCell: UITableViewCell {
             let configuration = UIImage.SymbolConfiguration(pointSize: 20, weight: .heavy)
             editButton.setImage(UIImage(systemName: "square.and.pencil", withConfiguration: configuration), for: .normal)
             editButton.setTitle("", for: .normal)
-            editButton.tintColor = Asset.gray1.color
+            editButton.tintColor = Asset.Colors.gray1.color
         }
     }
     @IBOutlet var titleBorderView: UIView! {
         didSet {
             titleBorderView.layer.borderWidth = 5
-            titleBorderView.layer.borderColor = Asset.green.color.cgColor
+            titleBorderView.layer.borderColor = Asset.Colors.green.color.cgColor
             titleBorderView.layer.cornerRadius = 10
             titleBorderView.backgroundColor = .clear
         }
@@ -68,7 +68,7 @@ class WorkoutSetCell: UITableViewCell {
     @IBOutlet var borderView: UIView! {
         didSet {
             borderView.layer.borderWidth = 5
-            borderView.layer.borderColor = Asset.green.color.cgColor
+            borderView.layer.borderColor = Asset.Colors.green.color.cgColor
             borderView.layer.cornerRadius = 10
             borderView.backgroundColor = .clear
         }

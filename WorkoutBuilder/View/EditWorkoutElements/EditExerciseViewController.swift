@@ -28,7 +28,7 @@ class EditExerciseViewController: UIViewController {
     
     @IBOutlet var backgroundView: UIView! {
         didSet {
-            backgroundView.backgroundColor = Asset.darkGray.color.withAlphaComponent(0.4)
+            backgroundView.backgroundColor = Asset.Colors.darkGray.color.withAlphaComponent(0.4)
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
             backgroundView.addGestureRecognizer(tapGesture)
         }
@@ -37,7 +37,7 @@ class EditExerciseViewController: UIViewController {
     @IBOutlet var cardBackgroundView: UIView! {
         didSet {
             cardBackgroundView.layer.cornerRadius = 10
-            cardBackgroundView.backgroundColor = Asset.gray3.color
+            cardBackgroundView.backgroundColor = Asset.Colors.gray3.color
         }
     }
     
@@ -47,7 +47,7 @@ class EditExerciseViewController: UIViewController {
             let backButtonImage = UIImage(systemName: "xmark", withConfiguration: btnConfiguration)
             backButton.setImage(backButtonImage, for: .normal)
             backButton.setTitle("", for: .normal)
-            backButton.tintColor = Asset.green.color
+            backButton.tintColor = Asset.Colors.green.color
         }
     }
     
@@ -57,7 +57,7 @@ class EditExerciseViewController: UIViewController {
             let validateButtonImage = UIImage(systemName: "checkmark", withConfiguration: btnConfiguration)
             validateButton.setImage(validateButtonImage, for: .normal)
             validateButton.setTitle("", for: .normal)
-            validateButton.tintColor = Asset.green.color
+            validateButton.tintColor = Asset.Colors.green.color
         }
     }
     
@@ -65,9 +65,9 @@ class EditExerciseViewController: UIViewController {
         didSet {
             let btnConfiguration = UIImage.SymbolConfiguration(weight: .heavy)
             let deleteButtonImage = UIImage(systemName: "trash", withConfiguration: btnConfiguration)
-            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.gray1.color), for: .normal)
-            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.gray1.color]), for: .normal)
-            deleteButton.tintColor = Asset.gray2.color
+            deleteButton.setImage(deleteButtonImage?.withTintColor(Asset.Colors.gray1.color), for: .normal)
+            deleteButton.setAttributedTitle(NSAttributedString(string: "Supprimer l'élement", attributes: [.font : FontFamily.DMSans.regular.font(size: 20), .foregroundColor: Asset.Colors.gray1.color]), for: .normal)
+            deleteButton.tintColor = Asset.Colors.gray2.color
         }
     }
     
@@ -75,7 +75,7 @@ class EditExerciseViewController: UIViewController {
         didSet {
             label.text = "Exercice"
             label.font = FontFamily.PoppinsExtraBold.regular.font(size: 20)
-            label.textColor = Asset.gray1.color
+            label.textColor = Asset.Colors.gray1.color
         }
     }
     
@@ -83,15 +83,15 @@ class EditExerciseViewController: UIViewController {
         didSet {
             exerciseLabel.text = "Titre de l'exercice:"
             exerciseLabel.font = FontFamily.DMSans.regular.font(size: 18)
-            exerciseLabel.textColor = Asset.gray1.color
+            exerciseLabel.textColor = Asset.Colors.gray1.color
             exerciseLabel.numberOfLines = 2
         }
     }
     @IBOutlet var exerciseTitleTextField: UITextField! {
         didSet {
             exerciseTitleTextField.delegate = self
-            exerciseTitleTextField.tintColor = Asset.green.color
-            exerciseTitleTextField.backgroundColor = Asset.gray2.color
+            exerciseTitleTextField.tintColor = Asset.Colors.green.color
+            exerciseTitleTextField.backgroundColor = Asset.Colors.gray2.color
             exerciseTitleTextField.text = exercise.title
             exerciseTitleTextField.returnKeyType = .done
         }
@@ -101,18 +101,18 @@ class EditExerciseViewController: UIViewController {
         didSet {
             exerciseSegmentedControl.setTitle("Répétitions", forSegmentAt: ExerciseType.withReps.rawValue)
             exerciseSegmentedControl.setTitle("Temps", forSegmentAt: ExerciseType.withTime.rawValue)
-            exerciseSegmentedControl.setTitleTextAttributes([.foregroundColor: Asset.gray1.color, .font: FontFamily.PoppinsExtraBold.regular.font(size: 14)], for: .normal)
-            exerciseSegmentedControl.setTitleTextAttributes([.foregroundColor: Asset.gray3.color], for: .selected)
-            exerciseSegmentedControl.backgroundColor = Asset.gray2.color
+            exerciseSegmentedControl.setTitleTextAttributes([.foregroundColor: Asset.Colors.gray1.color, .font: FontFamily.PoppinsExtraBold.regular.font(size: 14)], for: .normal)
+            exerciseSegmentedControl.setTitleTextAttributes([.foregroundColor: Asset.Colors.gray3.color], for: .selected)
+            exerciseSegmentedControl.backgroundColor = Asset.Colors.gray2.color
             exerciseSegmentedControl.selectedSegmentIndex = ExerciseType.withReps.rawValue
-            exerciseSegmentedControl.selectedSegmentTintColor = Asset.green.color
+            exerciseSegmentedControl.selectedSegmentTintColor = Asset.Colors.green.color
         }
     }
     
     @IBOutlet var repLabel: UILabel! {
         didSet {
             repLabel.font = FontFamily.DMSans.regular.font(size: 18)
-            repLabel.textColor = Asset.gray1.color
+            repLabel.textColor = Asset.Colors.gray1.color
             repLabel.text = "Nombre de répétitions:"
         }
     }
@@ -126,15 +126,15 @@ class EditExerciseViewController: UIViewController {
     @IBOutlet var weightLabel: UILabel! {
         didSet {
             weightLabel.font = FontFamily.DMSans.regular.font(size: 18)
-            weightLabel.textColor = Asset.gray1.color
+            weightLabel.textColor = Asset.Colors.gray1.color
             weightLabel.text = "Poids:"
         }
     }
     @IBOutlet var weightTextField: UITextField! {
         didSet {
             weightTextField.delegate = self
-            weightTextField.tintColor = Asset.green.color
-            weightTextField.backgroundColor = Asset.gray2.color
+            weightTextField.tintColor = Asset.Colors.green.color
+            weightTextField.backgroundColor = Asset.Colors.gray2.color
             weightTextField.keyboardType = .numberPad
             weightTextField.placeholder = "10 (Optionnel)"
         }

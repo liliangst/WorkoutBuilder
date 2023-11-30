@@ -23,6 +23,8 @@
 		380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AD2A939A7400DE1568 /* HomeViewController.swift */; };
 		380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */; };
 		383CBCF42B1691020043D7F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */; };
+		383CBCF62B1898080043D7F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383CBCF52B1898080043D7F3 /* Images.xcassets */; };
+		383CBCF82B1898DC0043D7F3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CBCF72B1898DC0043D7F3 /* Assets.swift */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
 		384F306C2B0D27BB00AAF6C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F306B2B0D27BB00AAF6C5 /* HomeView.swift */; };
 		385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */; };
@@ -31,7 +33,6 @@
 		385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */; };
 		385D9DB32AC6D549009BF4A3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 385D9DB22AC6D549009BF4A3 /* Kingfisher */; };
 		385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 385D9DB42AC6D847009BF4A3 /* swiftgen.yml */; };
-		385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DB62AC6EA3D009BF4A3 /* Colors.swift */; };
 		385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */; };
 		386B7A832A965E330000948E /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B7A822A965E330000948E /* CustomTabBar.swift */; };
 		387243E82AF94FE4003B1BC9 /* EditExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387243E62AF94FE4003B1BC9 /* EditExerciseViewController.swift */; };
@@ -110,6 +111,8 @@
 		380AF2AD2A939A7400DE1568 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCard.swift; sourceTree = "<group>"; };
 		383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		383CBCF52B1898080043D7F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		383CBCF72B1898DC0043D7F3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		384F306B2B0D27BB00AAF6C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		385D9DAA2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyCollectionObject.swift; sourceTree = "<group>"; };
 		385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		385D9DB42AC6D847009BF4A3 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = swiftgen.yml; path = WorkoutBuilder/swiftgen.yml; sourceTree = "<group>"; };
-		385D9DB62AC6EA3D009BF4A3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		386B7A822A965E330000948E /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387243E62AF94FE4003B1BC9 /* EditExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseViewController.swift; sourceTree = "<group>"; };
@@ -322,7 +324,7 @@
 		385D9DB02AC6D4B5009BF4A3 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				385D9DB62AC6EA3D009BF4A3 /* Colors.swift */,
+				383CBCF72B1898DC0043D7F3 /* Assets.swift */,
 				385D9DB72AC6EA3D009BF4A3 /* Fonts.swift */,
 			);
 			path = Generated;
@@ -383,6 +385,7 @@
 			children = (
 				380AF2A12A8BDACB00DE1568 /* Fonts */,
 				380AF26A2A8BC53500DE1568 /* Colors.xcassets */,
+				383CBCF52B1898080043D7F3 /* Images.xcassets */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380AF26E2A8BC53500DE1568 /* LaunchScreen.storyboard in Resources */,
+				383CBCF62B1898080043D7F3 /* Images.xcassets in Resources */,
 				387F16BC2AEABBC5006827E4 /* AddWorkoutElementCell.xib in Resources */,
 				385D9DB52AC6D847009BF4A3 /* swiftgen.yml in Resources */,
 				387F16C82AEABF06006827E4 /* WorkoutExerciseCell.xib in Resources */,
@@ -633,7 +637,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				380AF2B02A939AA900DE1568 /* MusicPlayerCard.swift in Sources */,
-				385D9DB82AC6EA3D009BF4A3 /* Colors.swift in Sources */,
 				3887D1B92AE82B090086FA2C /* AddWorkoutElementCell.swift in Sources */,
 				385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */,
 				38C565712AD6F1BB002A514B /* RaisedButtonStyle.swift in Sources */,
@@ -660,6 +663,7 @@
 				389763CA2AA9FFA200222CD4 /* SpotifyHandler.swift in Sources */,
 				387243F02AF95002003B1BC9 /* EditRestViewController.swift in Sources */,
 				384085002AA8BC4A00030B5A /* Constant.swift in Sources */,
+				383CBCF82B1898DC0043D7F3 /* Assets.swift in Sources */,
 				38C5656E2AD6F174002A514B /* WorkoutCardRectangle.swift in Sources */,
 				385D9DAC2AC6C7B7009BF4A3 /* SpotifyAlbumData.swift in Sources */,
 				385D9DAF2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift in Sources */,

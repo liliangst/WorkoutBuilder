@@ -23,12 +23,12 @@ struct MusicPlayerCard: View {
             VStack {
                 Text("Pas de service de musique disponible")
                     .font(FontFamily.PoppinsExtraBold.regular.swiftUIFont(size: 24))
-                    .foregroundColor(Asset.gray1.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                 Text("Pour ajouter un service de musique veuillez vous connecter dans l'onglet musique.")
                     .font(FontFamily.DMSans.regular.swiftUIFont(size: 20))
-                    .foregroundColor(Asset.gray1.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     .multilineTextAlignment(.center)
             }
             .minimumScaleFactor(0.01)
@@ -39,14 +39,14 @@ struct MusicPlayerCard: View {
             
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(Asset.gray3.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                     .offset(y: offset)
                 
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(Asset.gray3.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray3.swiftUIColor)
                 
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Asset.gray2.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray2.swiftUIColor)
                     .padding(5)
                 
                 VStack(spacing: 20) {
@@ -55,12 +55,12 @@ struct MusicPlayerCard: View {
                             // This is a placeholder
                             // Show green rectangle when there is no image
                             Rectangle()
-                                .foregroundColor(Asset.green.swiftUIColor)
+                                .foregroundColor(Asset.Colors.green.swiftUIColor)
                             Image(systemName: "music.note")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding(10)
-                                .foregroundColor(Asset.gray1.swiftUIColor)
+                                .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                             
                             if let trackImage = trackImage {
                                 Image(uiImage: trackImage)
@@ -82,7 +82,7 @@ struct MusicPlayerCard: View {
                                 .font(FontFamily.DMSans.regular.swiftUIFont(size: 18))
                                 .lineLimit(1)
                         }
-                        .foregroundColor(Asset.gray1.swiftUIColor)
+                        .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                         
                         Spacer()
                     }
@@ -109,7 +109,7 @@ struct MusicPlayerCard: View {
                     }
                     .frame(height: 10)
                     .font(FontFamily.DMSans.regular.swiftUIFont(size: 10))
-                    .foregroundColor(Asset.gray1.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     .padding(.horizontal, 15)
                     .onReceive(NotificationCenter.default.publisher(for: .CurrentTrack)) { notification in
                         let track = notification.object as? SPTAppRemoteTrack
@@ -147,7 +147,7 @@ struct MusicPlayerCard: View {
                         }
                         
                     }
-                    .foregroundColor(Asset.gray1.swiftUIColor)
+                    .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                 }
             }
             .opacity(isEmptyState ? 0.0 : 1.0)
@@ -165,12 +165,12 @@ struct MusicPlayerProgressStyle: ProgressViewStyle {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(Asset.gray3.swiftUIColor)
+                    .fill(Asset.Colors.gray3.swiftUIColor)
                     .frame(height: height)
                     .frame(width: geometry.size.width)
                 
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(Asset.gray1.swiftUIColor)
+                    .fill(Asset.Colors.gray1.swiftUIColor)
                     .frame(width: geometry.size.width * progress, height: height)
             }
         }
