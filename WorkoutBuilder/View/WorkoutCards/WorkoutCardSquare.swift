@@ -54,9 +54,7 @@ struct WorkoutCardSquare: View {
                     
                     Spacer()
                     
-                    Text(""/*String(workout.numberOfExercise) +
-                         String(workout.numberOfExercise > 1 ? " exercices" : " exercice") +
-                         "\n1h10"*/)
+                    Text("") // Empty description for card
                     .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                     .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                     .frame(maxWidth: .infinity, alignment: .leading)

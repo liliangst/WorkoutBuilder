@@ -133,7 +133,6 @@ extension EditWorkoutViewController: UITextFieldDelegate {
 
 extension EditWorkoutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //(workout?.elementsObjects.count ?? 0) + 1
         workoutElementsList.count + 1
     }
     
@@ -191,13 +190,10 @@ extension EditWorkoutViewController: AddWorkoutElementDelegate {
     func addElement(_ element: WorkoutElementObject.Type) {
         switch element {
         case is Sets.Type:
-            //workout?.insert(Sets())
             workoutElementsList.append(Sets())
         case is Exercise.Type:
-            //workout?.insert(Exercise())
             workoutElementsList.append(Exercise())
         case is Rest.Type:
-            //workout?.insert(Rest())
             workoutElementsList.append(Rest())
         default:
             break

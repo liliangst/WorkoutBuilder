@@ -214,9 +214,14 @@ struct WorkoutPlayerCard: View {
                 
                 HStack {
                     Button {
-                        // TODO: Refresh better
-                        currentElement = workoutElementsToPlay[0]
-                        nextElement = workoutElementsToPlay[1]
+                        if workoutElementsToPlay.count > 0 {
+                            currentElement = workoutElementsToPlay[0]
+                        }
+                        if workoutElementsToPlay.count > 1 {
+                            nextElement = workoutElementsToPlay[1]
+                        } else {
+                            nextElement = nil
+                        }
                         currentElementIndex = 0
                     } label: {
                         Image(systemName: "arrow.counterclockwise")

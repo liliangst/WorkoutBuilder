@@ -48,31 +48,7 @@ class Sets: Object, WorkoutElementObject {
     }
     
     func remove(_ element: WorkoutElementObject) {
-        let elementId: ObjectId?
-        let elementIndex: Int?
-        
-        switch element {
-        case is Exercise:
-            elementId = (element as! Exercise).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                return (elementObject as! Exercise).id == elementId
-            })!
-        case is Rest:
-            elementId = (element as! Rest).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                return (elementObject as! Rest).id == elementId
-            })!
-        case is Sets:
-            elementId = (element as! Sets).id
-            elementIndex = elementsObjects.firstIndex(where: { elementObject in
-                return (elementObject as! Exercise).id == elementId
-            })!
-        default:
-            elementId = nil
-            elementIndex = nil
-        }
-        
-        guard let elementIndex = elementIndex else {
+        guard let elementIndex = elementsObjects.firstIndex(where: {$0 === element}) else {
             return
         }
         

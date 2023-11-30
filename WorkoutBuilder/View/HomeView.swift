@@ -55,6 +55,5 @@ struct HomeView: View {
             }
         }
         .background(Asset.Colors.darkGray.swiftUIColor)
-        
     }
 }

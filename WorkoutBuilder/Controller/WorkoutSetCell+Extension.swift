@@ -45,10 +45,8 @@ extension WorkoutSetCell: AddWorkoutElementDelegate {
     func addElement(_ element: WorkoutElementObject.Type) {
         switch element {
         case is Exercise.Type:
-            //`set`.insert(Exercise())
             `set`.editedElementsObjectsList.append(Exercise())
         case is Rest.Type:
-            //`set`.insert(Rest())
             `set`.editedElementsObjectsList.append(Rest())
         default:
             break
@@ -60,6 +58,7 @@ extension WorkoutSetCell: AddWorkoutElementDelegate {
 
 extension WorkoutSetCell: EditWorkoutDataModifier {
     func delete(_ workoutElement: WorkoutElementObject) {
+        `set`.editedElementsObjectsList.removeAll(where: {$0 === workoutElement})
         `set`.remove(workoutElement)
         refreshData()
     }

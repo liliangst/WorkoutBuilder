@@ -365,24 +365,12 @@
                     <view key="view" contentMode="scaleToFill" id="Kqd-cL-akc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-6l-cPx">
-                                <rect key="frame" x="20" y="158" width="353" height="611"/>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UrV-Un-RAF"/>
                         <color key="backgroundColor" name="DarkGray"/>
-                        <constraints>
-                            <constraint firstItem="eMG-6l-cPx" firstAttribute="leading" secondItem="UrV-Un-RAF" secondAttribute="leading" constant="20" id="2dF-yw-nW5"/>
-                            <constraint firstItem="eMG-6l-cPx" firstAttribute="top" secondItem="UrV-Un-RAF" secondAttribute="top" constant="55" id="4FV-0B-7jh"/>
-                            <constraint firstItem="UrV-Un-RAF" firstAttribute="bottom" secondItem="eMG-6l-cPx" secondAttribute="bottom" id="uvg-Rz-ziC"/>
-                            <constraint firstItem="UrV-Un-RAF" firstAttribute="trailing" secondItem="eMG-6l-cPx" secondAttribute="trailing" constant="20" id="wD5-IL-2O5"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="fqz-ze-v8e" userLabel="Home"/>
                     <navigationItem key="navigationItem" id="gbL-1d-8gu"/>
                     <connections>
-                        <outlet property="stackView" destination="eMG-6l-cPx" id="GOv-lk-sfl"/>
                         <segue destination="E1o-XW-bpw" kind="show" identifier="OpenEditWorkoutSegue" id="JQ4-e6-b7r"/>
                     </connections>
                 </viewController>
