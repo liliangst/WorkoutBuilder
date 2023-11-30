@@ -25,6 +25,8 @@
 		383CBCF42B1691020043D7F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */; };
 		383CBCF62B1898080043D7F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383CBCF52B1898080043D7F3 /* Images.xcassets */; };
 		383CBCF82B1898DC0043D7F3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CBCF72B1898DC0043D7F3 /* Assets.swift */; };
+		383CBCFA2B18D9E80043D7F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CBCF92B18D9E80043D7F3 /* SettingsViewController.swift */; };
+		383CBCFC2B18DA370043D7F3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383CBCFB2B18DA370043D7F3 /* SettingsView.swift */; };
 		384085002AA8BC4A00030B5A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384084FF2AA8BC4A00030B5A /* Constant.swift */; };
 		384F306C2B0D27BB00AAF6C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F306B2B0D27BB00AAF6C5 /* HomeView.swift */; };
 		385D9DAB2AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D9DA82AC6C7B7009BF4A3 /* SpotifyPlaylistData.swift */; };
@@ -113,6 +115,8 @@
 		383CBCF32B1691020043D7F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		383CBCF52B1898080043D7F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		383CBCF72B1898DC0043D7F3 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		383CBCF92B18D9E80043D7F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		383CBCFB2B18DA370043D7F3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		384084FE2AA8B7D700030B5A /* WorkoutBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkoutBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
 		384084FF2AA8BC4A00030B5A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		384F306B2B0D27BB00AAF6C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -265,9 +269,10 @@
 				380AF2642A8BC53400DE1568 /* Main.storyboard */,
 				380AF26C2A8BC53500DE1568 /* LaunchScreen.storyboard */,
 				384F306B2B0D27BB00AAF6C5 /* HomeView.swift */,
-				380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */,
 				38F95B5E2B06A3D900DC36CC /* WorkoutPlayerCard.swift */,
 				387A00162A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift */,
+				380AF2AF2A939AA900DE1568 /* MusicPlayerCard.swift */,
+				383CBCFB2B18DA370043D7F3 /* SettingsView.swift */,
 				386B7A822A965E330000948E /* CustomTabBar.swift */,
 				385D9DAE2AC6C81F009BF4A3 /* PlaylistAlbumCollectionViewCell.swift */,
 				38C565692AD6E7C9002A514B /* HostingCell.swift */,
@@ -289,6 +294,7 @@
 				38802E2E2AEFF48700195D45 /* AddWorkoutElementViewController.swift */,
 				3887D1C12AE9AB180086FA2C /* WorkoutSetCell+Extension.swift */,
 				389763CB2AAA135100222CD4 /* MusicViewController.swift */,
+				383CBCF92B18D9E80043D7F3 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				38C5656A2AD6E7C9002A514B /* HostingCell.swift in Sources */,
 				389B45992AA61D9F00373C2D /* Workout.swift in Sources */,
 				38C565732AD94402002A514B /* EditWorkoutViewController.swift in Sources */,
+				383CBCFA2B18D9E80043D7F3 /* SettingsViewController.swift in Sources */,
 				380AF2AE2A939A7400DE1568 /* HomeViewController.swift in Sources */,
 				38802E302AEFF48700195D45 /* AddWorkoutElementViewController.swift in Sources */,
 				3887D1BE2AE9600E0086FA2C /* WorkoutRestCell.swift in Sources */,
@@ -656,6 +663,7 @@
 				38F6DF132AE16F60002CB3E5 /* WorkoutManager.swift in Sources */,
 				38C565762ADEBF62002A514B /* WorkoutCardSquare.swift in Sources */,
 				385D9DB92AC6EA3D009BF4A3 /* Fonts.swift in Sources */,
+				383CBCFC2B18DA370043D7F3 /* SettingsView.swift in Sources */,
 				389B459D2AA628CE00373C2D /* Sets.swift in Sources */,
 				387A00172A9638B3009CCF36 /* FavoriteWorkoutsCarousel.swift in Sources */,
 				385D9DAD2AC6C7B7009BF4A3 /* SpotifyCollectionObject.swift in Sources */,

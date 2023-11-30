@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="jiC-Br-M8I">
             <objects>
-                <viewController id="g4W-A5-NLi" sceneMemberID="viewController">
+                <viewController id="g4W-A5-NLi" customClass="SettingsViewController" customModule="WorkoutBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GWg-87-tk6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,9 +45,9 @@
                                 <color key="color" name="Green"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-aA-83E">
-                                <rect key="frame" x="113.33333333333333" y="386" width="166.66666666666669" height="80"/>
+                                <rect key="frame" x="113.33333333333333" y="401" width="166.66666666666669" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="9Iy-XA-4Me"/>
+                                    <constraint firstAttribute="height" constant="50" id="9Iy-XA-4Me"/>
                                 </constraints>
                                 <color key="tintColor" name="Green"/>
                                 <state key="normal" title="Button"/>
