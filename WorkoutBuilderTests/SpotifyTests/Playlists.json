@@ -1,0 +1,800 @@
+{
+    "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7/playlists?offset=0&limit=20",
+    "items": [
+        {
+            "collaborative": false,
+            "description": "Created on the Discz app",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/2oqU0cAk79mUPiSMDVq6aC"
+            },
+            "href": "https://api.spotify.com/v1/playlists/2oqU0cAk79mUPiSMDVq6aC",
+            "id": "2oqU0cAk79mUPiSMDVq6aC",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273110978fabea619d30156216b",
+                    "width": 640
+                }
+            ],
+            "name": "Discz",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MyxhZjRiZGM1M2UyZjIxODg1YjBkNDFjYTkwYzUxMjc4N2I0YjhlMzZm",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/2oqU0cAk79mUPiSMDVq6aC/tracks",
+                "total": 1
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:2oqU0cAk79mUPiSMDVq6aC"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/2eUFLW2Z6PWpuOYfiHjZsb"
+            },
+            "href": "https://api.spotify.com/v1/playlists/2eUFLW2Z6PWpuOYfiHjZsb",
+            "id": "2eUFLW2Z6PWpuOYfiHjZsb",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ca679b02fa2cae0756cf9a31",
+                    "width": 640
+                }
+            ],
+            "name": "ShakaPonk",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "NCwxOGIyMWY0M2I5ZmVlMGQ3MjU5NzllNmQzY2QxMzYyMGFhNDk0YmI3",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/2eUFLW2Z6PWpuOYfiHjZsb/tracks",
+                "total": 3
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:2eUFLW2Z6PWpuOYfiHjZsb"
+        },
+        {
+            "collaborative": false,
+            "description": "Découvrez le nouvel album &quot;Chrome&quot; de Ziak ! ",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/3B8DGvdWfV5oh8ZIozLisO"
+            },
+            "href": "https://api.spotify.com/v1/playlists/3B8DGvdWfV5oh8ZIozLisO",
+            "id": "3B8DGvdWfV5oh8ZIozLisO",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb4aa01337e958c45ec2940867",
+                    "width": null
+                }
+            ],
+            "name": "Ziak - Chrome",
+            "owner": {
+                "display_name": "Ziak",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/31whzutxjsct5i2cehaayznvqwnq"
+                },
+                "href": "https://api.spotify.com/v1/users/31whzutxjsct5i2cehaayznvqwnq",
+                "id": "31whzutxjsct5i2cehaayznvqwnq",
+                "type": "user",
+                "uri": "spotify:user:31whzutxjsct5i2cehaayznvqwnq"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "NTYsYzY0YTY1ZGQ0OTJmNTIwOWE0YWJkYjc4NzRkZDRiOTA5NTg0NGU1YQ==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/3B8DGvdWfV5oh8ZIozLisO/tracks",
+                "total": 28
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:3B8DGvdWfV5oh8ZIozLisO"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/3jINTpATYWlFkOz3teGKg2"
+            },
+            "href": "https://api.spotify.com/v1/playlists/3jINTpATYWlFkOz3teGKg2",
+            "id": "3jINTpATYWlFkOz3teGKg2",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2734c2e8da96f169099bac70fb8",
+                    "width": 640
+                }
+            ],
+            "name": "A voir ",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MixlMjg4N2MzY2Y0MDQxZDI5OTBjNDVjNzI0ZTI4MWNjZjQ2OTk0ODdm",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/3jINTpATYWlFkOz3teGKg2/tracks",
+                "total": 1
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:3jINTpATYWlFkOz3teGKg2"
+        },
+        {
+            "collaborative": false,
+            "description": "La Rétrospective Spotify revient sur les titres que vous avez le plus aimés cette année.",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/37i9dQZF1F0sijgNaJdgit"
+            },
+            "href": "https://api.spotify.com/v1/playlists/37i9dQZF1F0sijgNaJdgit",
+            "id": "37i9dQZF1F0sijgNaJdgit",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://wrapped-images.spotifycdn.com/image/yts-2022/large/your-top-songs-2022_large_fr.jpg",
+                    "width": null
+                }
+            ],
+            "name": "Vos titres préférés de 2022",
+            "owner": {
+                "display_name": "Spotify",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/spotify"
+                },
+                "href": "https://api.spotify.com/v1/users/spotify",
+                "id": "spotify",
+                "type": "user",
+                "uri": "spotify:user:spotify"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MTY2OTkwODk2MiwwMDAwMDAwMDVkZjRlMjIyNDg0MTY1NTA0YzQzN2EwZTQ3YTM1NDE2",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1F0sijgNaJdgit/tracks",
+                "total": 101
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:37i9dQZF1F0sijgNaJdgit"
+        },
+        {
+            "collaborative": false,
+            "description": "Playlist du calendrier RAPLUME. Mise à jour chaque jour avec chaque son. MadeInParis, Smeels, S. Pri Noir, mademoiselle Lou, Jolagreen23, Malo, Houdi, Favé, AAMO, Kobo, Theodore, Djang...",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/0NnpVau0DpihQ0PmH9HNNl"
+            },
+            "href": "https://api.spotify.com/v1/playlists/0NnpVau0DpihQ0PmH9HNNl",
+            "id": "0NnpVau0DpihQ0PmH9HNNl",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb33077409bd288930f450df05",
+                    "width": null
+                }
+            ],
+            "name": "MIEL RAPLUME",
+            "owner": {
+                "display_name": "Raplume",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/k8gchkqw0lhzyruchdz75zkno"
+                },
+                "href": "https://api.spotify.com/v1/users/k8gchkqw0lhzyruchdz75zkno",
+                "id": "k8gchkqw0lhzyruchdz75zkno",
+                "type": "user",
+                "uri": "spotify:user:k8gchkqw0lhzyruchdz75zkno"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MTEyLGMyMzViZDkwNzA4YjcwODMzZDNkN2E2ZjI4MjZiOTM5NTQwMmI2ZTI=",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/0NnpVau0DpihQ0PmH9HNNl/tracks",
+                "total": 25
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:0NnpVau0DpihQ0PmH9HNNl"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/5gAM7U0HjbL4uCN0YkSdaE"
+            },
+            "href": "https://api.spotify.com/v1/playlists/5gAM7U0HjbL4uCN0YkSdaE",
+            "id": "5gAM7U0HjbL4uCN0YkSdaE",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273a2067b9e261777ae51370b73",
+                    "width": 640
+                }
+            ],
+            "name": "🔊",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "NCw5MmViYzI5OWQ4MDEyY2NkZDQ2OWU0ODczMWMyNWQ1ZjQxMWEzZTBm",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/5gAM7U0HjbL4uCN0YkSdaE/tracks",
+                "total": 1
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:5gAM7U0HjbL4uCN0YkSdaE"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/6XYRVLnP5jO599WWmEZ1MT"
+            },
+            "href": "https://api.spotify.com/v1/playlists/6XYRVLnP5jO599WWmEZ1MT",
+            "id": "6XYRVLnP5jO599WWmEZ1MT",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb3f5e125e7c4d10d513335aa8",
+                    "width": null
+                }
+            ],
+            "name": "Levitate",
+            "owner": {
+                "display_name": "Peck",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/sprtn29"
+                },
+                "href": "https://api.spotify.com/v1/users/sprtn29",
+                "id": "sprtn29",
+                "type": "user",
+                "uri": "spotify:user:sprtn29"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MTE1LDA5MDdlMzZlN2Q1NWUyNThmYTZjYTMzZDEwYmY1YzY0ZDA0NDMzMDY=",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/6XYRVLnP5jO599WWmEZ1MT/tracks",
+                "total": 69
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:6XYRVLnP5jO599WWmEZ1MT"
+        },
+        {
+            "collaborative": false,
+            "description": "Created via http:&#x2F;&#x2F;disczmusic.com&#x2F;",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/2sqKNla5cTTptY2Ww9eSck"
+            },
+            "href": "https://api.spotify.com/v1/playlists/2sqKNla5cTTptY2Ww9eSck",
+            "id": "2sqKNla5cTTptY2Ww9eSck",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b273419b64179e9d4010d2475703ab67616d0000b2735410bf5e6137d3db8028cb16ab67616d0000b273ec9743f8de6796134bc90846ab67616d0000b273fb6362ba7acdbc0d0f7464bc",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b273419b64179e9d4010d2475703ab67616d0000b2735410bf5e6137d3db8028cb16ab67616d0000b273ec9743f8de6796134bc90846ab67616d0000b273fb6362ba7acdbc0d0f7464bc",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b273419b64179e9d4010d2475703ab67616d0000b2735410bf5e6137d3db8028cb16ab67616d0000b273ec9743f8de6796134bc90846ab67616d0000b273fb6362ba7acdbc0d0f7464bc",
+                    "width": 60
+                }
+            ],
+            "name": "Discz",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MTAsMzQ4ODBiN2ZlMjkwNTc3NzY4OGFkYzZlOGQ5MjE2OTA2MGRiMTk1OQ==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/2sqKNla5cTTptY2Ww9eSck/tracks",
+                "total": 21
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:2sqKNla5cTTptY2Ww9eSck"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/6jG2NkgPh4cs5Qas6NW1Ji"
+            },
+            "href": "https://api.spotify.com/v1/playlists/6jG2NkgPh4cs5Qas6NW1Ji",
+            "id": "6jG2NkgPh4cs5Qas6NW1Ji",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b273608b815f9403dc6293b0dba9ab67616d0000b27384591e69e5120e372eb9ef0cab67616d0000b27390335ed93fe03df5c42350a7ab67616d0000b273fe21c1bccf59654e995b87c1",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b273608b815f9403dc6293b0dba9ab67616d0000b27384591e69e5120e372eb9ef0cab67616d0000b27390335ed93fe03df5c42350a7ab67616d0000b273fe21c1bccf59654e995b87c1",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b273608b815f9403dc6293b0dba9ab67616d0000b27384591e69e5120e372eb9ef0cab67616d0000b27390335ed93fe03df5c42350a7ab67616d0000b273fe21c1bccf59654e995b87c1",
+                    "width": 60
+                }
+            ],
+            "name": "🔊",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "NSwyOTY4NWQxZmNkMGQ0MDEzNDkzYzg1MTk5NjYxN2E5ZTA5ZDU1NzEw",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/6jG2NkgPh4cs5Qas6NW1Ji/tracks",
+                "total": 4
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:6jG2NkgPh4cs5Qas6NW1Ji"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/04WsOIcuX4DR2IYxOCiDZz"
+            },
+            "href": "https://api.spotify.com/v1/playlists/04WsOIcuX4DR2IYxOCiDZz",
+            "id": "04WsOIcuX4DR2IYxOCiDZz",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b2731a4e99f0c693fecc9038d3ddab67616d0000b273206dcb32282da4c6a778d073ab67616d0000b27364be01336a8f917538a60b74ab67616d0000b273684d81c9356531f2a456b1c1",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b2731a4e99f0c693fecc9038d3ddab67616d0000b273206dcb32282da4c6a778d073ab67616d0000b27364be01336a8f917538a60b74ab67616d0000b273684d81c9356531f2a456b1c1",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b2731a4e99f0c693fecc9038d3ddab67616d0000b273206dcb32282da4c6a778d073ab67616d0000b27364be01336a8f917538a60b74ab67616d0000b273684d81c9356531f2a456b1c1",
+                    "width": 60
+                }
+            ],
+            "name": "🇯🇵",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MTEsMDA2YWVhNzA0ZTU1NDRlNTQ4ZTQyNmVhNTQyMzM3NWE0YzgxMzQxOQ==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/04WsOIcuX4DR2IYxOCiDZz/tracks",
+                "total": 6
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:04WsOIcuX4DR2IYxOCiDZz"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/4bha6IXNGrQJb8Nt4cpImz"
+            },
+            "href": "https://api.spotify.com/v1/playlists/4bha6IXNGrQJb8Nt4cpImz",
+            "id": "4bha6IXNGrQJb8Nt4cpImz",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273317056b8956bc3df00542604",
+                    "width": 640
+                }
+            ],
+            "name": "🌞",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "NCxjODNmNDg3YTI5ZTZiOTRlNWE2MDMwM2IxMDQ3MDU1MmJmYTgyNDU2",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/4bha6IXNGrQJb8Nt4cpImz/tracks",
+                "total": 3
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:4bha6IXNGrQJb8Nt4cpImz"
+        },
+        {
+            "collaborative": false,
+            "description": "The songs you loved most this year, all wrapped up.",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/37i9dQZF1EMbD5PaGmFBsu"
+            },
+            "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMbD5PaGmFBsu",
+            "id": "37i9dQZF1EMbD5PaGmFBsu",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://lineup-images.scdn.co/wrapped-2020-top100_LARGE-en.jpg",
+                    "width": null
+                }
+            ],
+            "name": "Your Top Songs 2020",
+            "owner": {
+                "display_name": "Spotify",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/spotify"
+                },
+                "href": "https://api.spotify.com/v1/users/spotify",
+                "id": "spotify",
+                "type": "user",
+                "uri": "spotify:user:spotify"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MjY3NzQ2MTIsMDAwMDAwMDA0NTU1ZDlhNmI3MjZjNjNhZjBhOTU1ZGRlMTQwNjU0Zg==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EMbD5PaGmFBsu/tracks",
+                "total": 100
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:37i9dQZF1EMbD5PaGmFBsu"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/1A96iqAdFegY3z4WTG5sDv"
+            },
+            "href": "https://api.spotify.com/v1/playlists/1A96iqAdFegY3z4WTG5sDv",
+            "id": "1A96iqAdFegY3z4WTG5sDv",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b27307920f3b9469f3ae228c660aab67616d0000b27317bdbde74b5f8c5ec4238194ab67616d0000b27330f48bb9c6530a3d614a0b41ab67616d0000b273a370c4ab70240b507b95c5a0",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b27307920f3b9469f3ae228c660aab67616d0000b27317bdbde74b5f8c5ec4238194ab67616d0000b27330f48bb9c6530a3d614a0b41ab67616d0000b273a370c4ab70240b507b95c5a0",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b27307920f3b9469f3ae228c660aab67616d0000b27317bdbde74b5f8c5ec4238194ab67616d0000b27330f48bb9c6530a3d614a0b41ab67616d0000b273a370c4ab70240b507b95c5a0",
+                    "width": 60
+                }
+            ],
+            "name": "Sopico",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MTEsYmQxYzdiZWZmNzQxMWZkNGU0YTIyNzQyNmVkMjY3M2NmMDJhMTM5Yg==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/1A96iqAdFegY3z4WTG5sDv/tracks",
+                "total": 8
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:1A96iqAdFegY3z4WTG5sDv"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/12OU4K9BX66KU9JlN6a84I"
+            },
+            "href": "https://api.spotify.com/v1/playlists/12OU4K9BX66KU9JlN6a84I",
+            "id": "12OU4K9BX66KU9JlN6a84I",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb08844f8a19bce52b0f012959",
+                    "width": null
+                }
+            ],
+            "name": "Népal ",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "OSw0OTE5NzQwNmM0NzBhNDRlYjdkOTZhYjg4NzdiMjdlYjM5OWE2ZmQ5",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/12OU4K9BX66KU9JlN6a84I/tracks",
+                "total": 7
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:12OU4K9BX66KU9JlN6a84I"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/4MN9DEJDvdUGZEQO9Hrd2A"
+            },
+            "href": "https://api.spotify.com/v1/playlists/4MN9DEJDvdUGZEQO9Hrd2A",
+            "id": "4MN9DEJDvdUGZEQO9Hrd2A",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b27310121cb2d924847186a04f51ab67616d0000b273aab3328376eb21dc7f733b09ab67616d0000b273e776c9742fc97ac4b26eed50ab67616d0000b273f175613bfd05a1746597eaea",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b27310121cb2d924847186a04f51ab67616d0000b273aab3328376eb21dc7f733b09ab67616d0000b273e776c9742fc97ac4b26eed50ab67616d0000b273f175613bfd05a1746597eaea",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b27310121cb2d924847186a04f51ab67616d0000b273aab3328376eb21dc7f733b09ab67616d0000b273e776c9742fc97ac4b26eed50ab67616d0000b273f175613bfd05a1746597eaea",
+                    "width": 60
+                }
+            ],
+            "name": "Luidji",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MTMsNjRhNmE2NGE5ZDk1ZTExN2ExMWY5M2U5MTE1NTgyYmY2ZjUzMjM1MQ==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/4MN9DEJDvdUGZEQO9Hrd2A/tracks",
+                "total": 8
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:4MN9DEJDvdUGZEQO9Hrd2A"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/0WsWiBonRexL4UCxhkOZah"
+            },
+            "href": "https://api.spotify.com/v1/playlists/0WsWiBonRexL4UCxhkOZah",
+            "id": "0WsWiBonRexL4UCxhkOZah",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb55a0bb84053e5440d5bcc4dd",
+                    "width": null
+                }
+            ],
+            "name": "🔥",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MjcsNDU4YThlYjQzZWM5NGMzMmM2ZGY0YjA1MGZhYWFkMzBlYjliOWNkZQ==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/0WsWiBonRexL4UCxhkOZah/tracks",
+                "total": 16
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:0WsWiBonRexL4UCxhkOZah"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/72HPYtlZScdDMDmulleKo4"
+            },
+            "href": "https://api.spotify.com/v1/playlists/72HPYtlZScdDMDmulleKo4",
+            "id": "72HPYtlZScdDMDmulleKo4",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b27327ddd747545c0d0cfe7595faab67616d0000b2735c7fdd07d99c156401073aaaab67616d0000b273956346ed9c201b6de9d3a1a2ab67616d0000b273b9b49e11904a8c231a7ce3a7",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b27327ddd747545c0d0cfe7595faab67616d0000b2735c7fdd07d99c156401073aaaab67616d0000b273956346ed9c201b6de9d3a1a2ab67616d0000b273b9b49e11904a8c231a7ce3a7",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b27327ddd747545c0d0cfe7595faab67616d0000b2735c7fdd07d99c156401073aaaab67616d0000b273956346ed9c201b6de9d3a1a2ab67616d0000b273b9b49e11904a8c231a7ce3a7",
+                    "width": 60
+                }
+            ],
+            "name": "🥶",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "OSw5M2QxOTU5YTZiZDJhNjU3ZTJiYjA0ZDQxYzdkMjUyZTRhY2RmYTc2",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/72HPYtlZScdDMDmulleKo4/tracks",
+                "total": 8
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:72HPYtlZScdDMDmulleKo4"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/55tz2NqtMif8zh4ZxZ8ONc"
+            },
+            "href": "https://api.spotify.com/v1/playlists/55tz2NqtMif8zh4ZxZ8ONc",
+            "id": "55tz2NqtMif8zh4ZxZ8ONc",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://mosaic.scdn.co/640/ab67616d0000b2730334d1ab8b8177a3f47a0633ab67616d0000b27308d47c72c5a1e492b34dfc31ab67616d0000b273168aadf98b62ac5d4020187eab67616d0000b2735a17e05433676ae143d9f50a",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://mosaic.scdn.co/300/ab67616d0000b2730334d1ab8b8177a3f47a0633ab67616d0000b27308d47c72c5a1e492b34dfc31ab67616d0000b273168aadf98b62ac5d4020187eab67616d0000b2735a17e05433676ae143d9f50a",
+                    "width": 300
+                },
+                {
+                    "height": 60,
+                    "url": "https://mosaic.scdn.co/60/ab67616d0000b2730334d1ab8b8177a3f47a0633ab67616d0000b27308d47c72c5a1e492b34dfc31ab67616d0000b273168aadf98b62ac5d4020187eab67616d0000b2735a17e05433676ae143d9f50a",
+                    "width": 60
+                }
+            ],
+            "name": "🥵!",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MTA5LGM3MmNiN2IwYzNkYzVjN2ZiYWUyZjk4OGMyOGRiZjgxZTIzODZlMjE=",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/55tz2NqtMif8zh4ZxZ8ONc/tracks",
+                "total": 52
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:55tz2NqtMif8zh4ZxZ8ONc"
+        },
+        {
+            "collaborative": false,
+            "description": "",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/0yZ4FFGjk1SaxsK4s5cw6t"
+            },
+            "href": "https://api.spotify.com/v1/playlists/0yZ4FFGjk1SaxsK4s5cw6t",
+            "id": "0yZ4FFGjk1SaxsK4s5cw6t",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273133f8b778fbdae5f47480b77",
+                    "width": 640
+                }
+            ],
+            "name": "Old rap FR",
+            "owner": {
+                "display_name": "Lils",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/2t4gzv9paiiwwa2jrwixyoxj7"
+                },
+                "href": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7",
+                "id": "2t4gzv9paiiwwa2jrwixyoxj7",
+                "type": "user",
+                "uri": "spotify:user:2t4gzv9paiiwwa2jrwixyoxj7"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MiwzNDFlZDA1MTU3YjU3YzRmMzg4YmU0MTMxMjFjNDg5MTJkYWM2OTU2",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/0yZ4FFGjk1SaxsK4s5cw6t/tracks",
+                "total": 1
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:0yZ4FFGjk1SaxsK4s5cw6t"
+        }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/users/2t4gzv9paiiwwa2jrwixyoxj7/playlists?offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 36
+}

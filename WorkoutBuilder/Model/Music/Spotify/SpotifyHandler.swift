@@ -14,6 +14,8 @@ class SpotifyHandler: NSObject {
     
     static let shared = SpotifyHandler()
     
+    private var session: URLSession
+    
     private var responseCode: String? {
         didSet {
             fetchAccessToken { (dictionary, error) in
@@ -77,7 +79,13 @@ class SpotifyHandler: NSObject {
     
     // MARK: Initilizer
     
-    private override init () {}
+    private override init () {
+        self.session = URLSession.shared
+    }
+    
+    init(session: URLSession) {
+        self.session = session
+    }
     
     // MARK: Functions
     
@@ -147,7 +155,7 @@ extension SpotifyHandler: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
             if error != nil {
                 return
             }
-            guard let albums = data?.ablums else {
+            guard let albums = data?.albums else {
                 return
             }
             self.userAlbums = albums
@@ -210,7 +218,7 @@ extension SpotifyHandler {
         requestBodyComponents.queryItems = [
             URLQueryItem(name: "client_id", value: Constant.SpotifyClientID),
             URLQueryItem(name: "grant_type", value: "authorization_code"),
-            URLQueryItem(name: "code", value: responseCode!),
+            URLQueryItem(name: "code", value: responseCode ?? ""),
             URLQueryItem(name: "redirect_uri", value: Constant.SpotifyRedirectURL.absoluteString),
             URLQueryItem(name: "code_verifier", value: ""), // not currently used
             URLQueryItem(name: "scope", value: scopeAsString),
@@ -218,7 +226,7 @@ extension SpotifyHandler {
         
         request.httpBody = requestBodyComponents.query?.data(using: .utf8)
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard let data = data,                              // is there data
                   let response = response as? HTTPURLResponse,  // is there HTTP response
                   (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX
@@ -247,10 +255,10 @@ extension SpotifyHandler {
         let url = URL(string: "https://api.spotify.com/v1/me/playlists")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        let spotifyAuthKey = "Bearer \(accessToken!)"
+        let spotifyAuthKey = "Bearer \(accessToken ?? "")"
         request.allHTTPHeaderFields = ["Authorization": spotifyAuthKey]
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard let data = data,                              // is there data
                   let response = response as? HTTPURLResponse,  // is there HTTP response
                   (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX
@@ -268,10 +276,10 @@ extension SpotifyHandler {
         let url = URL(string: "https://api.spotify.com/v1/me/albums")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        let spotifyAuthKey = "Bearer \(accessToken!)"
+        let spotifyAuthKey = "Bearer \(accessToken ?? "")"
         request.allHTTPHeaderFields = ["Authorization": spotifyAuthKey]
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard let data = data,                              // is there data
                   let response = response as? HTTPURLResponse,  // is there HTTP response
                   (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX

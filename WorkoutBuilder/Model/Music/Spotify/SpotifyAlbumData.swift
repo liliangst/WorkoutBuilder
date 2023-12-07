@@ -10,7 +10,7 @@ import Foundation
 struct SpotifyAlbumData: Decodable {
     var next: String?
     var total: Int
-    var ablums: [SpotifyAlbumObject] {
+    var albums: [SpotifyAlbumObject] {
         items.map({$0.album})
     }
     

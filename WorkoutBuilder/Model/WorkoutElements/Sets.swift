@@ -26,10 +26,8 @@ class Sets: Object, WorkoutElementObject {
             elementId = (element as! Exercise).id
         case is Rest:
             elementId = (element as! Rest).id
-        case is Sets:
-            elementId = (element as! Sets).id
         default:
-            elementId = ObjectId("")
+            return
         }
         let workoutElement = WorkoutElement(id: elementId, type: type.rawValue)
         if !elements.contains(where: {$0.id == workoutElement.id}) {

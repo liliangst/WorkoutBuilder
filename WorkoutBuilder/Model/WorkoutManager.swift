@@ -28,8 +28,12 @@ class WorkoutManager {
         #endif
     }
     
-    private let realm = try! Realm()
+    var realm = try! Realm()
 
+    func configure(with configuration: Realm.Configuration) {
+        realm = try! Realm(configuration: configuration)
+    }
+    
     var favoriteWorkouts: [Workout] {
         workouts.filter({$0.isFavorite})
     }
@@ -69,18 +73,6 @@ class WorkoutManager {
         try! realm.write {
             workout.thaw()?.isFavorite = false
             NotificationCenter.default.post(name: .DeleteFavoriteWorkout, object: nil)
-        }
-    }
-    
-    func add(element: WorkoutElement, to workout: Workout) {
-        try! realm.write {
-            workout.elements.append(element)
-        }
-    }
-    
-    func add(element: WorkoutElement, to set: Sets) {
-        try! realm.write {
-            set.elements.append(element)
         }
     }
     
