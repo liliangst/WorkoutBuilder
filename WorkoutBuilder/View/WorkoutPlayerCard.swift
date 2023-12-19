@@ -108,7 +108,7 @@ struct WorkoutPlayerCard: View {
                         .foregroundStyle(Asset.Colors.gray3.swiftUIColor)
                     HStack(spacing: 15) {
                         if currentElement is Exercise {
-                            Text((currentElement as! Exercise).title)
+                            Text((currentElement as! Exercise).title + " ×\((currentElement as! Exercise).numberOfReps ?? 0)")
                                 .font(FontFamily.DMSans.regular.swiftUIFont(fixedSize: 20))
                                 .foregroundColor(Asset.Colors.gray1.swiftUIColor)
                                 .lineLimit(2)

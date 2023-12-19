@@ -103,7 +103,7 @@ final class SpotifyHandlerTests: XCTestCase {
                 XCTAssertNotNil(error)
             }
             
-            guard let playlists = data?.items else {
+            guard let _ = data?.items else {
                 XCTAssertNil(data)
                 expectation.fulfill()
                 return
@@ -156,7 +156,7 @@ final class SpotifyHandlerTests: XCTestCase {
                 XCTAssertNotNil(error)
             }
             
-            guard let albums = data?.albums else {
+            guard let _ = data?.albums else {
                 XCTAssertNil(data)
                 expectation.fulfill()
                 return
